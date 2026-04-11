@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { TrainrLogoMark } from "./TrainrLogoMark";
 import { Container } from "./system/Container";
 
 function MailIcon({ className }: { className?: string }) {
@@ -32,17 +33,15 @@ export function SiteFooter() {
       <Container className="py-16 sm:py-20">
         <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-[1.35fr_1fr_1fr] lg:gap-8">
           <div>
-            <div className="flex items-center gap-2">
-              <span
-                className="flex h-9 w-9 items-center justify-center rounded-[var(--tr-radius-sm)] bg-[var(--tr-surface-1)] text-sm font-bold text-trainr-accent ring-1 ring-[var(--tr-border-medium)]"
-                aria-hidden
-              >
-                T
-              </span>
-              <p className="text-lg font-semibold tracking-[-0.04em] text-[var(--tr-text-primary)]">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 rounded-[var(--tr-radius-sm)] text-[var(--tr-text-primary)] outline-offset-4 transition-opacity hover:opacity-90"
+            >
+              <TrainrLogoMark variant="footer" className="translate-y-px" />
+              <span className="text-base font-semibold tracking-[-0.04em] sm:text-lg">
                 Trainr
-              </p>
-            </div>
+              </span>
+            </Link>
             <p className="tr-text-body-sm mt-4 max-w-sm text-pretty">
               Misma propuesta que la app: hub de Inicio, Explorar, Chats,
               Entreno, Nutrición y Premium; feed social y chat 1:1 con datos en

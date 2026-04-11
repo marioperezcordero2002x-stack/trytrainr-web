@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { TrainrLogoMark } from "./TrainrLogoMark";
 
 const nav = [
   { href: "/#about", label: "Qué es" },
@@ -9,19 +10,6 @@ const nav = [
   { href: "/#app", label: "Interfaz" },
   { href: "/#contact", label: "Contacto" },
 ] as const;
-
-function LogoMark({ className }: { className?: string }) {
-  return (
-    <span
-      className={`flex h-8 w-8 items-center justify-center rounded-[var(--tr-radius-sm)] bg-[var(--tr-surface-1)] ring-1 ring-[var(--tr-border-medium)] ${className ?? ""}`.trim()}
-      aria-hidden
-    >
-      <span className="text-[13px] font-bold tracking-tighter text-trainr-accent">
-        T
-      </span>
-    </span>
-  );
-}
 
 export function SiteHeader() {
   const [elevated, setElevated] = useState(false);
@@ -46,10 +34,10 @@ export function SiteHeader() {
       >
         <Link
           href="/"
-          className="group flex shrink-0 items-center gap-2.5 rounded-[var(--tr-radius-sm)] text-[var(--tr-text-primary)] outline-offset-4 transition-opacity hover:opacity-95"
+          className="group flex shrink-0 items-center gap-2 rounded-[var(--tr-radius-sm)] text-[var(--tr-text-primary)] outline-offset-4 transition-opacity hover:opacity-[0.92] sm:gap-2.5"
         >
-          <LogoMark />
-          <span className="text-[1.0625rem] font-semibold tracking-[-0.04em]">
+          <TrainrLogoMark variant="header" className="translate-y-[0.5px]" />
+          <span className="text-[1rem] font-semibold tracking-[-0.04em] sm:text-[1.0625rem]">
             Trainr
           </span>
         </Link>
