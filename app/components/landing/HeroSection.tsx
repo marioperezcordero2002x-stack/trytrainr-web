@@ -29,7 +29,10 @@ function ChevronRight({ className }: { className?: string }) {
 /** Preview alineado a FeedPostCard + TrainrAppCard: post con likes/comentarios. */
 function HeroDevicePreview() {
   return (
-    <div className="relative mx-auto w-full max-w-[300px] lg:max-w-[320px]">
+    <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px]">
+      <p className="mb-3 text-right font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-[var(--tr-text-faint)] sm:text-[10px]">
+        Vista feed
+      </p>
       <div
         className="pointer-events-none absolute -inset-10 rounded-[var(--tr-radius-2xl)] bg-[var(--trainr-accent-glow)] blur-3xl"
         aria-hidden
@@ -81,9 +84,9 @@ function HeroDevicePreview() {
                 <span>5 comentarios</span>
               </div>
             </div>
-            <div className="rounded-[var(--tr-radius-md)] border border-dashed border-[var(--tr-border-medium)] bg-white/[0.02] py-4 text-center">
-              <p className="text-[11px] font-medium text-[var(--tr-text-tertiary)]">
-                Explorar · gente nueva que entrena en serio
+            <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)]/80 py-3.5 text-center ring-1 ring-white/[0.04]">
+              <p className="text-[11px] font-medium text-[var(--tr-text-secondary)]">
+                Explorar · atletas en serio
               </p>
             </div>
           </div>
@@ -97,7 +100,7 @@ function HeroDevicePreview() {
 export function HeroSection() {
   return (
     <section
-      className="relative flex min-h-[min(100svh,56rem)] flex-col overflow-hidden border-b border-[var(--tr-border)] bg-[var(--tr-canvas)]"
+      className="relative flex min-h-0 flex-col overflow-hidden border-b border-[var(--tr-border)] bg-[var(--tr-canvas)] sm:min-h-[min(92svh,52rem)] lg:min-h-[min(100svh,56rem)]"
       aria-labelledby="hero-heading"
     >
       <div
@@ -110,50 +113,79 @@ export function HeroSection() {
       />
       <div className="tr-divider-fade absolute bottom-0 left-0 right-0 opacity-60" />
 
-      <Container className="relative flex flex-1 flex-col justify-center py-12 sm:py-16 lg:py-20">
-        <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-14">
+      <Container className="relative flex flex-1 flex-col justify-center py-10 sm:py-14 lg:py-20">
+        <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-14">
           <div className="lg:col-span-6 xl:col-span-6">
             <RevealOnView>
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                <Eyebrow>{hero.eyebrow}</Eyebrow>
-                <span
-                  className="hidden text-[var(--tr-text-faint)] sm:inline"
-                  aria-hidden
-                >
-                  ·
-                </span>
-                <span className="font-mono text-[var(--tr-text-caption)] font-medium uppercase tracking-[0.12em] text-[var(--tr-text-tertiary)]">
-                  {hero.domainLine}
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-3 sm:gap-y-2">
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+                  <Eyebrow>{hero.eyebrow}</Eyebrow>
+                  <span
+                    className="hidden text-[var(--tr-text-faint)] sm:inline"
+                    aria-hidden
+                  >
+                    ·
+                  </span>
+                  <span className="font-mono text-[var(--tr-text-caption)] font-medium uppercase tracking-[0.12em] text-[var(--tr-text-tertiary)]">
+                    {hero.domainLine}
+                  </span>
+                </div>
+                <span className="inline-flex w-fit rounded-[var(--tr-radius-pill)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)] px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--tr-text-secondary)] sm:ml-0">
+                  {hero.trustBadge}
                 </span>
               </div>
             </RevealOnView>
 
-            <RevealOnView delayMs={35} className="mt-5 sm:mt-7">
+            <RevealOnView delayMs={35} className="mt-6 sm:mt-8">
               <h1
                 id="hero-heading"
-                className="tr-text-display text-balance text-[var(--tr-text-primary)]"
+                className="max-w-xl text-balance text-[var(--tr-text-primary)] lg:max-w-2xl"
               >
-                {hero.headline}
-                <span className="mt-1 block text-trainr-accent sm:mt-2">
+                <span className="tr-text-display block">{hero.headline}</span>
+                <span className="mt-3 block text-[clamp(1.125rem,3.6vw,1.75rem)] font-semibold leading-[1.12] tracking-[-0.032em] text-trainr-accent sm:mt-4">
                   {hero.headlineAccent}
                 </span>
               </h1>
             </RevealOnView>
 
             <RevealOnView delayMs={75} className="mt-5 max-w-xl sm:mt-6">
-              <p className="tr-text-lead text-pretty leading-relaxed">
+              <p className="text-[0.9375rem] leading-snug text-pretty text-[var(--tr-text-secondary)] sm:text-lg sm:leading-relaxed">
                 {hero.subhead}
               </p>
             </RevealOnView>
 
-            <RevealOnView delayMs={95} className="mt-6 sm:mt-7">
-              <p className="tr-text-overline mb-2.5 text-[var(--tr-text-faint)]">
-                Todo en el hub
+            <RevealOnView delayMs={95} className="mt-7 sm:mt-8">
+              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+                <a
+                  href={hero.primaryHref}
+                  className="group inline-flex min-h-[50px] w-full items-center justify-center gap-2 rounded-[var(--tr-radius-lg)] bg-trainr-accent px-6 text-[0.9375rem] font-extrabold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_16px_40px_-12px_rgba(255,122,0,0.42)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-[var(--trainr-accent-hover)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.14),0_20px_48px_-12px_rgba(255,122,0,0.48)] active:scale-[0.98] sm:w-auto sm:min-h-[52px] sm:min-w-[200px] sm:px-7"
+                >
+                  {hero.primaryCta}
+                  <ChevronRight className="opacity-90 transition-transform duration-200 group-hover:translate-x-0.5" />
+                </a>
+                <a
+                  href={hero.secondaryHref}
+                  className="inline-flex min-h-[50px] w-full items-center justify-center rounded-[var(--tr-radius-lg)] border border-[var(--tr-border-medium)] bg-transparent px-6 text-[0.875rem] font-semibold text-[var(--tr-text-primary)] shadow-[var(--tr-shadow-inset)] transition-[background-color,border-color] duration-200 hover:border-[var(--tr-border-strong)] hover:bg-[var(--tr-surface-0)] sm:w-auto sm:min-h-[52px] sm:min-w-[168px]"
+                >
+                  {hero.secondaryCta}
+                </a>
+              </div>
+              <a
+                href={`mailto:${supportEmail}?subject=Prioridad%20de%20acceso%20Trainr`}
+                className="mt-4 inline-flex text-[0.8125rem] font-medium text-[var(--tr-text-tertiary)] underline decoration-[var(--tr-border-strong)] underline-offset-[5px] transition-colors hover:text-[var(--tr-text-primary)]"
+              >
+                {hero.tertiaryCta}
+              </a>
+            </RevealOnView>
+
+            <RevealOnView delayMs={115} className="mt-8 sm:mt-10">
+              <p className="tr-text-overline mb-2 text-[var(--tr-text-faint)]">
+                {hero.hubOverline}
               </p>
-              <ul className="flex flex-wrap gap-2" aria-label="Pestañas del hub">
+              <ul className="flex flex-wrap gap-1.5 sm:gap-2" aria-label="Pestañas del hub">
                 {hubTabs.map((tab) => (
                   <li key={tab}>
-                    <span className="inline-block rounded-[var(--tr-radius-pill)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] px-3 py-1.5 text-center text-[11px] font-semibold tracking-wide text-[var(--tr-text-secondary)]">
+                    <span className="inline-block rounded-[var(--tr-radius-pill)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)]/90 px-2.5 py-1 text-center text-[10px] font-semibold tracking-wide text-[var(--tr-text-tertiary)] sm:px-3 sm:py-1.5 sm:text-[11px] sm:text-[var(--tr-text-secondary)]">
                       {tab}
                     </span>
                   </li>
@@ -161,28 +193,7 @@ export function HeroSection() {
               </ul>
             </RevealOnView>
 
-            <RevealOnView delayMs={110} className="mt-8 sm:mt-10">
-              <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-stretch">
-                <a
-                  href={hero.primaryHref}
-                  className="group inline-flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-[var(--tr-radius-lg)] bg-trainr-accent px-7 text-[0.9375rem] font-extrabold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_16px_40px_-12px_rgba(255,122,0,0.42)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-[var(--trainr-accent-hover)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.14),0_20px_48px_-12px_rgba(255,122,0,0.48)] active:scale-[0.98] sm:flex-none sm:min-w-[220px]"
-                >
-                  {hero.primaryCta}
-                  <ChevronRight className="opacity-90 transition-transform duration-200 group-hover:translate-x-0.5" />
-                </a>
-                <span className="inline-flex min-h-[52px] flex-1 cursor-default items-center justify-center rounded-[var(--tr-radius-pill)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)] px-5 text-center text-[0.875rem] font-medium text-[var(--tr-text-tertiary)] sm:flex-none sm:px-6">
-                  {hero.secondaryCta}
-                </span>
-                <a
-                  href={`mailto:${supportEmail}`}
-                  className="inline-flex min-h-[52px] items-center justify-center px-2 text-[0.875rem] font-medium text-[var(--tr-text-secondary)] underline decoration-[var(--tr-border-strong)] underline-offset-[6px] transition-colors hover:text-[var(--tr-text-primary)] sm:px-4"
-                >
-                  {hero.tertiaryCta}
-                </a>
-              </div>
-            </RevealOnView>
-
-            <RevealOnView delayMs={145} className="mt-10 sm:mt-12">
+            <RevealOnView delayMs={145} className="mt-9 sm:mt-11">
               <div className="tr-divider-fade mb-6 sm:mb-8" />
               <ul className="grid gap-3 sm:grid-cols-3 sm:gap-4">
                 {hero.specRows.map((row) => (

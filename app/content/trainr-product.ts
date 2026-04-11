@@ -23,18 +23,21 @@ export const trainrProduct = {
   hero: {
     eyebrow: "Trainr",
     domainLine: "trytrainr.com",
-    headline: "La red social donde",
-    headlineAccent: "el progreso importa.",
+    trustBadge: "Prioridad de acceso · lista abierta",
+    hubOverline: "Seis pestañas, un solo hub",
+    headline: "El gym, en red — con la gente que sí cuenta.",
+    headlineAccent: "Social fitness con avance visible y chat directo.",
     subhead:
-      "Entrena, comparte y habla con gente que va en serio. Feed con tu evolución visible, chat directo, planes de entreno, nutrición con macros y una comunidad que entiende el gym — todo en una app oscura, rápida y sin ruido de otras redes.",
-    primaryCta: "Ver qué incluye la app",
+      "Una app social fitness donde publicas progreso con contexto, sigues perfiles serios y hablas 1:1 cuando toca coordinar o apoyar. Planes de entreno, macros y seis pestañas en un hub oscuro: disciplina compartida, no viralidad vacía.",
+    primaryCta: "Explorar la app",
     primaryHref: "#features" as const,
-    secondaryCta: "Próximamente en App Store",
-    tertiaryCta: "Prioridad acceso · escríbenos",
+    secondaryCta: "Ver la interfaz",
+    secondaryHref: "#app" as const,
+    tertiaryCta: "Pedir prioridad de acceso",
     specRows: [
-      { label: "Tu evolución", value: "Visible en el feed" },
-      { label: "Conexión real", value: "Chat 1:1 con atletas" },
-      { label: "Plan completo", value: "Entreno + nutrición" },
+      { label: "Progreso", value: "Feed con contexto de entreno" },
+      { label: "Comunidad", value: "Perfiles y chat sin ruido" },
+      { label: "Hábito", value: "Entreno + nutrición en el hub" },
     ] as const,
   },
 
@@ -167,14 +170,23 @@ export const trainrProduct = {
   ] as const,
 
   showcase: {
-    eyebrow: "Dentro de la app",
-    title: "Tres pantallas que usas cada día",
+    eyebrow: "Producto",
+    title: "Una app, tres capas conectadas",
     lead:
-      "Así se conecta el día a día: ver el feed, revisar un perfil y cerrar el círculo en el chat. Sustituye por capturas reales del simulador cuando publiques.",
+      "Progreso visible en el feed, identidad en el perfil y conversación directa en el chat — el circuito que ya recorres en Trainr.",
     devices: [
-      { label: "Feed", caption: "Progreso y conversación" },
-      { label: "Perfil", caption: "Identidad y grid" },
-      { label: "Chat", caption: "Mensajes directos" },
+      {
+        label: "Feed",
+        caption: "Progreso documentado que la comunidad ve y celebra.",
+      },
+      {
+        label: "Perfil",
+        caption: "Identidad fitness, stats y red en un solo lugar.",
+      },
+      {
+        label: "Chat",
+        caption: "Acuerdos y apoyo entre series, sin salir del entreno.",
+      },
     ] as const,
   },
 } as const;
