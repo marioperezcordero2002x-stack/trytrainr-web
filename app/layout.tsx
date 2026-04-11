@@ -27,11 +27,27 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Trainr — App social fitness",
     description:
-      "Feed, Explorar, Chats, Entreno, Nutrición y Premium en un solo hub. Social fitness con Firestore.",
-    url: "https://trytrainr.com",
+      "Progreso visible, comunidad seria y hub completo: feed, chat 1:1, entreno, nutrición y más. Social fitness sin postureo vacío.",
+    url: "/",
     siteName: "Trainr",
     locale: "es_ES",
     type: "website",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Trainr — App social fitness",
+        type: "image/png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Trainr — App social fitness",
+    description:
+      "Progreso visible, comunidad seria: feed, chat, entreno y nutrición en una app oscura pensada para constancia.",
+    images: ["/og-image.png"],
   },
 };
 
