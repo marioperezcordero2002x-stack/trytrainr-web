@@ -24,6 +24,7 @@ const iconById = {
 
 export function FeaturesSection() {
   const [flagship, ...rest] = trainrProduct.features;
+  const intro = trainrProduct.featuresIntro;
 
   return (
     <Section
@@ -35,17 +36,15 @@ export function FeaturesSection() {
     >
       <div className="max-w-3xl">
         <RevealOnView>
-          <Eyebrow>Producto real</Eyebrow>
+          <Eyebrow>{intro.eyebrow}</Eyebrow>
           <h2
             id="features-heading"
             className="tr-text-h2 mt-5 text-balance text-[var(--tr-text-primary)]"
           >
-            Lo que hace la app hoy, módulo a módulo
+            {intro.title}
           </h2>
           <p className="tr-text-lead mt-5 max-w-2xl text-pretty">
-            Cada bloque corresponde a código en el cliente Trainr (feed, chat,
-            perfil, social, entreno, nutrición, premium). Sin prometer APIs que
-            no existan en la build actual.
+            {intro.lead}
           </p>
         </RevealOnView>
       </div>

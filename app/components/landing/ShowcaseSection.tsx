@@ -68,31 +68,35 @@ function ScreenFeed() {
     <div className="space-y-3 px-3 pb-9 pt-1">
       <div className="flex items-center justify-between px-0.5">
         <span className="text-[13px] font-semibold text-white">Inicio</span>
-        <span className="rounded-md bg-white/[0.06] px-2 py-0.5 text-[10px] font-medium text-zinc-400">
-          Para ti
+        <span className="rounded-md bg-[var(--trainr-accent-soft)] px-2 py-0.5 text-[10px] font-semibold text-trainr-accent">
+          Tu feed
         </span>
       </div>
-      <article className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-1)] p-3">
+      <article className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-1)] p-3 ring-1 ring-white/[0.03]">
         <div className="flex gap-2.5">
           <div className="h-9 w-9 shrink-0 rounded-full bg-gradient-to-br from-zinc-600 to-zinc-900 ring-1 ring-white/[0.08]" />
           <div className="min-w-0 flex-1">
-            <p className="text-[12px] font-medium text-zinc-200">@marc · Push</p>
-            <p className="text-[11px] text-zinc-500">Hace 2 h</p>
+            <p className="text-[12px] font-semibold text-zinc-100">Laura M.</p>
+            <p className="text-[11px] text-zinc-500">@laurafuerza · Hace 1 h</p>
           </div>
         </div>
+        <p className="mt-2.5 text-[11px] leading-snug text-zinc-400">
+          Semana 6 completada. Subida de 2,5 kg en press banca respecto al mes
+          pasado.
+        </p>
         <div className="mt-3 aspect-[16/10] rounded-[10px] bg-gradient-to-br from-zinc-800/80 to-zinc-950 ring-1 ring-white/[0.05]">
           <div className="flex h-full flex-col justify-end p-2.5">
-            <span className="inline-flex w-fit rounded bg-black/50 px-1.5 py-0.5 text-[10px] text-zinc-300 backdrop-blur-sm">
-              100 kg × 3
+            <span className="inline-flex w-fit rounded bg-black/55 px-1.5 py-0.5 text-[10px] font-medium text-zinc-200 backdrop-blur-sm">
+              82,5 kg × 5 · vídeo
             </span>
           </div>
         </div>
         <div className="mt-3 flex items-center gap-4 border-t border-[var(--tr-border)] pt-2.5 text-[11px] text-zinc-500">
-          <span className="text-zinc-400">24 apoyo</span>
-          <span>6 comentarios</span>
+          <span className="font-medium text-zinc-300">112 me gusta</span>
+          <span>14 comentarios</span>
         </div>
       </article>
-      <div className="h-10 rounded-[var(--tr-radius-sm)] bg-[var(--tr-surface-1)] ring-1 ring-[var(--tr-border)]" />
+      <div className="h-9 rounded-[var(--tr-radius-sm)] bg-[var(--tr-surface-1)] ring-1 ring-[var(--tr-border)]" />
     </div>
   );
 }
@@ -101,9 +105,11 @@ function ScreenChat() {
   return (
     <div className="flex min-h-[320px] flex-col px-3 pb-9 pt-0">
       <div className="border-b border-[var(--tr-border)] py-2 text-center">
-        <span className="text-[13px] font-semibold text-zinc-100">
-          Laura · Coach
+        <span className="text-[11px] font-medium uppercase tracking-wider text-zinc-500">
+          Chat
         </span>
+        <p className="text-[13px] font-semibold text-zinc-100">Laura M.</p>
+        <p className="text-[10px] text-zinc-500">@laurafuerza</p>
       </div>
       <div className="flex flex-1 flex-col justify-end gap-2 py-3">
         <div className="max-w-[88%] rounded-2xl rounded-bl-md border border-[var(--tr-border)] bg-[var(--tr-surface-1)] px-3 py-2">
@@ -127,30 +133,50 @@ function ScreenChat() {
   );
 }
 
-function ScreenStats() {
+function ScreenProfile() {
   return (
-    <div className="space-y-4 px-3 pb-10 pt-1">
-      <div>
-        <p className="text-[13px] font-semibold text-white">Planes</p>
-        <p className="text-[11px] text-[var(--tr-text-tertiary)]">
-          Principiante · 3 días / semana
-        </p>
-        <p className="mt-3 text-[11px] font-medium text-[var(--tr-text-secondary)]">
-          Día 2 — Full Body B
-        </p>
-        <ul className="mt-2 space-y-1.5 text-[10px] leading-snug text-[var(--tr-text-tertiary)]">
-          <li>· Press hombro mancuernas — 3×10-12</li>
-          <li>· Remo máquina — 3×10-12</li>
-          <li>· Curl femoral — 3×12</li>
-        </ul>
+    <div className="space-y-3 px-3 pb-10 pt-1">
+      <div className="flex flex-col items-center border-b border-[var(--tr-border)] pb-4">
+        <div className="h-[68px] w-[68px] shrink-0 rounded-full bg-gradient-to-br from-zinc-600 to-zinc-900 ring-2 ring-[var(--tr-border-medium)]" />
+        <p className="mt-3 text-[14px] font-bold text-white">Marc Vega</p>
+        <p className="text-[11px] text-[var(--tr-text-tertiary)]">@marcvega</p>
+        <div className="mt-4 flex w-full justify-center gap-6 sm:gap-8">
+          <div className="text-center">
+            <p className="text-[13px] font-bold tabular-nums text-white">48</p>
+            <p className="text-[10px] text-[var(--tr-text-tertiary)]">posts</p>
+          </div>
+          <div className="text-center">
+            <p className="text-[13px] font-bold tabular-nums text-white">1,2k</p>
+            <p className="text-[10px] text-[var(--tr-text-tertiary)]">
+              seguidores
+            </p>
+          </div>
+          <div className="text-center">
+            <p className="text-[13px] font-bold tabular-nums text-white">380</p>
+            <p className="text-[10px] text-[var(--tr-text-tertiary)]">
+              siguiendo
+            </p>
+          </div>
+        </div>
+        <div className="mt-4 flex w-full gap-2 px-0.5">
+          <div className="flex-1 rounded-[var(--tr-radius-md)] bg-trainr-accent py-2.5 text-center text-[11px] font-extrabold text-white">
+            Seguir
+          </div>
+          <div className="flex-1 rounded-[var(--tr-radius-md)] border border-[var(--tr-border-medium)] py-2.5 text-center text-[11px] font-semibold text-[var(--tr-text-primary)]">
+            Mensaje
+          </div>
+        </div>
       </div>
-      <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-1)] p-3">
-        <p className="text-[10px] font-medium text-[var(--tr-text-tertiary)]">
-          Ejercicios completados
-        </p>
-        <p className="mt-1 text-[11px] text-[var(--tr-text-secondary)]">
-          Sincronizado con tu usuario en Firestore.
-        </p>
+      <p className="px-0.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--tr-text-faint)]">
+        Publicaciones
+      </p>
+      <div className="grid grid-cols-3 gap-1">
+        {[1, 2, 3, 4, 5, 6].map((i) => (
+          <div
+            key={i}
+            className="aspect-square rounded-[6px] bg-gradient-to-br from-zinc-800/80 to-zinc-950 ring-1 ring-[var(--tr-border)]"
+          />
+        ))}
       </div>
     </div>
   );
@@ -220,14 +246,14 @@ export function ShowcaseSection() {
                 caption={deviceB.caption}
                 className="lg:translate-y-12"
               >
-                <ScreenChat />
+                <ScreenProfile />
               </DeviceFrame>
               <DeviceFrame
                 label={deviceC.label}
                 caption={deviceC.caption}
                 className="lg:pt-0"
               >
-                <ScreenStats />
+                <ScreenChat />
               </DeviceFrame>
             </div>
 

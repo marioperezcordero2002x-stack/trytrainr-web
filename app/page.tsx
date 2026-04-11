@@ -1,5 +1,7 @@
 import { AboutSection } from "./components/landing/AboutSection";
+import { DifferentSection } from "./components/landing/DifferentSection";
 import { FeaturesSection } from "./components/landing/FeaturesSection";
+import { FinalCtaSection } from "./components/landing/FinalCtaSection";
 import { HeroSection } from "./components/landing/HeroSection";
 import { ShowcaseSection } from "./components/landing/ShowcaseSection";
 import { SiteFooter } from "./components/SiteFooter";
@@ -16,7 +18,9 @@ export default function Home() {
         <HeroSection />
         <AboutSection />
         <FeaturesSection />
+        <DifferentSection />
         <ShowcaseSection />
+        <FinalCtaSection />
       </main>
       <SiteFooter />
     </>

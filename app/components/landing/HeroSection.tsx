@@ -73,7 +73,7 @@ function HeroDevicePreview() {
                 </div>
               </div>
               <p className="px-3 py-2 text-[12px] leading-snug text-[var(--tr-text-secondary)]">
-                4×8 en sentadilla. RPE 7,5. Siguiente bloque: peso muerto.
+                Semana 3 · 4×8 sentadilla a 100 kg. RPE 7,5. Mañana tirón.
               </p>
               <div className="mx-3 mb-2 aspect-[16/10] rounded-[var(--tr-radius-sm)] bg-gradient-to-br from-zinc-800/60 to-zinc-950 ring-1 ring-[var(--tr-border)]" />
               <div className="flex gap-4 border-t border-[var(--tr-border)] px-3 py-2 text-[11px] text-[var(--tr-text-tertiary)]">
@@ -81,9 +81,9 @@ function HeroDevicePreview() {
                 <span>5 comentarios</span>
               </div>
             </div>
-            <div className="rounded-[var(--tr-radius-md)] border border-dashed border-[var(--tr-border-medium)] bg-white/[0.02] py-5 text-center">
-              <p className="text-[11px] font-medium text-[var(--tr-text-faint)]">
-                Explorar · solo perfiles públicos
+            <div className="rounded-[var(--tr-radius-md)] border border-dashed border-[var(--tr-border-medium)] bg-white/[0.02] py-4 text-center">
+              <p className="text-[11px] font-medium text-[var(--tr-text-tertiary)]">
+                Explorar · gente nueva que entrena en serio
               </p>
             </div>
           </div>
@@ -128,25 +128,27 @@ export function HeroSection() {
               </div>
             </RevealOnView>
 
-            <RevealOnView delayMs={35} className="mt-6 sm:mt-8">
+            <RevealOnView delayMs={35} className="mt-5 sm:mt-7">
               <h1
                 id="hero-heading"
                 className="tr-text-display text-balance text-[var(--tr-text-primary)]"
               >
                 {hero.headline}
-                <span className="block text-[var(--tr-text-secondary)]">
+                <span className="mt-1 block text-trainr-accent sm:mt-2">
                   {hero.headlineAccent}
                 </span>
               </h1>
             </RevealOnView>
 
-            <RevealOnView delayMs={75} className="mt-6 max-w-xl sm:mt-7">
-              <p className="tr-text-lead text-pretty">{hero.subhead}</p>
+            <RevealOnView delayMs={75} className="mt-5 max-w-xl sm:mt-6">
+              <p className="tr-text-lead text-pretty leading-relaxed">
+                {hero.subhead}
+              </p>
             </RevealOnView>
 
-            <RevealOnView delayMs={95} className="mt-5">
-              <p className="tr-text-overline mb-2 text-[var(--tr-text-faint)]">
-                Barra inferior en app
+            <RevealOnView delayMs={95} className="mt-6 sm:mt-7">
+              <p className="tr-text-overline mb-2.5 text-[var(--tr-text-faint)]">
+                Todo en el hub
               </p>
               <ul className="flex flex-wrap gap-2" aria-label="Pestañas del hub">
                 {hubTabs.map((tab) => (
@@ -162,8 +164,8 @@ export function HeroSection() {
             <RevealOnView delayMs={110} className="mt-8 sm:mt-10">
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-stretch">
                 <a
-                  href="#about"
-                  className="group inline-flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-[var(--tr-radius-lg)] bg-trainr-accent px-7 text-[0.9375rem] font-extrabold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_16px_40px_-12px_rgba(255,122,0,0.42)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-[var(--trainr-accent-hover)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.14),0_20px_48px_-12px_rgba(255,122,0,0.48)] active:scale-[0.98] sm:flex-none sm:min-w-[200px]"
+                  href={hero.primaryHref}
+                  className="group inline-flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-[var(--tr-radius-lg)] bg-trainr-accent px-7 text-[0.9375rem] font-extrabold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_16px_40px_-12px_rgba(255,122,0,0.42)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-[var(--trainr-accent-hover)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.14),0_20px_48px_-12px_rgba(255,122,0,0.48)] active:scale-[0.98] sm:flex-none sm:min-w-[220px]"
                 >
                   {hero.primaryCta}
                   <ChevronRight className="opacity-90 transition-transform duration-200 group-hover:translate-x-0.5" />

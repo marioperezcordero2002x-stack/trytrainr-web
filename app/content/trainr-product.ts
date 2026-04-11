@@ -23,18 +23,59 @@ export const trainrProduct = {
   hero: {
     eyebrow: "Trainr",
     domainLine: "trytrainr.com",
-    headline: "Tu gym social,",
-    headlineAccent: "en un solo hub.",
+    headline: "La red social donde",
+    headlineAccent: "el progreso importa.",
     subhead:
-      "Seis pestañas fijas (Inicio, Explorar, Chats, Entreno, Nutrición, Premium), barra superior con perfil, notificaciones, búsqueda y nuevo post. Feed con publicaciones, likes y comentarios; chat uno a uno; planes de entreno por días y ejercicios; nutrición con macros y comidas; Premium con suscripción mensual. Oscuro #0F0F0F y acento #FF7A00 como en la app.",
-    primaryCta: "Cómo está construido",
-    secondaryCta: "App Store · en curso",
-    tertiaryCta: "Contacto producto",
+      "Entrena, comparte y habla con gente que va en serio. Feed con tu evolución visible, chat directo, planes de entreno, nutrición con macros y una comunidad que entiende el gym — todo en una app oscura, rápida y sin ruido de otras redes.",
+    primaryCta: "Ver qué incluye la app",
+    primaryHref: "#features" as const,
+    secondaryCta: "Próximamente en App Store",
+    tertiaryCta: "Prioridad acceso · escríbenos",
     specRows: [
-      { label: "Navegación", value: "6 pestañas en hub" },
-      { label: "Chat", value: "Conversaciones 1:1" },
-      { label: "Monetización", value: "Premium vía tienda" },
+      { label: "Tu evolución", value: "Visible en el feed" },
+      { label: "Conexión real", value: "Chat 1:1 con atletas" },
+      { label: "Plan completo", value: "Entreno + nutrición" },
     ] as const,
+  },
+
+  featuresIntro: {
+    eyebrow: "Todo en una app",
+    title: "Diseñada para quien entrena, no para quien presume",
+    lead: "Cada función empuja a constancia y contacto útil — no a viralidad vacía.",
+  },
+
+  differentiators: {
+    eyebrow: "Diferencia",
+    title: "Por qué Trainr es diferente",
+    lead:
+      "No es otra red genérica con fotos de comida. Está pensada para disciplina compartida.",
+    points: [
+      {
+        title: "Comunidad de progreso real",
+        body: "El centro es lo que entrenas y cómo evolucionas — no el postureo del día.",
+      },
+      {
+        title: "Menos ruido, más hábito",
+        body: "Interfaz oscura y directa para centrarte en sesiones, mensajes útiles y tu plan.",
+      },
+      {
+        title: "Conexión entre gente seria",
+        body: "Habla con perfiles que entienden cargas, RPE y constancia — no con desconocidos al azar.",
+      },
+      {
+        title: "Tu evolución en foco",
+        body: "Perfil, feed y herramientas alineados para que veas el hilo de semanas y meses.",
+      },
+    ] as const,
+  },
+
+  finalCta: {
+    title: "Sé de los primeros en usar Trainr",
+    lead:
+      "La app está en marcha: déjanos tu interés y te respondemos con novedades de lanzamiento.",
+    primaryLabel: "Quiero prioridad",
+    secondaryLabel: "Ver la interfaz",
+    secondaryHref: "#app" as const,
   },
 
   about: {
@@ -76,64 +117,64 @@ export const trainrProduct = {
   features: [
     {
       id: "feed",
-      title: "Feed social (Inicio + Explorar)",
+      title: "Tu progreso, visible",
       description:
-        "Dos superficies en el hub: el feed principal y Explorar para descubrir contenido público. Cada publicación lleva autor, texto, imagen opcional, contadores de likes y comentarios, y puede enlazar a una rutina (routineId).",
+        "Comparte entrenos y avances en un feed pensado para el gym: texto, foto, reacciones y comentarios de gente que entiende el contexto — más que likes vacíos.",
       icon: "feed" as const,
     },
     {
       id: "chat",
-      title: "Chats privados",
+      title: "Habla con quien entrena como tú",
       description:
-        "Lista de conversaciones uno a uno, último mensaje y hora. Entrada a chat individual y flujo para iniciar conversación. Contador de no leídos en la pestaña inferior.",
+        "Chats uno a uno para coordinar series, dudas de técnica o simplemente apoyo. Lista clara, último mensaje a la vista y aviso si hay algo sin leer.",
       icon: "chat" as const,
     },
     {
       id: "profile",
-      title: "Perfil fitness",
+      title: "Tu identidad fitness",
       description:
-        "Perfil con foto, identidad, estadísticas, publicaciones en grid y acciones de seguimiento y mensaje. Pensado como tarjeta de visita dentro de la comunidad.",
+        "Perfil con lo que importa: quién eres, tu grid de publicaciones, seguidores y un atajo para escribir a quien quieras conocer mejor.",
       icon: "profile" as const,
     },
     {
       id: "social",
-      title: "Comunidad y comentarios",
+      title: "Encuentra y comenta con propósito",
       description:
-        "Búsqueda de usuarios desde el hub. Seguidores y seguidos. Comentarios en publicaciones con pantalla dedicada — el lazo social alrededor del feed.",
+        "Busca usuarios, mira seguidores y seguidos, y mete en los posts el comentario que aporta — no el emoji suelto.",
       icon: "social" as const,
     },
     {
       id: "training",
-      title: "Planes de entreno",
+      title: "Planes que te quitan excusas",
       description:
-        "Pestaña Entreno con planes por nivel y frecuencia semanal: días nombrados y listas de ejercicios con series/reps. Progreso ligado a documentos de usuario y ejercicios completados en Firestore.",
+        "Rutinas por nivel y días de la semana con ejercicios y series concretas. Menos improvisación, más estructura para seguir el plan.",
       icon: "training" as const,
     },
     {
       id: "nutrition",
-      title: "Nutrición estructurada",
+      title: "Nutrición con números claros",
       description:
-        "Pestaña Nutrición con planes como volumen o definición: rangos de kcal, proteína, carbohidratos y grasas, y comidas del día desglosadas en alimentos concretos.",
+        "Planes tipo volumen o definición con kcal y macros, y comidas del día desglosadas para que no adivines qué comer.",
       icon: "nutrition" as const,
     },
     {
       id: "premium",
-      title: "Trainr Premium",
+      title: "Premium sin fricción",
       description:
-        "Suscripción mensual vía RevenueCat: sin anuncios en feed y navegación, insignia en perfil, contenido exclusivo, estadísticas avanzadas en expansión y acceso anticipado a novedades. Restaurar compras soportado.",
+        "Suscripción mensual: sin anuncios que te saquen del foco, insignia en perfil, extras para la comunidad y prioridad en lo que venga nuevo.",
       icon: "premium" as const,
     },
   ] as const,
 
   showcase: {
-    eyebrow: "Interfaz",
-    title: "Misma jerarquía que en el binario",
+    eyebrow: "Dentro de la app",
+    title: "Tres pantallas que usas cada día",
     lead:
-      "Referencia visual alineada a `TrainrAppCard`, `TrainrPrimaryButton` y tokens `TrainrColors`: fondo #0F0F0F, superficies #161616 / #1B1B1B, acento #FF7A00. Sustituye por capturas del simulador cuando quieras material de prensa.",
+      "Así se conecta el día a día: ver el feed, revisar un perfil y cerrar el círculo en el chat. Sustituye por capturas reales del simulador cuando publiques.",
     devices: [
-      { label: "Inicio", caption: "Feed · post · acciones" },
-      { label: "Chats", caption: "Lista 1:1" },
-      { label: "Entreno", caption: "Plan · día" },
+      { label: "Feed", caption: "Progreso y conversación" },
+      { label: "Perfil", caption: "Identidad y grid" },
+      { label: "Chat", caption: "Mensajes directos" },
     ] as const,
   },
 } as const;
