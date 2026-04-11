@@ -171,22 +171,12 @@ export const trainrProduct = {
 
   showcase: {
     eyebrow: "Producto",
-    title: "Una app, tres capas conectadas",
-    lead:
-      "Progreso visible en el feed, identidad en el perfil y conversación directa en el chat — el circuito que ya recorres en Trainr.",
+    title: "Así se ve tu progreso en Trainr",
+    lead: "Feed serio, perfil con peso y chat directo — tres capas, una sola app.",
     devices: [
-      {
-        label: "Feed",
-        caption: "Progreso documentado que la comunidad ve y celebra.",
-      },
-      {
-        label: "Perfil",
-        caption: "Identidad fitness, stats y red en un solo lugar.",
-      },
-      {
-        label: "Chat",
-        caption: "Acuerdos y apoyo entre series, sin salir del entreno.",
-      },
+      { label: "Feed", caption: "Tu avance, con contexto" },
+      { label: "Perfil", caption: "Identidad que se nota" },
+      { label: "Chat", caption: "Acuerdos entre series" },
     ] as const,
   },
 } as const;
