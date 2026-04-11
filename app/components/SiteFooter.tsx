@@ -44,8 +44,9 @@ export function SiteFooter() {
               </p>
             </div>
             <p className="tr-text-body-sm mt-4 max-w-sm text-pretty">
-              Producto fitness con mentalidad de software serio: pocos
-              elementos, alta legibilidad, acento naranja con función clara.
+              Misma propuesta que la app: hub de Inicio, Explorar, Chats,
+              Entreno, Nutrición y Premium; feed social y chat 1:1 con datos en
+              Firestore.
             </p>
             <p className="mt-5 font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-[var(--tr-text-faint)]">
               trytrainr.com

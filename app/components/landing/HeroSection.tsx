@@ -1,6 +1,9 @@
+import { trainrProduct } from "../../content/trainr-product";
 import { RevealOnView } from "../RevealOnView";
 import { Container } from "../system/Container";
 import { Eyebrow } from "../system/Eyebrow";
+
+const { hero, hubTabs, supportEmail } = trainrProduct;
 
 function ChevronRight({ className }: { className?: string }) {
   return (
@@ -23,7 +26,7 @@ function ChevronRight({ className }: { className?: string }) {
   );
 }
 
-/** Preview de producto en hero: marco tipo dispositivo + Dynamic Island. */
+/** Preview alineado a FeedPostCard + TrainrAppCard: post con likes/comentarios. */
 function HeroDevicePreview() {
   return (
     <div className="relative mx-auto w-full max-w-[300px] lg:max-w-[320px]">
@@ -35,77 +38,56 @@ function HeroDevicePreview() {
         className="relative rounded-[2.125rem] p-[10px] shadow-[var(--tr-shadow-device)]"
         style={{
           background:
-            "linear-gradient(145deg, #25252c 0%, #121218 40%, #0a0a0f 100%)",
+            "linear-gradient(145deg, #2a2a30 0%, #1a1a1f 40%, #121214 100%)",
         }}
       >
         <div
-          className="relative overflow-hidden rounded-[1.65rem] bg-[#050506] ring-1 ring-black/50"
+          className="relative overflow-hidden rounded-[1.65rem] bg-[#0a0a0a] ring-1 ring-black/50"
           style={{ aspectRatio: "9 / 19" }}
         >
-          {/* Brillo superficial */}
           <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.04] via-transparent to-transparent"
+            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.035] via-transparent to-transparent"
             aria-hidden
           />
-          {/* Barra de estado */}
-          <div className="relative z-10 flex h-11 items-end justify-between px-6 pb-1 pt-2">
-            <span
-              className="font-mono text-[11px] font-semibold tabular-nums text-zinc-500"
-              aria-hidden
-            >
+          <div className="relative z-10 flex h-11 items-end justify-between px-5 pb-1 pt-2">
+            <span className="font-mono text-[11px] font-semibold tabular-nums text-[var(--tr-text-tertiary)]">
               9:41
             </span>
-            <div className="absolute left-1/2 top-2 h-[28px] w-[88px] -translate-x-1/2 rounded-full bg-black ring-1 ring-white/[0.12]" />
-            <div className="flex items-center gap-1 pr-0.5" aria-hidden>
-              <div className="h-2.5 w-3 rounded-sm border border-zinc-600/80" />
-            </div>
+            <div className="absolute left-1/2 top-2 h-[28px] w-[88px] -translate-x-1/2 rounded-full bg-black ring-1 ring-white/[0.1]" />
+            <div className="h-2.5 w-5 rounded-sm border border-[var(--tr-border-medium)]" />
           </div>
-          {/* Contenido app */}
           <div className="relative z-10 space-y-3 px-3 pb-8 pt-1">
-            <div className="flex items-center justify-between px-1">
-              <span className="text-[13px] font-semibold tracking-tight text-white">
-                Hoy
-              </span>
-              <span className="rounded-md bg-[var(--trainr-accent-soft)] px-2 py-0.5 font-mono text-[10px] font-semibold text-trainr-accent">
-                Fuerza
-              </span>
-            </div>
-            <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-1)] p-3 shadow-[var(--tr-shadow-inset)]">
-              <div className="flex gap-3">
-                <div className="h-10 w-10 shrink-0 rounded-full bg-gradient-to-br from-zinc-700 to-zinc-900 ring-1 ring-white/[0.08]" />
+            <p className="px-1 text-[13px] font-semibold text-[var(--tr-text-primary)]">
+              Inicio
+            </p>
+            <div className="overflow-hidden rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] shadow-[var(--tr-shadow-inset)]">
+              <div className="flex gap-2.5 border-b border-[var(--tr-border)] px-3 py-2.5">
+                <div className="h-9 w-9 shrink-0 rounded-full bg-gradient-to-br from-zinc-600 to-zinc-900 ring-1 ring-white/[0.08]" />
                 <div className="min-w-0 flex-1">
-                  <p className="text-[12px] font-medium text-zinc-200">
-                    Press banca · 5×5
+                  <p className="text-[12px] font-semibold text-[var(--tr-text-primary)]">
+                    Ana Ruiz
                   </p>
-                  <p className="mt-0.5 text-[11px] text-zinc-500">
-                    Serie top a 82,5 kg
+                  <p className="text-[11px] text-[var(--tr-text-tertiary)]">
+                    @ana · 2 h
                   </p>
                 </div>
               </div>
-              <div className="mt-3 h-px w-full bg-[var(--tr-border)]" />
-              <p className="mt-2.5 text-[11px] leading-snug text-zinc-500">
-                RPE 8. Próxima sesión: miércoles.
+              <p className="px-3 py-2 text-[12px] leading-snug text-[var(--tr-text-secondary)]">
+                4×8 en sentadilla. RPE 7,5. Siguiente bloque: peso muerto.
               </p>
-            </div>
-            <div className="rounded-[var(--tr-radius-md)] border border-dashed border-[var(--tr-border-medium)] bg-white/[0.02] px-3 py-6 text-center">
-              <p className="text-[11px] font-medium text-zinc-600">
-                + Registrar entreno
-              </p>
-            </div>
-            <div className="flex items-center gap-2 px-1">
-              <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-zinc-800">
-                <div
-                  className="h-full w-[72%] rounded-full bg-trainr-accent/85"
-                  style={{
-                    boxShadow: "0 0 12px rgba(232, 87, 32, 0.25)",
-                  }}
-                />
+              <div className="mx-3 mb-2 aspect-[16/10] rounded-[var(--tr-radius-sm)] bg-gradient-to-br from-zinc-800/60 to-zinc-950 ring-1 ring-[var(--tr-border)]" />
+              <div className="flex gap-4 border-t border-[var(--tr-border)] px-3 py-2 text-[11px] text-[var(--tr-text-tertiary)]">
+                <span>18 me gusta</span>
+                <span>5 comentarios</span>
               </div>
-              <span className="font-mono text-[10px] text-zinc-600">72%</span>
+            </div>
+            <div className="rounded-[var(--tr-radius-md)] border border-dashed border-[var(--tr-border-medium)] bg-white/[0.02] py-5 text-center">
+              <p className="text-[11px] font-medium text-[var(--tr-text-faint)]">
+                Explorar · solo perfiles públicos
+              </p>
             </div>
           </div>
-          {/* Home indicator */}
-          <div className="absolute bottom-2 left-1/2 h-1 w-[28%] -translate-x-1/2 rounded-full bg-zinc-700/90" />
+          <div className="absolute bottom-2 left-1/2 z-10 h-1 w-[28%] -translate-x-1/2 rounded-full bg-zinc-600/90" />
         </div>
       </div>
     </div>
@@ -133,12 +115,15 @@ export function HeroSection() {
           <div className="lg:col-span-6 xl:col-span-6">
             <RevealOnView>
               <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                <Eyebrow>Trainr</Eyebrow>
-                <span className="hidden text-[var(--tr-text-faint)] sm:inline" aria-hidden>
+                <Eyebrow>{hero.eyebrow}</Eyebrow>
+                <span
+                  className="hidden text-[var(--tr-text-faint)] sm:inline"
+                  aria-hidden
+                >
                   ·
                 </span>
                 <span className="font-mono text-[var(--tr-text-caption)] font-medium uppercase tracking-[0.12em] text-[var(--tr-text-tertiary)]">
-                  trytrainr.com
+                  {hero.domainLine}
                 </span>
               </div>
             </RevealOnView>
@@ -148,38 +133,49 @@ export function HeroSection() {
                 id="hero-heading"
                 className="tr-text-display text-balance text-[var(--tr-text-primary)]"
               >
-                El estándar social
+                {hero.headline}
                 <span className="block text-[var(--tr-text-secondary)]">
-                  del entreno serio.
+                  {hero.headlineAccent}
                 </span>
               </h1>
             </RevealOnView>
 
             <RevealOnView delayMs={75} className="mt-6 max-w-xl sm:mt-7">
-              <p className="tr-text-lead text-pretty">
-                Feed, mensajes y registro de sesiones en un solo producto.
-                Interfaz oscura, navegación directa y acento naranja solo donde
-                aporta claridad — no donde distrae.
+              <p className="tr-text-lead text-pretty">{hero.subhead}</p>
+            </RevealOnView>
+
+            <RevealOnView delayMs={95} className="mt-5">
+              <p className="tr-text-overline mb-2 text-[var(--tr-text-faint)]">
+                Barra inferior en app
               </p>
+              <ul className="flex flex-wrap gap-2" aria-label="Pestañas del hub">
+                {hubTabs.map((tab) => (
+                  <li key={tab}>
+                    <span className="inline-block rounded-[var(--tr-radius-pill)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] px-3 py-1.5 text-center text-[11px] font-semibold tracking-wide text-[var(--tr-text-secondary)]">
+                      {tab}
+                    </span>
+                  </li>
+                ))}
+              </ul>
             </RevealOnView>
 
             <RevealOnView delayMs={110} className="mt-8 sm:mt-10">
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-stretch">
                 <a
                   href="#about"
-                  className="group inline-flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-[var(--tr-radius-pill)] bg-trainr-accent px-7 text-[0.9375rem] font-semibold text-[#0a0a0b] shadow-[0_0_0_1px_rgba(255,255,255,0.08),0_16px_40px_-12px_rgba(232,87,32,0.45)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-[var(--trainr-accent-hover)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_20px_48px_-12px_rgba(232,87,32,0.5)] active:scale-[0.98] sm:flex-none sm:min-w-[200px]"
+                  className="group inline-flex min-h-[52px] flex-1 items-center justify-center gap-2 rounded-[var(--tr-radius-lg)] bg-trainr-accent px-7 text-[0.9375rem] font-extrabold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_16px_40px_-12px_rgba(255,122,0,0.42)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-[var(--trainr-accent-hover)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.14),0_20px_48px_-12px_rgba(255,122,0,0.48)] active:scale-[0.98] sm:flex-none sm:min-w-[200px]"
                 >
-                  Ver el producto
-                  <ChevronRight className="opacity-70 transition-transform duration-200 group-hover:translate-x-0.5" />
+                  {hero.primaryCta}
+                  <ChevronRight className="opacity-90 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </a>
                 <span className="inline-flex min-h-[52px] flex-1 cursor-default items-center justify-center rounded-[var(--tr-radius-pill)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)] px-5 text-center text-[0.875rem] font-medium text-[var(--tr-text-tertiary)] sm:flex-none sm:px-6">
-                  App Store · en curso
+                  {hero.secondaryCta}
                 </span>
                 <a
-                  href="mailto:support@trytrainr.com"
+                  href={`mailto:${supportEmail}`}
                   className="inline-flex min-h-[52px] items-center justify-center px-2 text-[0.875rem] font-medium text-[var(--tr-text-secondary)] underline decoration-[var(--tr-border-strong)] underline-offset-[6px] transition-colors hover:text-[var(--tr-text-primary)] sm:px-4"
                 >
-                  Escríbenos
+                  {hero.tertiaryCta}
                 </a>
               </div>
             </RevealOnView>
@@ -187,18 +183,14 @@ export function HeroSection() {
             <RevealOnView delayMs={145} className="mt-10 sm:mt-12">
               <div className="tr-divider-fade mb-6 sm:mb-8" />
               <ul className="grid gap-3 sm:grid-cols-3 sm:gap-4">
-                {[
-                  { k: "Cobertura", v: "iOS primero" },
-                  { k: "Enfoque", v: "Entreno, no viralidad" },
-                  { k: "Contacto", v: "support@trytrainr.com" },
-                ].map((row) => (
+                {hero.specRows.map((row) => (
                   <li
-                    key={row.k}
+                    key={row.label}
                     className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] px-4 py-3 shadow-[var(--tr-shadow-inset)]"
                   >
-                    <p className="tr-text-overline">{row.k}</p>
-                    <p className="mt-1 text-[0.8125rem] font-medium text-zinc-300">
-                      {row.v}
+                    <p className="tr-text-overline">{row.label}</p>
+                    <p className="mt-1 text-[0.8125rem] font-medium text-[var(--tr-text-primary)]">
+                      {row.value}
                     </p>
                   </li>
                 ))}

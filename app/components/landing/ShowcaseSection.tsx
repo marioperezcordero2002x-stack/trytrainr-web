@@ -1,15 +1,21 @@
 import type { ReactNode } from "react";
+import { trainrProduct } from "../../content/trainr-product";
 import { RevealOnView } from "../RevealOnView";
 import { Eyebrow } from "../system/Eyebrow";
 import { Section } from "../system/Section";
 
+const showcase = trainrProduct.showcase;
+const [deviceA, deviceB, deviceC] = showcase.devices;
+
 function DeviceFrame({
   children,
   label,
+  caption,
   className = "",
 }: {
   children: ReactNode;
   label: string;
+  caption: string;
   className?: string;
 }) {
   return (
@@ -47,8 +53,11 @@ function DeviceFrame({
           </div>
         </div>
       </div>
-      <p className="mt-5 font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--tr-text-faint)]">
+      <p className="mt-5 text-center font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--tr-text-faint)]">
         {label}
+      </p>
+      <p className="mt-1 text-center text-[11px] text-[var(--tr-text-tertiary)]">
+        {caption}
       </p>
     </div>
   );
@@ -103,14 +112,14 @@ function ScreenChat() {
           </p>
         </div>
         <div className="ml-auto max-w-[88%] rounded-2xl rounded-br-md bg-trainr-accent px-3 py-2">
-          <p className="text-[12px] font-medium leading-snug text-[#0c0c0e]">
+          <p className="text-[12px] font-semibold leading-snug text-white">
             Hecho. Última a 80 kg limpio.
           </p>
         </div>
       </div>
       <div className="flex gap-2 rounded-2xl border border-[var(--tr-border-medium)] bg-[var(--tr-surface-1)] p-2">
         <div className="h-9 min-w-0 flex-1 rounded-lg bg-[#08080a] ring-1 ring-[var(--tr-border)]" />
-        <div className="flex h-9 w-11 items-center justify-center rounded-lg bg-trainr-accent text-[#0c0c0e] shadow-[0_0_20px_-6px_rgba(232,87,32,0.6)]">
+        <div className="flex h-9 w-11 items-center justify-center rounded-lg bg-trainr-accent text-white shadow-[0_0_20px_-6px_rgba(255,122,0,0.45)]">
           <span className="text-lg font-light leading-none">↑</span>
         </div>
       </div>
@@ -122,33 +131,25 @@ function ScreenStats() {
   return (
     <div className="space-y-4 px-3 pb-10 pt-1">
       <div>
-        <p className="text-[11px] font-medium text-zinc-500">Semana 14</p>
-        <p className="mt-1 text-2xl font-semibold tabular-nums tracking-tight text-white">
-          4<span className="text-trainr-accent">/</span>5
+        <p className="text-[13px] font-semibold text-white">Planes</p>
+        <p className="text-[11px] text-[var(--tr-text-tertiary)]">
+          Principiante · 3 días / semana
         </p>
-        <p className="text-[11px] text-zinc-500">sesiones completadas</p>
-      </div>
-      <div className="flex h-28 items-end justify-between gap-1.5">
-        {[35, 55, 42, 78, 50, 92, 68].map((h, j) => (
-          <div
-            key={j}
-            className="w-full rounded-t-[3px] bg-zinc-800/90"
-            style={{ height: `${h}%` }}
-          />
-        ))}
+        <p className="mt-3 text-[11px] font-medium text-[var(--tr-text-secondary)]">
+          Día 2 — Full Body B
+        </p>
+        <ul className="mt-2 space-y-1.5 text-[10px] leading-snug text-[var(--tr-text-tertiary)]">
+          <li>· Press hombro mancuernas — 3×10-12</li>
+          <li>· Remo máquina — 3×10-12</li>
+          <li>· Curl femoral — 3×12</li>
+        </ul>
       </div>
       <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-1)] p-3">
-        <div className="flex items-center justify-between">
-          <span className="text-[11px] text-zinc-500">Plan fuerza · fase 2</span>
-          <span className="rounded-full bg-[var(--trainr-accent-soft)] px-2 py-0.5 text-[10px] font-semibold text-trainr-accent">
-            Pro
-          </span>
-        </div>
-        <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-zinc-800">
-          <div className="h-full w-[58%] rounded-full bg-trainr-accent/90" />
-        </div>
-        <p className="mt-2 text-[10px] text-zinc-600">
-          Próximo hito: deload en 9 días
+        <p className="text-[10px] font-medium text-[var(--tr-text-tertiary)]">
+          Ejercicios completados
+        </p>
+        <p className="mt-1 text-[11px] text-[var(--tr-text-secondary)]">
+          Sincronizado con tu usuario en Firestore.
         </p>
       </div>
     </div>
@@ -175,17 +176,15 @@ export function ShowcaseSection() {
 
       <div className="relative">
         <RevealOnView className="max-w-3xl">
-          <Eyebrow>Interfaz</Eyebrow>
+          <Eyebrow>{showcase.eyebrow}</Eyebrow>
           <h2
             id="showcase-heading"
             className="tr-text-h2 mt-5 text-balance text-[var(--tr-text-primary)]"
           >
-            Misma disciplina visual en cada vista
+            {showcase.title}
           </h2>
           <p className="tr-text-lead mt-5 max-w-2xl text-pretty">
-            Tres pantallas representativas: consumo social, conversación
-            one-to-one y lectura de carga semanal. Sustituye por capturas de
-            producción cuando el build esté congelado para prensa.
+            {showcase.lead}
           </p>
         </RevealOnView>
 
@@ -198,7 +197,7 @@ export function ShowcaseSection() {
                   Vista previa de producto
                 </p>
                 <p className="mt-2 text-[0.875rem] text-[var(--tr-text-secondary)]">
-                  Feed · conversación · carga de trabajo
+                  {deviceA.caption} · {deviceB.caption} · {deviceC.caption}
                 </p>
               </div>
               <div className="flex items-center gap-2" aria-hidden>
@@ -209,13 +208,25 @@ export function ShowcaseSection() {
             </div>
 
             <div className="flex flex-col items-stretch gap-12 lg:flex-row lg:items-start lg:justify-center lg:gap-8 xl:gap-12">
-              <DeviceFrame label="Explorar" className="lg:pt-0">
+              <DeviceFrame
+                label={deviceA.label}
+                caption={deviceA.caption}
+                className="lg:pt-0"
+              >
                 <ScreenFeed />
               </DeviceFrame>
-              <DeviceFrame label="Coordinar" className="lg:translate-y-12">
+              <DeviceFrame
+                label={deviceB.label}
+                caption={deviceB.caption}
+                className="lg:translate-y-12"
+              >
                 <ScreenChat />
               </DeviceFrame>
-              <DeviceFrame label="Medir" className="lg:pt-0">
+              <DeviceFrame
+                label={deviceC.label}
+                caption={deviceC.caption}
+                className="lg:pt-0"
+              >
                 <ScreenStats />
               </DeviceFrame>
             </div>

@@ -1,34 +1,9 @@
+import { trainrProduct } from "../../content/trainr-product";
 import { RevealOnView } from "../RevealOnView";
 import { Eyebrow } from "../system/Eyebrow";
 import { Section } from "../system/Section";
 
-const pillars = [
-  {
-    label: "Feed",
-    title: "Contexto de gym",
-    body: "Publicaciones ligadas al entreno: cargas, bloques, constancia. Nada de contenido ajeno al plan.",
-  },
-  {
-    label: "Red",
-    title: "Seguimiento con intención",
-    body: "Sigues perfiles por disciplina y estilo, no por algoritmo o moda pasajera.",
-  },
-  {
-    label: "Chat",
-    title: "Mensajes acotados",
-    body: "Privado, al lado del calendario de sesiones. Sin mezclar con el resto de tu vida digital.",
-  },
-  {
-    label: "Registro",
-    title: "Sesión documentada",
-    body: "Cada entreno deja rastro útil: qué hiciste, cuándo y cómo se sintió.",
-  },
-  {
-    label: "Hábito",
-    title: "Ritmo semanal",
-    body: "La interfaz refuerza la cadencia: ver el hilo de la semana importa más que un pico aislado.",
-  },
-] as const;
+const { about } = trainrProduct;
 
 export function AboutSection() {
   return (
@@ -41,21 +16,16 @@ export function AboutSection() {
     >
       <div className="lg:grid lg:grid-cols-12 lg:gap-x-12 xl:gap-x-16">
         <RevealOnView className="lg:col-span-5">
-          <Eyebrow>Qué es Trainr</Eyebrow>
+          <Eyebrow>{about.eyebrow}</Eyebrow>
           <h2
             id="about-heading"
-            className="tr-text-h2 mt-5 max-w-[20ch] text-balance text-[var(--tr-text-primary)] sm:max-w-none"
+            className="tr-text-h2 mt-5 max-w-[22ch] text-balance text-[var(--tr-text-primary)] sm:max-w-none"
           >
-            Una capa social construida alrededor del entreno.
+            {about.title}
           </h2>
-          <p className="tr-text-body mt-6 max-w-md text-pretty">
-            Otras redes premian el ruido. Trainr asume que ya tienes disciplina
-            y te da herramientas para sostenerla: visibilidad del progreso,
-            conversación útil y registro sin fricción.
-          </p>
+          <p className="tr-text-body mt-6 max-w-md text-pretty">{about.body}</p>
           <p className="tr-text-body-sm mt-5 max-w-md text-pretty text-[var(--tr-text-tertiary)]">
-            Misma línea visual que la app móvil: negro profundo, grises
-            calibrados, naranja solo para jerarquía y estados clave.
+            {about.footnote}
           </p>
         </RevealOnView>
 
@@ -65,7 +35,7 @@ export function AboutSection() {
         >
           <div className="overflow-hidden rounded-[var(--tr-radius-xl)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] shadow-[var(--tr-shadow-card)]">
             <div className="divide-y divide-[var(--tr-border)]">
-              {pillars.map((item, i) => (
+              {about.pillars.map((item, i) => (
                 <div
                   key={item.label}
                   className="group flex gap-5 p-5 transition-colors duration-200 hover:bg-[var(--tr-surface-1)] sm:gap-6 sm:p-6"

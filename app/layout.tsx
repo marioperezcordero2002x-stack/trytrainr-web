@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     template: "%s · Trainr",
   },
   description:
-    "Trainr: feed, chat y registro de entrenos en una app social fitness oscura y deliberada. trytrainr.com",
+    "Trainr: hub de 6 pestañas (Inicio, Explorar, Chats, Entreno, Nutrición, Premium), feed social, chat 1:1, planes de entreno y dietas. App iOS. trytrainr.com",
   metadataBase: new URL("https://trytrainr.com"),
   openGraph: {
     title: "Trainr — App social fitness",
     description:
-      "El estándar social del entreno serio. Feed, mensajes y métricas en un solo producto.",
+      "Feed, Explorar, Chats, Entreno, Nutrición y Premium en un solo hub. Social fitness con Firestore.",
     url: "https://trytrainr.com",
     siteName: "Trainr",
     locale: "es_ES",

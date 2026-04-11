@@ -2,40 +2,44 @@
 
 /* ─── Trainr design system (tokens) ─── */
 :root {
-  /* Canvas & bands (ritmo vertical: alternancia densidad) */
-  --tr-canvas: #020203;
-  --tr-canvas-subtle: #050508;
-  --tr-band: #08080d;
-  --tr-band-deep: #050508;
+  /*
+   * Alineado con Flutter TrainrTokens:
+   * TrainrColors.background / surface / surfaceElevated / accent / accentSoft
+   * TrainrRadii.sm..xxl (card = xl 24px, button = lg 20px)
+   */
+  --tr-canvas: #0f0f0f;
+  --tr-canvas-subtle: #121212;
+  --tr-band: #141414;
+  --tr-band-deep: #101010;
 
-  /* Surfaces (elevación) */
-  --tr-surface-0: #0b0b0f;
-  --tr-surface-1: #101014;
-  --tr-surface-2: #16161c;
-  --tr-surface-glass: rgba(8, 8, 12, 0.72);
+  /* Surfaces (elevación) — #161616 / #1B1B1B */
+  --tr-surface-0: #161616;
+  --tr-surface-1: #1b1b1b;
+  --tr-surface-2: #212121;
+  --tr-surface-glass: rgba(15, 15, 15, 0.78);
 
   /* Text */
-  --tr-text-primary: #f4f4f5;
-  --tr-text-secondary: #a1a1aa;
-  --tr-text-tertiary: #71717a;
-  --tr-text-faint: #52525b;
+  --tr-text-primary: #ffffff;
+  --tr-text-secondary: rgba(255, 255, 255, 0.72);
+  --tr-text-tertiary: rgba(255, 255, 255, 0.52);
+  --tr-text-faint: rgba(255, 255, 255, 0.38);
 
-  /* Accent (estratégico, no decorativo) */
-  --trainr-accent: #e85720;
-  --trainr-accent-hover: #f06a35;
-  --trainr-accent-soft: rgba(232, 87, 32, 0.11);
-  --trainr-accent-line: rgba(232, 87, 32, 0.38);
-  --trainr-accent-glow: rgba(232, 87, 32, 0.14);
+  /* Accent — #FF7A00 / #FFA54B */
+  --trainr-accent: #ff7a00;
+  --trainr-accent-hover: #ff8f26;
+  --trainr-accent-soft: rgba(255, 122, 0, 0.14);
+  --trainr-accent-line: rgba(255, 122, 0, 0.42);
+  --trainr-accent-glow: rgba(255, 122, 0, 0.12);
 
-  /* Borders */
-  --tr-border: rgba(255, 255, 255, 0.055);
-  --tr-border-medium: rgba(255, 255, 255, 0.09);
-  --tr-border-strong: rgba(255, 255, 255, 0.12);
+  /* Borders — TrainrColors.borderSubtle(0.08) */
+  --tr-border: rgba(255, 255, 255, 0.08);
+  --tr-border-medium: rgba(255, 255, 255, 0.12);
+  --tr-border-strong: rgba(255, 255, 255, 0.16);
 
-  /* Radii (consistente en toda la UI) */
-  --tr-radius-sm: 0.625rem;
-  --tr-radius-md: 0.875rem;
-  --tr-radius-lg: 1.125rem;
+  /* Radii (12 / 16 / 20 / 24 / 28 px) */
+  --tr-radius-sm: 0.75rem;
+  --tr-radius-md: 1rem;
+  --tr-radius-lg: 1.25rem;
   --tr-radius-xl: 1.5rem;
   --tr-radius-2xl: 1.75rem;
   --tr-radius-pill: 624.9375rem;
