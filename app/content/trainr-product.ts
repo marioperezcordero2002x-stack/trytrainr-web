@@ -23,21 +23,21 @@ export const trainrProduct = {
   hero: {
     eyebrow: "Trainr",
     domainLine: "trytrainr.com",
-    trustBadge: "Prioridad de acceso · lista abierta",
+    trustBadge: "Lista de acceso abierta",
     hubOverline: "Seis pestañas, un solo hub",
-    headline: "El gym, en red — con la gente que sí cuenta.",
-    headlineAccent: "Social fitness con avance visible y chat directo.",
+    headline: "Menos postureo. Más progreso que se ve.",
+    headlineAccent: "La app social fitness para quien entrena de verdad.",
     subhead:
-      "Una app social fitness donde publicas progreso con contexto, sigues perfiles serios y hablas 1:1 cuando toca coordinar o apoyar. Planes de entreno, macros y seis pestañas en un hub oscuro: disciplina compartida, no viralidad vacía.",
-    primaryCta: "Explorar la app",
-    primaryHref: "#features" as const,
-    secondaryCta: "Ver la interfaz",
+      "Publica tu evolución en el feed, conecta con una comunidad seria y mantén el ritmo con planes de entreno, macros y chat directo — todo en un hub oscuro pensado para constancia, no para viralidad vacía.",
+    primaryCta: "Únete ahora",
+    primaryHref: "#cta" as const,
+    secondaryCta: "Ver la app",
     secondaryHref: "#app" as const,
-    tertiaryCta: "Pedir prioridad de acceso",
+    tertiaryCta: "O escríbenos para prioridad",
     specRows: [
-      { label: "Progreso", value: "Feed con contexto de entreno" },
-      { label: "Comunidad", value: "Perfiles y chat sin ruido" },
-      { label: "Hábito", value: "Entreno + nutrición en el hub" },
+      { label: "Progreso", value: "Visible en el feed" },
+      { label: "Comunidad", value: "Perfiles y chat serios" },
+      { label: "Entreno", value: "Planes + nutrición en el hub" },
     ] as const,
   },
 
@@ -49,27 +49,34 @@ export const trainrProduct = {
 
   differentiators: {
     eyebrow: "Diferencia",
-    title: "Por qué Trainr es diferente",
-    lead:
-      "No es otra red genérica con fotos de comida. Está pensada para disciplina compartida.",
+    title: "Aquí no vienes a aparentar.",
+    lead: "Vienes a progresar. Y se nota en cada publicación.",
     points: [
       {
-        title: "Comunidad de progreso real",
-        body: "El centro es lo que entrenas y cómo evolucionas — no el postureo del día.",
+        title: "Progreso, no escenario",
+        body: "El feed es para sesiones y avances — no para postureo del día.",
       },
       {
-        title: "Menos ruido, más hábito",
-        body: "Interfaz oscura y directa para centrarte en sesiones, mensajes útiles y tu plan.",
+        title: "Hub oscuro, cabeza clara",
+        body: "Entreno, macros y chat sin el ruido de otras redes.",
       },
       {
-        title: "Conexión entre gente seria",
-        body: "Habla con perfiles que entienden cargas, RPE y constancia — no con desconocidos al azar.",
+        title: "Gente que habla tu idioma",
+        body: "Cargas, RPE, constancia. Conexión con quien entiende el gym.",
       },
       {
-        title: "Tu evolución en foco",
-        body: "Perfil, feed y herramientas alineados para que veas el hilo de semanas y meses.",
+        title: "Tu línea en el tiempo",
+        body: "Perfil y feed para ver semanas y meses, no solo un día suelto.",
       },
     ] as const,
+  },
+
+  /** Cierre inmediato tras el preview (#app): empuja a acción sin duplicar ruido. */
+  afterShowcase: {
+    title: "Empieza hoy con Trainr",
+    subtitle: "Haz visible tu progreso con gente que va en serio.",
+    primaryLabel: "Consigue acceso",
+    mailtoSubject: "Trainr – quiero acceso" as const,
   },
 
   finalCta: {

@@ -139,22 +139,24 @@ export function HeroSection() {
             <RevealOnView delayMs={35} className="mt-6 sm:mt-8">
               <h1
                 id="hero-heading"
-                className="max-w-xl text-balance text-[var(--tr-text-primary)] lg:max-w-2xl"
+                className="max-w-[19rem] text-balance text-[var(--tr-text-primary)] min-[400px]:max-w-[22rem] sm:max-w-lg lg:max-w-xl"
               >
-                <span className="tr-text-display block">{hero.headline}</span>
-                <span className="mt-3 block text-[clamp(1.125rem,3.6vw,1.75rem)] font-semibold leading-[1.12] tracking-[-0.032em] text-trainr-accent sm:mt-4">
+                <span className="tr-text-display block leading-[1.03]">
+                  {hero.headline}
+                </span>
+                <span className="mt-3 block max-w-prose text-[clamp(1.05rem,3.2vw,1.65rem)] font-semibold leading-[1.14] tracking-[-0.03em] text-trainr-accent sm:mt-4">
                   {hero.headlineAccent}
                 </span>
               </h1>
             </RevealOnView>
 
-            <RevealOnView delayMs={75} className="mt-5 max-w-xl sm:mt-6">
-              <p className="text-[0.9375rem] leading-snug text-pretty text-[var(--tr-text-secondary)] sm:text-lg sm:leading-relaxed">
+            <RevealOnView delayMs={75} className="mt-5 max-w-md sm:mt-6 lg:max-w-lg">
+              <p className="text-[0.9375rem] leading-snug text-pretty text-[var(--tr-text-secondary)] sm:text-[1.0625rem] sm:leading-[1.55]">
                 {hero.subhead}
               </p>
             </RevealOnView>
 
-            <RevealOnView delayMs={95} className="mt-7 sm:mt-8">
+            <RevealOnView delayMs={95} className="mt-6 sm:mt-8">
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href={hero.primaryHref}

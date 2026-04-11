@@ -18,24 +18,24 @@ export function DifferentSection() {
         <Eyebrow>{differentiators.eyebrow}</Eyebrow>
         <h2
           id="different-heading"
-          className="tr-text-h2 mt-5 text-balance text-[var(--tr-text-primary)]"
+          className="tr-text-h2 mt-4 max-w-xl text-balance text-[var(--tr-text-primary)] sm:mt-5 lg:max-w-2xl"
         >
           {differentiators.title}
         </h2>
-        <p className="tr-text-lead mt-5 max-w-2xl text-pretty">
+        <p className="mt-4 max-w-xl text-pretty text-base font-medium leading-snug text-[var(--tr-text-secondary)] sm:mt-5 sm:text-lg sm:leading-snug">
           {differentiators.lead}
         </p>
       </RevealOnView>
 
-      <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-5 lg:mt-14">
+      <div className="mt-8 grid gap-3.5 sm:mt-10 sm:grid-cols-2 sm:gap-4 lg:mt-12">
         {differentiators.points.map((point, i) => (
           <RevealOnView key={point.title} delayMs={i * 45}>
-            <div className="h-full rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-5 shadow-[var(--tr-shadow-inset)] transition-[border-color,box-shadow] duration-200 hover:border-[var(--tr-border-medium)] sm:p-6">
-              <div className="mb-3 h-px w-10 bg-trainr-accent/80" />
-              <h3 className="text-base font-semibold tracking-tight text-[var(--tr-text-primary)]">
+            <div className="h-full rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-4 shadow-[var(--tr-shadow-inset)] transition-[border-color,box-shadow] duration-200 hover:border-[var(--tr-border-medium)] sm:p-5">
+              <div className="mb-2.5 h-px w-9 bg-trainr-accent/80" />
+              <h3 className="text-[0.9375rem] font-semibold tracking-tight text-[var(--tr-text-primary)] sm:text-base">
                 {point.title}
               </h3>
-              <p className="tr-text-body-sm mt-2 text-pretty text-[var(--tr-text-secondary)]">
+              <p className="mt-1.5 text-pretty text-[0.8125rem] leading-relaxed text-[var(--tr-text-secondary)] sm:text-sm">
                 {point.body}
               </p>
             </div>

@@ -1,6 +1,7 @@
 import { AboutSection } from "./components/landing/AboutSection";
 import { DifferentSection } from "./components/landing/DifferentSection";
 import { FeaturesSection } from "./components/landing/FeaturesSection";
+import { ConversionBridgeSection } from "./components/landing/ConversionBridgeSection";
 import { FinalCtaSection } from "./components/landing/FinalCtaSection";
 import { HeroSection } from "./components/landing/HeroSection";
 import { ShowcaseSection } from "./components/landing/ShowcaseSection";
@@ -20,6 +21,7 @@ export default function Home() {
         <FeaturesSection />
         <DifferentSection />
         <ShowcaseSection />
+        <ConversionBridgeSection />
         <FinalCtaSection />
       </main>
       <SiteFooter />
