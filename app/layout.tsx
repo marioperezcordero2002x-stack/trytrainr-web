@@ -20,10 +20,6 @@ export const metadata: Metadata = {
   description:
     "Trainr: hub de 6 pestañas (Inicio, Explorar, Chats, Entreno, Nutrición, Premium), feed social, chat 1:1, planes de entreno y dietas. App iOS. trytrainr.com",
   metadataBase: new URL("https://trytrainr.com"),
-  icons: {
-    icon: [{ url: "/trainr_logo.png", type: "image/png" }],
-    apple: "/trainr_logo.png",
-  },
   openGraph: {
     title: "Trainr — App social fitness",
     description:
