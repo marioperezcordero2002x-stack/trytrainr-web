@@ -11,11 +11,14 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="flex min-h-full flex-col bg-[#050507] text-zinc-100">
+    <div className="flex min-h-full flex-col bg-[var(--tr-canvas)] text-[var(--tr-text-primary)]">
       <SiteHeader />
-      <main className="flex-1 px-4 py-16 sm:px-6 lg:px-8">
+      <main
+        id="main-content"
+        className="flex-1 px-4 py-16 sm:px-6 sm:py-20 lg:px-8"
+      >
         <article className="mx-auto max-w-3xl">
-          <p className="text-sm font-medium text-[#ff6b2c]">
+          <p className="text-[0.8125rem] font-semibold uppercase tracking-[0.08em] text-trainr-accent">
             Última actualización: 11 de abril de 2026
           </p>
           <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white">
@@ -158,7 +161,7 @@ export default function TermsPage() {
             Para consultas sobre estos Terms of Service:{" "}
             <a
               href="mailto:support@trytrainr.com"
-              className="text-[#ff6b2c] hover:text-[#ff8550]"
+              className="text-trainr-accent underline-offset-2 hover:underline"
             >
               support@trytrainr.com
             </a>
@@ -166,7 +169,10 @@ export default function TermsPage() {
           </p>
 
           <p className="mt-12 text-sm text-zinc-500">
-            <Link href="/" className="text-[#ff6b2c] hover:text-[#ff8550]">
+            <Link
+              href="/"
+              className="text-trainr-accent underline-offset-2 hover:underline"
+            >
               ← Volver al inicio
             </Link>
           </p>

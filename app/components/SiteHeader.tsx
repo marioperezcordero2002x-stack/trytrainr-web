@@ -1,44 +1,77 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const nav = [
   { href: "/#about", label: "Qué es" },
-  { href: "/#features", label: "Características" },
-  { href: "/#app", label: "La app" },
+  { href: "/#features", label: "Producto" },
+  { href: "/#app", label: "Interfaz" },
   { href: "/#contact", label: "Contacto" },
-];
+] as const;
+
+function LogoMark({ className }: { className?: string }) {
+  return (
+    <span
+      className={`flex h-8 w-8 items-center justify-center rounded-[var(--tr-radius-sm)] bg-[var(--tr-surface-1)] ring-1 ring-[var(--tr-border-medium)] ${className ?? ""}`.trim()}
+      aria-hidden
+    >
+      <span className="text-[13px] font-bold tracking-tighter text-trainr-accent">
+        T
+      </span>
+    </span>
+  );
+}
 
 export function SiteHeader() {
+  const [elevated, setElevated] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setElevated(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-[#050507]/80 backdrop-blur-xl">
-      <div className="mx-auto flex h-auto min-h-16 max-w-6xl flex-col gap-3 px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:gap-0 sm:py-0 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-3 sm:contents">
-          <Link
-            href="/"
-            className="shrink-0 text-lg font-semibold tracking-tight text-white transition-colors hover:text-[#ff6b2c]"
-          >
+    <header
+      className={`sticky top-0 z-50 border-b transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ease-out ${
+        elevated
+          ? "border-[var(--tr-border)] bg-[var(--tr-surface-glass)] shadow-[0_1px_0_0_rgba(255,255,255,0.04)] backdrop-blur-xl backdrop-saturate-150"
+          : "border-transparent bg-[var(--tr-canvas)]/80 backdrop-blur-sm"
+      }`}
+    >
+      <div
+        className="mx-auto flex h-14 max-w-[var(--tr-max-w)] items-center gap-3 px-[var(--tr-gutter-x)] sm:h-[var(--header-height)] sm:gap-4"
+      >
+        <Link
+          href="/"
+          className="group flex shrink-0 items-center gap-2.5 rounded-[var(--tr-radius-sm)] text-[var(--tr-text-primary)] outline-offset-4 transition-opacity hover:opacity-95"
+        >
+          <LogoMark />
+          <span className="text-[1.0625rem] font-semibold tracking-[-0.04em]">
             Trainr
-          </Link>
-          <a
-            href="mailto:support@trytrainr.com"
-            className="rounded-full border border-white/10 bg-white/[0.03] px-3 py-2 text-xs font-medium text-zinc-200 transition-all hover:border-[#ff6b2c]/40 hover:bg-[#ff6b2c]/10 hover:text-white sm:hidden"
-          >
-            Contactar
-          </a>
-        </div>
-        <nav className="flex items-center gap-4 overflow-x-auto pb-0.5 text-xs font-medium text-zinc-400 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-6 sm:pb-0 md:gap-8 md:text-sm [&::-webkit-scrollbar]:hidden">
+          </span>
+        </Link>
+
+        <nav
+          className="flex min-w-0 flex-1 items-center justify-center gap-0.5 overflow-x-auto py-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-1 [&::-webkit-scrollbar]:hidden"
+          aria-label="Secciones"
+        >
           {nav.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="shrink-0 transition-colors hover:text-white"
+              className="shrink-0 rounded-[var(--tr-radius-sm)] px-2.5 py-2 text-[0.8125rem] font-medium text-[var(--tr-text-tertiary)] transition-[background-color,color] duration-200 hover:bg-white/[0.04] hover:text-[var(--tr-text-primary)] sm:px-3 sm:text-sm"
             >
               {item.label}
             </a>
           ))}
         </nav>
+
         <a
           href="mailto:support@trytrainr.com"
-          className="hidden rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-sm font-medium text-zinc-200 transition-all hover:border-[#ff6b2c]/40 hover:bg-[#ff6b2c]/10 hover:text-white sm:inline-flex sm:shrink-0"
+          className="inline-flex shrink-0 items-center justify-center rounded-[var(--tr-radius-pill)] bg-[var(--tr-surface-1)] px-3.5 py-2 text-[0.8125rem] font-semibold text-[var(--tr-text-primary)] ring-1 ring-[var(--tr-border-medium)] transition-[background-color,box-shadow,transform] duration-200 hover:bg-[var(--tr-surface-2)] hover:ring-[color:var(--trainr-accent-line)] active:scale-[0.98] sm:px-5 sm:text-sm"
         >
           Contactar
         </a>
