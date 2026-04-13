@@ -20,10 +20,13 @@ export function FinalCtaSection() {
             </p>
           ) : null}
           <h2
-            className={`tr-text-h2 text-balance font-extrabold tracking-[-0.035em] text-[var(--tr-text-primary)] ${finalCta.kicker ? "mt-5 sm:mt-6" : ""}`}
+            className={`tr-text-h2 inline-block max-w-none whitespace-nowrap text-center font-extrabold tracking-[-0.035em] text-[var(--tr-text-primary)] ${finalCta.kicker ? "mt-5 sm:mt-6" : ""}`}
           >
             {finalCta.title}
           </h2>
+          <p className="relative mx-auto mt-9 max-w-md overflow-hidden rounded-[var(--tr-radius-lg)] border border-[color:var(--trainr-accent-line)] bg-gradient-to-br from-[rgba(255,122,0,0.16)] via-[rgba(255,122,0,0.07)] to-transparent px-4 py-3.5 text-center text-[clamp(1.1rem,3.2vw,1.55rem)] font-extrabold leading-tight tracking-[-0.034em] text-trainr-accent shadow-[0_0_48px_-10px_rgba(255,122,0,0.5),inset_0_1px_0_rgba(255,255,255,0.07)] sm:mt-10 sm:px-5 sm:py-4">
+            <span className="relative z-[1]">{finalCta.iconicLine}</span>
+          </p>
           {finalCta.subtitle ? (
             <p className="mx-auto mt-4 max-w-md text-pretty text-[clamp(1.125rem,2.8vw,1.375rem)] font-bold leading-snug tracking-tight text-trainr-accent sm:mt-5">
               {finalCta.subtitle}

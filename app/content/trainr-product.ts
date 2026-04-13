@@ -89,6 +89,7 @@ export const trainrProduct = {
   finalCta: {
     kicker: "",
     title: "Empieza hoy.",
+    iconicLine: "No pienses. Cumple.",
     subtitle: "",
     lead: "",
     note: "",
