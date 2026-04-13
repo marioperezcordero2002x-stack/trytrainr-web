@@ -18,24 +18,20 @@ export function BundleSection() {
         <Eyebrow className="text-center">{bundle.eyebrow}</Eyebrow>
         <h2
           id="bundle-heading"
-          className="mt-5 text-balance text-[var(--tr-text-primary)] text-[clamp(1.75rem,4.5vw,2.75rem)] font-semibold leading-[1.08] tracking-[-0.035em] sm:mt-6"
+          className="mt-5 text-balance text-[var(--tr-text-primary)] text-[clamp(1.75rem,4.5vw,2.85rem)] font-semibold leading-[1.08] tracking-[-0.035em] sm:mt-6"
         >
           {bundle.title}
         </h2>
-        <ul className="mx-auto mt-8 max-w-xl space-y-3 text-center text-pretty sm:mt-10 sm:space-y-3.5">
-          {bundle.tension.map((line) => (
-            <li
-              key={line}
-              className="text-[1.0625rem] font-semibold leading-snug text-[var(--tr-text-primary)] sm:text-lg"
-            >
-              {line}
-            </li>
-          ))}
-        </ul>
+        <p className="mx-auto mt-8 max-w-lg text-[1.125rem] font-semibold leading-snug text-[var(--tr-text-secondary)] sm:mt-9 sm:text-xl">
+          {bundle.pairLead}
+        </p>
+        <p className="mx-auto mt-2 max-w-lg text-[1.125rem] font-semibold leading-snug text-[var(--tr-text-primary)] sm:text-xl">
+          {bundle.pairResolve}
+        </p>
         <p className="tr-text-lead mx-auto mt-8 max-w-md text-pretty font-semibold text-trainr-accent sm:mt-10">
           {bundle.lead}
         </p>
-        <p className="tr-text-body-sm mx-auto mt-3 max-w-lg text-pretty text-[var(--tr-text-secondary)] sm:mt-4 sm:text-[0.9375rem]">
+        <p className="tr-text-body-sm mx-auto mt-4 max-w-lg text-pretty text-[var(--tr-text-secondary)] sm:mt-5 sm:text-[0.9375rem]">
           {bundle.sublead}
         </p>
       </RevealOnView>

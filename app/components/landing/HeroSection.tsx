@@ -87,6 +87,19 @@ export function HeroSection() {
               </p>
             </RevealOnView>
 
+            <RevealOnView delayMs={65} className="mt-6 max-w-md sm:mt-7">
+              <div className="border-l-2 border-trainr-accent/50 pl-4">
+                <ul className="space-y-1 text-[0.875rem] font-medium leading-snug text-[var(--tr-text-tertiary)] sm:text-[0.9375rem]">
+                  {hero.tensionPains.map((line) => (
+                    <li key={line}>{line}</li>
+                  ))}
+                </ul>
+                <p className="mt-3 text-[0.9375rem] font-semibold leading-snug text-trainr-accent sm:text-[1rem]">
+                  {hero.tensionResolve}
+                </p>
+              </div>
+            </RevealOnView>
+
             <RevealOnView delayMs={85} className="mt-7 sm:mt-9">
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
