@@ -1,5 +1,5 @@
 /**
- * Landing copy: two-coach daily guidance. English. No social-first narrative.
+ * Copy de la landing en español: dos coaches, guía diaria, sin narrativa social.
  */
 
 export const trainrProduct = {
@@ -7,139 +7,145 @@ export const trainrProduct = {
   supportEmail: "support@trytrainr.com",
 
   hero: {
-    eyebrow: "Two coaches. One system.",
+    eyebrow: "Dos coaches. Un sistema.",
     domainLine: "trytrainr.com",
-    trustBadge: "Early access",
-    headline: "Trainr tells you what to train and how to eat each day.",
-    headlineAccent: "Less noise. More progress.",
-    subhead:
-      "Training Coach and Nutrition Coach work together to give you daily clarity, less friction, and better execution.",
-    primaryCta: "Get early access",
+    trustBadge: "Acceso anticipado",
+    headline: "Trainr te dice qué entrenar y cómo comer cada día.",
+    subhead: "Menos dudas. Más claridad. Solo ejecuta.",
+    reliefPhrases: [
+      "Deja de improvisar.",
+      "Sin dudas. Sin ruido.",
+      "Cada día, claro.",
+    ] as const,
+    primaryCta: "Acceso anticipado",
     primaryHref: "#cta" as const,
-    secondaryCta: "See how it works",
+    secondaryCta: "Ver cómo funciona",
     secondaryHref: "#how-trainr-works" as const,
-    tertiaryCta: "Email us for priority access",
+    tertiaryCta: "Escríbenos para prioridad",
   },
 
   quickValue: {
     items: [
       {
-        title: "Know what to train",
-        line: "Direction for today — not guesswork.",
+        title: "Qué entrenar",
+        line: "Hoy lo tienes claro. Nada de improvisar en el gimnasio.",
       },
       {
-        title: "Know how to eat",
-        line: "Guidance that fits your training.",
+        title: "Cómo comer",
+        line: "Orientación que encaja con lo que entrenas.",
       },
       {
-        title: "Stop overthinking the day",
-        line: "One system. Execute.",
+        title: "Menos ruido mental",
+        line: "Un solo sitio. Menos decisiones. Más constancia.",
       },
     ] as const,
   },
 
   howItWorks: {
-    eyebrow: "How it works",
-    title: "Three steps. One day.",
+    eyebrow: "Cómo funciona",
+    title: "Tres pasos. Un día.",
     steps: [
       {
-        title: "Training Coach decides today's training direction",
-        body: "What to do and how the session should feel — so you lift, not debate.",
+        title: "El Training Coach marca el entreno de hoy",
+        body: "Qué tocar y cómo enfocar la sesión — para entrenar, no para dudar.",
       },
       {
-        title: "Nutrition Coach tells you how to eat today",
-        body: "Practical eating that matches the work — without rigid dieting or macro noise.",
+        title: "El Nutrition Coach te orienta en la comida de hoy",
+        body: "Comer con sentido, alineado con el esfuerzo — sin rigidez ni complicarte la vida.",
       },
       {
-        title: "Together they create daily clarity and consistency",
-        body: "Shared context: less contradiction between training and food, steadier habits.",
+        title: "Juntos te dan claridad y constancia",
+        body: "Mismo día, misma lógica: entreno y comida dejan de pelearse.",
       },
     ] as const,
   },
 
   coaches: {
-    eyebrow: "The product",
-    title: "Two coaches. Your day.",
-    lead: "This is the core: guidance you can act on — not a feature dump.",
+    eyebrow: "El centro",
+    title: "Dos coaches. Tu día, resuelto.",
+    lead: "Guía concreta para hacer — no una lista interminable de funciones.",
     training: {
       label: "Training Coach",
-      title: "Training, directed",
+      title: "Tu entrenamiento de hoy, decidido.",
       bullets: [
-        "Decides what to train today.",
-        "Sets the direction for your day.",
-        "Adapts the session as you go.",
-        "Reduces mental friction.",
-        "Feels like a coach — not a tracker.",
+        "Te dice qué entrenar hoy.",
+        "Marca el enfoque del día y adapta la sesión.",
+        "Menos decisiones antes y durante el entreno.",
+        "Se nota guía de verdad, no solo registro.",
       ] as const,
     },
     nutrition: {
       label: "Nutrition Coach",
-      title: "Nutrition, made practical",
+      title: "Tu forma de comer hoy, clara.",
       bullets: [
-        "Tells you how to eat today.",
-        "Complements your training with daily clarity.",
-        "No rigid diet feeling.",
-        "No unnecessary macro obsession.",
-        "Practical and clear.",
+        "Te orienta en cómo comer hoy.",
+        "Va a juego con el entreno, sin complicarte.",
+        "Sin sensación de dieta rígida.",
+        "Sin obsesionarte con números. Práctico y claro.",
       ] as const,
     },
   },
 
   bundle: {
-    eyebrow: "Better together",
-    title: "One system. Better execution.",
-    lead: "Training and nutrition work better when they work together.",
+    eyebrow: "Mejor juntos",
+    title: "Por separado ayudan. Juntos marcan la diferencia.",
+    tension: [
+      "Entrenar sin comer bien se queda corto.",
+      "Comer bien sin entrenar con intención no basta.",
+      "Juntos funcionan de verdad.",
+    ] as const,
+    lead: "Un sistema. Mejor resultado.",
     sublead:
-      "Split across apps and spreadsheets, you carry the mental load. Trainr carries it in one place.",
+      "Si entreno y comida viven en mundos distintos, la carga mental la llevas tú. Trainr la une.",
     points: [
       {
-        title: "Each coach earns its keep",
-        body: "Alone, each one still cuts decisions in its lane.",
+        title: "Solo una pieza",
+        body: "Cuidar solo un lado te deja a medias: el otro sigue tirando de ti.",
       },
       {
-        title: "Together, they compound",
-        body: "One daily context — fuel and work stop working against each other.",
+        title: "Las dos, alineadas",
+        body: "Mismo contexto cada día: lo que levantas y lo que comes dejan de contradecirse.",
       },
       {
-        title: "The natural default",
-        body: "The bundle is the product: less friction, better adherence, consistency that lasts.",
+        title: "Lo natural",
+        body: "Así está pensado Trainr: menos fricción, más adherencia, constancia que aguanta.",
       },
     ] as const,
   },
 
   premiumFeel: {
-    eyebrow: "Premium by intent",
-    title: "Not another fitness app.",
-    lead: "A quieter, more serious system — built so you can actually follow through.",
+    eyebrow: "Producto serio",
+    title: "No es una app de fitness más.",
+    lead: "Menos ruido, más ejecución. Hecho para seguir el plan, no para perderte en pantallas.",
     points: [
       {
-        title: "Less noise",
-        body: "No clutter competing for attention. The job is to guide the day.",
+        title: "Menos ruido",
+        body: "Lo importante es qué hacer hoy — no competir por tu atención.",
       },
       {
-        title: "More consistency",
-        body: "Structure you can repeat — not spikes of motivation that fade.",
+        title: "Más constancia",
+        body: "Estructura que puedes repetir, no subidones que se esfuman.",
       },
       {
-        title: "Clearer daily action",
-        body: "You always know the next useful step for training and eating.",
+        title: "Acción clara cada día",
+        body: "Siempre sabes el siguiente paso útil en entreno y comida.",
       },
       {
-        title: "Designed for execution",
-        body: "Every choice in the product pushes toward doing the work — not scrolling it.",
+        title: "Pensado para ejecutar",
+        body: "Cada detalle empuja a cumplir — no a mirar.",
       },
     ] as const,
   },
 
   finalCta: {
-    kicker: "Don't guess. Execute.",
-    title: "Start with clarity.",
-    subtitle: "Get daily guidance with Trainr.",
-    lead: "Be first to try the two-coach system.",
-    note: "We'll follow up with early access details.",
-    primaryLabel: "Get early access",
-    secondaryLabel: "See how it works",
+    kicker: "No adivines. Cumple.",
+    title: "Empieza con claridad.",
+    subtitle: "Guía diaria con Trainr.",
+    lead: "Sé de los primeros en probar el sistema de dos coaches.",
+    note: "Te respondemos con detalles de acceso anticipado.",
+    primaryLabel: "Acceso anticipado",
+    secondaryLabel: "Ver cómo funciona",
     secondaryHref: "#how-trainr-works" as const,
-    mailtoSubject: "Trainr – early access" as const,
+    mailtoSubject: "Trainr – acceso anticipado" as const,
   },
 } as const;

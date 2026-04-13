@@ -18,19 +18,29 @@ export function BundleSection() {
         <Eyebrow className="text-center">{bundle.eyebrow}</Eyebrow>
         <h2
           id="bundle-heading"
-          className="tr-text-h2 mt-5 text-balance text-[var(--tr-text-primary)]"
+          className="mt-5 text-balance text-[var(--tr-text-primary)] text-[clamp(1.625rem,4vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.03em] sm:mt-6"
         >
           {bundle.title}
         </h2>
-        <p className="tr-text-lead mx-auto mt-5 max-w-xl text-pretty text-[var(--tr-text-secondary)]">
+        <ul className="mx-auto mt-8 max-w-xl space-y-3 text-center text-pretty sm:mt-9 sm:space-y-3.5">
+          {bundle.tension.map((line) => (
+            <li
+              key={line}
+              className="text-[1.0625rem] font-semibold leading-snug text-[var(--tr-text-primary)] sm:text-lg"
+            >
+              {line}
+            </li>
+          ))}
+        </ul>
+        <p className="tr-text-lead mx-auto mt-8 max-w-md text-pretty font-semibold text-trainr-accent sm:mt-9">
           {bundle.lead}
         </p>
-        <p className="tr-text-body-sm mx-auto mt-4 max-w-lg text-pretty text-[var(--tr-text-tertiary)] sm:mt-5">
+        <p className="tr-text-body-sm mx-auto mt-4 max-w-lg text-pretty text-[var(--tr-text-secondary)] sm:mt-5 sm:text-[0.9375rem]">
           {bundle.sublead}
         </p>
       </RevealOnView>
 
-      <div className="mt-11 grid gap-4 sm:mt-12 sm:grid-cols-3 sm:gap-5 lg:mt-14">
+      <div className="mt-12 grid gap-4 sm:mt-14 sm:grid-cols-3 sm:gap-5 lg:mt-16">
         {bundle.points.map((point, i) => (
           <RevealOnView key={point.title} delayMs={i * 55}>
             <div className="flex h-full flex-col rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-5 shadow-[var(--tr-shadow-inset)] sm:p-6">

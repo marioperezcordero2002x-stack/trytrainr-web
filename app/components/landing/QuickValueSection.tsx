@@ -14,7 +14,7 @@ export function QuickValueSection() {
       aria-labelledby="value-heading"
     >
       <h2 id="value-heading" className="sr-only">
-        What Trainr gives you every day
+        Qué te aporta Trainr cada día
       </h2>
       <RevealOnView>
         <div className="overflow-hidden rounded-[var(--tr-radius-xl)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)] shadow-[var(--tr-shadow-inset)]">

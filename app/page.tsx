@@ -18,8 +18,8 @@ export default function Home() {
       >
         <HeroSection />
         <QuickValueSection />
-        <HowItWorksSection />
         <CoachesSection />
+        <HowItWorksSection />
         <BundleSection />
         <PremiumFeelSection />
         <FinalCtaSection />

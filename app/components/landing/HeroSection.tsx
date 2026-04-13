@@ -31,7 +31,7 @@ function HeroDevicePreview() {
   return (
     <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px]">
       <p className="mb-3 text-right font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-[var(--tr-text-faint)] sm:text-[10px]">
-        Today
+        Hoy
       </p>
       <div
         className="pointer-events-none absolute -inset-10 rounded-[var(--tr-radius-2xl)] bg-[var(--trainr-accent-glow)] blur-3xl"
@@ -61,17 +61,17 @@ function HeroDevicePreview() {
           </div>
           <div className="relative z-10 space-y-2.5 px-3 pb-8 pt-1">
             <p className="px-1 text-[12px] font-semibold text-[var(--tr-text-primary)] sm:text-[13px]">
-              Today
+              Hoy
             </p>
             <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-2.5 shadow-[var(--tr-shadow-inset)] ring-1 ring-white/[0.04]">
               <p className="font-mono text-[8px] font-semibold uppercase tracking-[0.12em] text-trainr-accent sm:text-[9px]">
                 Training Coach
               </p>
               <p className="mt-1 text-[11px] font-bold leading-snug text-[var(--tr-text-primary)] sm:text-[12px]">
-                Lower · squat priority
+                Pierna · prioridad sentadilla
               </p>
               <p className="mt-1 text-[10px] leading-snug text-[var(--tr-text-tertiary)]">
-                4×6–8 · add load if RPE {"<"} 8
+                4×6–8 · sube peso si RPE {"<"} 8
               </p>
             </div>
             <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-2.5 shadow-[var(--tr-shadow-inset)] ring-1 ring-white/[0.04]">
@@ -79,15 +79,15 @@ function HeroDevicePreview() {
                 Nutrition Coach
               </p>
               <p className="mt-1 text-[11px] font-bold leading-snug text-[var(--tr-text-primary)] sm:text-[12px]">
-                Fuel for a heavy leg day
+                Comer bien con pierna dura
               </p>
               <p className="mt-1 text-[10px] leading-snug text-[var(--tr-text-tertiary)]">
-                Carbs around training · protein at dinner
+                Carbos alrededor del entreno · proteína en la cena
               </p>
             </div>
             <div className="rounded-[var(--tr-radius-sm)] border border-dashed border-[var(--tr-border-medium)] bg-black/25 py-2.5 text-center">
               <p className="px-2 text-[10px] font-medium text-[var(--tr-text-secondary)]">
-                Two coaches · one plan for the day
+                Dos coaches · un plan para hoy
               </p>
             </div>
           </div>
@@ -140,24 +140,37 @@ export function HeroSection() {
             <RevealOnView delayMs={35} className="mt-6 sm:mt-8">
               <h1
                 id="hero-heading"
-                className="max-w-[19rem] text-balance text-[var(--tr-text-primary)] min-[400px]:max-w-[22rem] sm:max-w-lg lg:max-w-xl"
+                className="max-w-[19rem] text-balance text-[var(--tr-text-primary)] min-[400px]:max-w-[24rem] sm:max-w-2xl lg:max-w-[32rem]"
               >
-                <span className="tr-text-display block leading-[1.03]">
+                <span className="tr-text-display block leading-[1.02]">
                   {hero.headline}
-                </span>
-                <span className="mt-3 block max-w-prose text-[clamp(1.05rem,3.2vw,1.65rem)] font-semibold leading-[1.14] tracking-[-0.03em] text-trainr-accent sm:mt-4">
-                  {hero.headlineAccent}
                 </span>
               </h1>
             </RevealOnView>
 
-            <RevealOnView delayMs={75} className="mt-5 max-w-md sm:mt-6 lg:max-w-lg">
-              <p className="text-[0.9375rem] leading-snug text-pretty text-[var(--tr-text-secondary)] sm:text-[1.0625rem] sm:leading-[1.55]">
+            <RevealOnView delayMs={50} className="mt-4 max-w-xl sm:mt-5 lg:max-w-2xl">
+              <p className="text-pretty text-[clamp(1.05rem,3vw,1.45rem)] font-semibold leading-snug tracking-[-0.02em] text-trainr-accent">
                 {hero.subhead}
               </p>
             </RevealOnView>
 
-            <RevealOnView delayMs={95} className="mt-6 sm:mt-8">
+            <RevealOnView delayMs={65} className="mt-5 sm:mt-6">
+              <ul
+                className="flex max-w-xl flex-wrap gap-x-2 gap-y-2"
+                aria-label="Menos carga mental"
+              >
+                {hero.reliefPhrases.map((phrase) => (
+                  <li
+                    key={phrase}
+                    className="rounded-[var(--tr-radius-pill)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)]/90 px-3 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--tr-text-secondary)] sm:text-[11px] sm:tracking-[0.12em]"
+                  >
+                    {phrase}
+                  </li>
+                ))}
+              </ul>
+            </RevealOnView>
+
+            <RevealOnView delayMs={95} className="mt-7 sm:mt-9">
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href={hero.primaryHref}
@@ -174,7 +187,7 @@ export function HeroSection() {
                 </a>
               </div>
               <a
-                href={`mailto:${supportEmail}?subject=${encodeURIComponent("Trainr – early access")}`}
+                href={`mailto:${supportEmail}?subject=${encodeURIComponent("Trainr – acceso anticipado")}`}
                 className="mt-4 inline-flex text-[0.8125rem] font-medium text-[var(--tr-text-tertiary)] underline decoration-[var(--tr-border-strong)] underline-offset-[5px] transition-colors hover:text-[var(--tr-text-primary)]"
               >
                 {hero.tertiaryCta}

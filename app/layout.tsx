@@ -14,35 +14,35 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Trainr — Two coaches. Daily clarity.",
+    default: "Trainr — Dos coaches. Claridad diaria.",
     template: "%s · Trainr",
   },
   description:
-    "Trainr tells you what to train and how to eat each day. Training Coach and Nutrition Coach in one premium system. trytrainr.com",
+    "Trainr te dice qué entrenar y cómo comer cada día. Training Coach y Nutrition Coach en un sistema premium. trytrainr.com",
   metadataBase: new URL("https://trytrainr.com"),
   openGraph: {
-    title: "Trainr — Two coaches. One system.",
+    title: "Trainr — Dos coaches. Un sistema.",
     description:
-      "Daily clarity for training and nutrition — less noise, better execution. Early access at trytrainr.com.",
+      "Menos dudas, más claridad: entreno y nutrición alineados. Acceso anticipado en trytrainr.com.",
     url: "/",
     siteName: "Trainr",
-    locale: "en_US",
+    locale: "es_ES",
     type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Trainr — Training Coach and Nutrition Coach",
+        alt: "Trainr — Training Coach y Nutrition Coach",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trainr — Daily guidance",
+    title: "Trainr — Guía diaria",
     description:
-      "What to train and how to eat today, with two coaches that work as one system.",
+      "Qué entrenar y cómo comer hoy, con dos coaches que trabajan como un solo sistema.",
     images: ["/og-image.png"],
   },
 };
@@ -54,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[var(--tr-canvas)] text-[var(--tr-text-primary)]">
@@ -62,7 +62,7 @@ export default function RootLayout({
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-trainr-accent focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-[#0a0a0c] focus:shadow-lg"
         >
-          Skip to content
+          Saltar al contenido
         </a>
         {children}
       </body>
