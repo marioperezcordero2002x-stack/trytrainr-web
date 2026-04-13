@@ -14,16 +14,16 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Trainr — App social fitness",
+    default: "Trainr — Guidance diario de entreno y nutrición",
     template: "%s · Trainr",
   },
   description:
-    "Trainr: hub de 6 pestañas (Inicio, Explorar, Chats, Entreno, Nutrición, Premium), feed social, chat 1:1, planes de entreno y dietas. App iOS. trytrainr.com",
+    "Trainr te dice qué entrenar y cómo comer cada día. Training Coach y Nutrition Coach en un sistema claro y premium. trytrainr.com",
   metadataBase: new URL("https://trytrainr.com"),
   openGraph: {
-    title: "Trainr — App social fitness",
+    title: "Trainr — Dos coaches. Un sistema.",
     description:
-      "Progreso visible, comunidad seria y hub completo: feed, chat 1:1, entreno, nutrición y más. Social fitness sin postureo vacío.",
+      "Claridad diaria: dirección de entreno y orientación nutricional alineadas, sin ruido. Acceso anticipado en trytrainr.com.",
     url: "/",
     siteName: "Trainr",
     locale: "es_ES",
@@ -33,16 +33,16 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Trainr — App social fitness",
+        alt: "Trainr — Training Coach y Nutrition Coach",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trainr — App social fitness",
+    title: "Trainr — Guidance diario",
     description:
-      "Progreso visible, comunidad seria: feed, chat, entreno y nutrición en una app oscura pensada para constancia.",
+      "Qué entrenar y cómo comer hoy, con dos coaches que trabajan juntos. Menos fricción, más ejecución.",
     images: ["/og-image.png"],
   },
 };

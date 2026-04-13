@@ -3,7 +3,7 @@ import { RevealOnView } from "../RevealOnView";
 import { Container } from "../system/Container";
 import { Eyebrow } from "../system/Eyebrow";
 
-const { hero, hubTabs, supportEmail } = trainrProduct;
+const { hero, supportEmail } = trainrProduct;
 
 function ChevronRight({ className }: { className?: string }) {
   return (
@@ -26,12 +26,12 @@ function ChevronRight({ className }: { className?: string }) {
   );
 }
 
-/** Preview alineado a FeedPostCard + TrainrAppCard: post con likes/comentarios. */
+/** Preview: guidance diario (entreno + nutrición), sin feed social. */
 function HeroDevicePreview() {
   return (
     <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px]">
       <p className="mb-3 text-right font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-[var(--tr-text-faint)] sm:text-[10px]">
-        Vista feed
+        Tu día
       </p>
       <div
         className="pointer-events-none absolute -inset-10 rounded-[var(--tr-radius-2xl)] bg-[var(--trainr-accent-glow)] blur-3xl"
@@ -59,34 +59,35 @@ function HeroDevicePreview() {
             <div className="absolute left-1/2 top-2 h-[28px] w-[88px] -translate-x-1/2 rounded-full bg-black ring-1 ring-white/[0.1]" />
             <div className="h-2.5 w-5 rounded-sm border border-[var(--tr-border-medium)]" />
           </div>
-          <div className="relative z-10 space-y-3 px-3 pb-8 pt-1">
-            <p className="px-1 text-[13px] font-semibold text-[var(--tr-text-primary)]">
-              Inicio
+          <div className="relative z-10 space-y-2.5 px-3 pb-8 pt-1">
+            <p className="px-1 text-[12px] font-semibold text-[var(--tr-text-primary)] sm:text-[13px]">
+              Hoy
             </p>
-            <div className="overflow-hidden rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] shadow-[var(--tr-shadow-inset)]">
-              <div className="flex gap-2.5 border-b border-[var(--tr-border)] px-3 py-2.5">
-                <div className="h-9 w-9 shrink-0 rounded-full bg-gradient-to-br from-zinc-600 to-zinc-900 ring-1 ring-white/[0.08]" />
-                <div className="min-w-0 flex-1">
-                  <p className="text-[12px] font-semibold text-[var(--tr-text-primary)]">
-                    Ana Ruiz
-                  </p>
-                  <p className="text-[11px] text-[var(--tr-text-tertiary)]">
-                    @ana · 2 h
-                  </p>
-                </div>
-              </div>
-              <p className="px-3 py-2 text-[12px] leading-snug text-[var(--tr-text-secondary)]">
-                Semana 3 · 4×8 sentadilla a 100 kg. RPE 7,5. Mañana tirón.
+            <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-2.5 shadow-[var(--tr-shadow-inset)] ring-1 ring-white/[0.04]">
+              <p className="font-mono text-[8px] font-semibold uppercase tracking-[0.12em] text-trainr-accent sm:text-[9px]">
+                Training Coach
               </p>
-              <div className="mx-3 mb-2 aspect-[16/10] rounded-[var(--tr-radius-sm)] bg-gradient-to-br from-zinc-800/60 to-zinc-950 ring-1 ring-[var(--tr-border)]" />
-              <div className="flex gap-4 border-t border-[var(--tr-border)] px-3 py-2 text-[11px] text-[var(--tr-text-tertiary)]">
-                <span>18 me gusta</span>
-                <span>5 comentarios</span>
-              </div>
+              <p className="mt-1 text-[11px] font-bold leading-snug text-[var(--tr-text-primary)] sm:text-[12px]">
+                Pierna · sentadilla prioritaria
+              </p>
+              <p className="mt-1 text-[10px] leading-snug text-[var(--tr-text-tertiary)]">
+                4×6–8 · sube si RPE {"<"} 8
+              </p>
             </div>
-            <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)]/80 py-3.5 text-center ring-1 ring-white/[0.04]">
-              <p className="text-[11px] font-medium text-[var(--tr-text-secondary)]">
-                Explorar · atletas en serio
+            <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-2.5 shadow-[var(--tr-shadow-inset)] ring-1 ring-white/[0.04]">
+              <p className="font-mono text-[8px] font-semibold uppercase tracking-[0.12em] text-trainr-accent sm:text-[9px]">
+                Nutrition Coach
+              </p>
+              <p className="mt-1 text-[11px] font-bold leading-snug text-[var(--tr-text-primary)] sm:text-[12px]">
+                Comer hoy con pierna dura
+              </p>
+              <p className="mt-1 text-[10px] leading-snug text-[var(--tr-text-tertiary)]">
+                Carbohidrato alrededor del entreno · cena con proteína
+              </p>
+            </div>
+            <div className="rounded-[var(--tr-radius-sm)] border border-dashed border-[var(--tr-border-medium)] bg-black/25 py-2.5 text-center">
+              <p className="px-2 text-[10px] font-medium text-[var(--tr-text-secondary)]">
+                Dos coaches · una decisión por día
               </p>
             </div>
           </div>
@@ -178,21 +179,6 @@ export function HeroSection() {
               >
                 {hero.tertiaryCta}
               </a>
-            </RevealOnView>
-
-            <RevealOnView delayMs={115} className="mt-8 sm:mt-10">
-              <p className="tr-text-overline mb-2 text-[var(--tr-text-faint)]">
-                {hero.hubOverline}
-              </p>
-              <ul className="flex flex-wrap gap-1.5 sm:gap-2" aria-label="Pestañas del hub">
-                {hubTabs.map((tab) => (
-                  <li key={tab}>
-                    <span className="inline-block rounded-[var(--tr-radius-pill)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)]/90 px-2.5 py-1 text-center text-[10px] font-semibold tracking-wide text-[var(--tr-text-tertiary)] sm:px-3 sm:py-1.5 sm:text-[11px] sm:text-[var(--tr-text-secondary)]">
-                      {tab}
-                    </span>
-                  </li>
-                ))}
-              </ul>
             </RevealOnView>
 
             <RevealOnView delayMs={145} className="mt-9 sm:mt-11">

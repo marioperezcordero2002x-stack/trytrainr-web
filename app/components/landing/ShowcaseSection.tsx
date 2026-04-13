@@ -4,10 +4,10 @@ import { RevealOnView } from "../RevealOnView";
 import { Eyebrow } from "../system/Eyebrow";
 import { Section } from "../system/Section";
 import {
-  ShowcaseLiveChat,
-  ShowcaseLiveFeed,
-  ShowcaseLiveProfile,
-} from "./ShowcaseLivePreviews";
+  GuidanceShowcaseNutrition,
+  GuidanceShowcaseSystem,
+  GuidanceShowcaseTraining,
+} from "./GuidanceShowcasePreviews";
 
 const showcase = trainrProduct.showcase;
 const [deviceA, deviceB, deviceC] = showcase.devices;
@@ -133,7 +133,7 @@ export function ShowcaseSection() {
           </p>
           <ul
             className="mt-8 flex flex-wrap items-center justify-center gap-2 sm:mt-9 sm:gap-3"
-            aria-label="Capas principales de la app"
+            aria-label="Vistas principales del producto"
           >
             {[deviceA, deviceB, deviceC].map((d) => (
               <li key={d.label}>
@@ -172,7 +172,7 @@ export function ShowcaseSection() {
                   variant="mobileSatellite"
                   frameClassName={satelliteShadow}
                 >
-                  <ShowcaseLiveProfile dense />
+                  <GuidanceShowcaseNutrition dense />
                 </PhoneChrome>
                 <p className="mt-2 text-center font-mono text-[8px] font-semibold uppercase tracking-[0.16em] text-[var(--tr-text-faint)] sm:text-[9px]">
                   {deviceB.label}
@@ -185,7 +185,7 @@ export function ShowcaseSection() {
                   variant="mobileSatellite"
                   frameClassName={satelliteShadow}
                 >
-                  <ShowcaseLiveChat dense />
+                  <GuidanceShowcaseSystem dense />
                 </PhoneChrome>
                 <p className="mt-2 text-center font-mono text-[8px] font-semibold uppercase tracking-[0.16em] text-[var(--tr-text-faint)] sm:text-[9px]">
                   {deviceC.label}
@@ -198,7 +198,7 @@ export function ShowcaseSection() {
                   {deviceA.label}
                 </p>
                 <PhoneChrome variant="spotlight" frameClassName={spotlightShadow}>
-                  <ShowcaseLiveFeed spotlight />
+                  <GuidanceShowcaseTraining />
                 </PhoneChrome>
               </div>
             </div>
@@ -226,7 +226,7 @@ export function ShowcaseSection() {
                   {deviceA.label}
                 </p>
                 <PhoneChrome variant="spotlight" frameClassName={spotlightShadow}>
-                  <ShowcaseLiveFeed spotlight />
+                  <GuidanceShowcaseTraining />
                 </PhoneChrome>
               </div>
             </div>
@@ -237,7 +237,7 @@ export function ShowcaseSection() {
             >
               <DeviceGlow className="-inset-6 opacity-80" />
               <PhoneChrome variant="satellite" frameClassName={satelliteShadow}>
-                <ShowcaseLiveProfile />
+                <GuidanceShowcaseNutrition />
               </PhoneChrome>
               <p className="mt-3 text-center font-mono text-[9px] font-semibold uppercase tracking-[0.15em] text-[var(--tr-text-faint)] xl:text-[10px]">
                 {deviceB.label} · {deviceB.caption}
@@ -250,7 +250,7 @@ export function ShowcaseSection() {
             >
               <DeviceGlow className="-inset-6 opacity-80" />
               <PhoneChrome variant="satellite" frameClassName={satelliteShadow}>
-                <ShowcaseLiveChat />
+                <GuidanceShowcaseSystem />
               </PhoneChrome>
               <p className="mt-3 text-center font-mono text-[9px] font-semibold uppercase tracking-[0.15em] text-[var(--tr-text-faint)] xl:text-[10px]">
                 {deviceC.label} · {deviceC.caption}

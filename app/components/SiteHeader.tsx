@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import { TrainrLogoMark } from "./TrainrLogoMark";
 
 const nav = [
-  { href: "/#about", label: "Qué es" },
+  { href: "/#how-it-works", label: "Cómo funciona" },
+  { href: "/#coaches", label: "Coaches" },
   { href: "/#features", label: "Producto" },
   { href: "/#app", label: "Interfaz" },
   { href: "/#contact", label: "Contacto" },

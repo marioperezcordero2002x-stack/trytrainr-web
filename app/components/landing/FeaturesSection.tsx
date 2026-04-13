@@ -25,6 +25,7 @@ const iconById = {
 export function FeaturesSection() {
   const [flagship, ...rest] = trainrProduct.features;
   const intro = trainrProduct.featuresIntro;
+  const aside = trainrProduct.flagshipAside;
 
   return (
     <Section
@@ -51,7 +52,11 @@ export function FeaturesSection() {
 
       <div className="mt-12 space-y-4 sm:mt-14 sm:space-y-5 lg:mt-16">
         <RevealOnView>
-          <FlagshipFeatureCard feature={flagship} index={0} />
+          <FlagshipFeatureCard
+            feature={flagship}
+            index={0}
+            aside={aside}
+          />
         </RevealOnView>
 
         <div className="grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
@@ -69,9 +74,11 @@ export function FeaturesSection() {
 function FlagshipFeatureCard({
   feature,
   index,
+  aside,
 }: {
   feature: (typeof trainrProduct.features)[number];
   index: number;
+  aside: (typeof trainrProduct)["flagshipAside"];
 }) {
   const Icon = iconById[feature.icon];
 
@@ -108,23 +115,25 @@ function FlagshipFeatureCard({
 
       <div className="relative mt-8 flex flex-col justify-center rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-1)] p-5 lg:mt-0 lg:min-w-[240px] lg:flex-1">
         <p className="tr-text-overline text-[var(--tr-text-tertiary)]">
-          Hub inferior (app)
+          {aside.overline}
         </p>
-        <ul className="mt-4 flex flex-wrap gap-2">
-          {trainrProduct.hubTabs.map((tab) => (
+        <p className="mt-3 text-[0.9375rem] font-semibold leading-snug text-[var(--tr-text-primary)]">
+          {aside.title}
+        </p>
+        <p className="tr-text-body-sm mt-2 text-pretty text-[var(--tr-text-secondary)]">
+          {aside.body}
+        </p>
+        <ul className="mt-5 space-y-2">
+          {aside.bullets.map((line) => (
             <li
-              key={tab}
-              className="rounded-[var(--tr-radius-sm)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] px-2.5 py-1 font-mono text-[10px] font-semibold uppercase tracking-wider text-[var(--tr-text-secondary)]"
+              key={line}
+              className="flex gap-2 text-[0.8125rem] leading-snug text-[var(--tr-text-tertiary)]"
             >
-              {tab}
+              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-trainr-accent/80" />
+              <span>{line}</span>
             </li>
           ))}
         </ul>
-        <div className="mt-5 h-px w-full bg-[var(--tr-border)]" />
-        <p className="tr-text-body-sm mt-4 text-[var(--tr-text-tertiary)]">
-          Misma navegación en todos los módulos: el usuario no pierde el
-          contexto al cambiar de feed a entreno o a premium.
-        </p>
       </div>
     </article>
   );

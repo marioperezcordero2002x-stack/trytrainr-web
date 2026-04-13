@@ -43,9 +43,8 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="tr-text-body-sm mt-4 max-w-sm text-pretty">
-              Misma propuesta que la app: hub de Inicio, Explorar, Chats,
-              Entreno, Nutrición y Premium; feed social y chat 1:1 con datos en
-              Firestore.
+              Guidance diario con Training Coach y Nutrition Coach: claridad de
+              entreno y comida en un solo sistema, con contexto social opcional.
             </p>
             <p className="mt-5 font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-[var(--tr-text-faint)]">
               trytrainr.com
@@ -96,7 +95,7 @@ export function SiteFooter() {
             © {new Date().getFullYear()} Trainr. Todos los derechos reservados.
           </p>
           <p className="text-[11px] text-[var(--tr-text-faint)]">
-            Constancia sobre viralidad.
+            Claridad sobre ruido.
           </p>
         </div>
       </Container>
