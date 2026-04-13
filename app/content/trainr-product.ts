@@ -11,12 +11,7 @@ export const trainrProduct = {
     domainLine: "trytrainr.com",
     trustBadge: "Acceso anticipado",
     headline: "Trainr te dice qué entrenar y cómo comer cada día.",
-    subhead: "Menos dudas. Más claridad. Solo ejecuta.",
-    reliefPhrases: [
-      "Deja de improvisar.",
-      "Sin dudas. Sin ruido.",
-      "Cada día, claro.",
-    ] as const,
+    subhead: "Sin dudas. Sin ruido. Solo ejecuta.",
     primaryCta: "Acceso anticipado",
     primaryHref: "#cta" as const,
     secondaryCta: "Ver cómo funciona",
@@ -28,15 +23,15 @@ export const trainrProduct = {
     items: [
       {
         title: "Qué entrenar",
-        line: "Hoy lo tienes claro. Nada de improvisar en el gimnasio.",
+        line: "Claro antes de entrar al gym.",
       },
       {
         title: "Cómo comer",
-        line: "Orientación que encaja con lo que entrenas.",
+        line: "Alineado con lo que haces.",
       },
       {
-        title: "Menos ruido mental",
-        line: "Un solo sitio. Menos decisiones. Más constancia.",
+        title: "Menos ruido",
+        line: "Un sitio. Menos decisiones.",
       },
     ] as const,
   },
@@ -46,42 +41,40 @@ export const trainrProduct = {
     title: "Tres pasos. Un día.",
     steps: [
       {
-        title: "El Training Coach marca el entreno de hoy",
-        body: "Qué tocar y cómo enfocar la sesión — para entrenar, no para dudar.",
+        title: "Training Coach marca el entreno de hoy",
+        body: "Qué tocar y cómo enfocarlo — para entrenar, no para dudar.",
       },
       {
-        title: "El Nutrition Coach te orienta en la comida de hoy",
-        body: "Comer con sentido, alineado con el esfuerzo — sin rigidez ni complicarte la vida.",
+        title: "Nutrition Coach orienta la comida de hoy",
+        body: "Sentido práctico, alineado con el esfuerzo — sin rigidez.",
       },
       {
-        title: "Juntos te dan claridad y constancia",
-        body: "Mismo día, misma lógica: entreno y comida dejan de pelearse.",
+        title: "Juntos, claridad y constancia",
+        body: "Misma lógica en un solo día: entreno y comida acompañan.",
       },
     ] as const,
   },
 
   coaches: {
-    eyebrow: "El centro",
-    title: "Dos coaches. Tu día, resuelto.",
-    lead: "Guía concreta para hacer — no una lista interminable de funciones.",
+    eyebrow: "El sistema",
+    title: "Dos coaches. El producto.",
+    lead: "No son funciones sueltas: es cómo Trainr te guía cada día.",
     training: {
       label: "Training Coach",
       title: "Tu entrenamiento de hoy, decidido.",
       bullets: [
-        "Te dice qué entrenar hoy.",
-        "Marca el enfoque del día y adapta la sesión.",
-        "Menos decisiones antes y durante el entreno.",
-        "Se nota guía de verdad, no solo registro.",
+        "Qué entrenar y cómo enfocar el día.",
+        "Menos decisiones en el gym.",
+        "Guía real, no solo registro.",
       ] as const,
     },
     nutrition: {
       label: "Nutrition Coach",
       title: "Tu forma de comer hoy, clara.",
       bullets: [
-        "Te orienta en cómo comer hoy.",
-        "Va a juego con el entreno, sin complicarte.",
-        "Sin sensación de dieta rígida.",
-        "Sin obsesionarte con números. Práctico y claro.",
+        "Cómo comer hoy, en sintonía con el entreno.",
+        "Sin dieta rígida ni líos innecesarios.",
+        "Práctico, sin obsesionarte con números.",
       ] as const,
     },
   },
@@ -91,24 +84,24 @@ export const trainrProduct = {
     title: "Por separado ayudan. Juntos marcan la diferencia.",
     tension: [
       "Entrenar sin comer bien se queda corto.",
-      "Comer bien sin entrenar con intención no basta.",
+      "Comer bien sin entrenar no es suficiente.",
       "Juntos funcionan de verdad.",
     ] as const,
     lead: "Un sistema. Mejor resultado.",
     sublead:
-      "Si entreno y comida viven en mundos distintos, la carga mental la llevas tú. Trainr la une.",
+      "Si cada cosa va por su lado, la carga mental la llevas tú. Trainr lo une.",
     points: [
       {
-        title: "Solo una pieza",
-        body: "Cuidar solo un lado te deja a medias: el otro sigue tirando de ti.",
+        title: "Una pieza sola",
+        body: "Te deja a medias: el otro lado sigue pesando.",
       },
       {
         title: "Las dos, alineadas",
-        body: "Mismo contexto cada día: lo que levantas y lo que comes dejan de contradecirse.",
+        body: "Lo que levantas y lo que comes dejan de pelearse.",
       },
       {
-        title: "Lo natural",
-        body: "Así está pensado Trainr: menos fricción, más adherencia, constancia que aguanta.",
+        title: "Así está pensado",
+        body: "Menos fricción, más adherencia, constancia que aguanta.",
       },
     ] as const,
   },
@@ -116,23 +109,19 @@ export const trainrProduct = {
   premiumFeel: {
     eyebrow: "Producto serio",
     title: "No es una app de fitness más.",
-    lead: "Menos ruido, más ejecución. Hecho para seguir el plan, no para perderte en pantallas.",
+    lead: "Hecho para ejecutar el plan, no para llenarte de pantallas.",
     points: [
       {
         title: "Menos ruido",
-        body: "Lo importante es qué hacer hoy — no competir por tu atención.",
+        body: "El foco es qué hacer hoy.",
       },
       {
         title: "Más constancia",
-        body: "Estructura que puedes repetir, no subidones que se esfuman.",
+        body: "Rutina que puedes mantener, no subidones vacíos.",
       },
       {
-        title: "Acción clara cada día",
-        body: "Siempre sabes el siguiente paso útil en entreno y comida.",
-      },
-      {
-        title: "Pensado para ejecutar",
-        body: "Cada detalle empuja a cumplir — no a mirar.",
+        title: "Acción clara",
+        body: "Siempre sabes el siguiente paso en entreno y comida.",
       },
     ] as const,
   },

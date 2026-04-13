@@ -1,7 +1,13 @@
+import {
+  SCREENSHOT_ALT,
+  SCREENSHOT_NUTRITION,
+  SCREENSHOT_TRAINING,
+} from "../../content/app-screenshots";
 import { trainrProduct } from "../../content/trainr-product";
 import { RevealOnView } from "../RevealOnView";
 import { Eyebrow } from "../system/Eyebrow";
 import { Section } from "../system/Section";
+import { IphoneScreenshot } from "./IphoneScreenshot";
 
 const { coaches } = trainrProduct;
 
@@ -12,42 +18,65 @@ export function CoachesSection() {
       tone="band"
       spacing="default"
       aria-labelledby="coaches-heading"
-      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.28)] sm:!py-[calc(var(--tr-section-y)*1.38)]"
+      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.45)] sm:!py-[calc(var(--tr-section-y)*1.55)]"
     >
-      <RevealOnView className="max-w-4xl">
-        <Eyebrow>{coaches.eyebrow}</Eyebrow>
+      <RevealOnView className="mx-auto max-w-4xl text-center lg:text-left">
+        <Eyebrow className="lg:text-left">{coaches.eyebrow}</Eyebrow>
         <h2
           id="coaches-heading"
-          className="mt-5 text-balance text-[var(--tr-text-primary)] text-[clamp(1.75rem,4.5vw,2.75rem)] font-semibold leading-[1.08] tracking-[-0.035em] sm:mt-6 lg:text-[clamp(2rem,4vw,3rem)]"
+          className="mx-auto mt-5 max-w-4xl text-balance text-[var(--tr-text-primary)] text-[clamp(1.875rem,5vw,3.25rem)] font-semibold leading-[1.05] tracking-[-0.04em] sm:mt-6 lg:mx-0"
         >
           {coaches.title}
         </h2>
-        <p className="mt-4 max-w-xl text-pretty text-[1.0625rem] font-medium leading-snug text-[var(--tr-text-secondary)] sm:mt-5 sm:text-lg">
+        <p className="mx-auto mt-4 max-w-2xl text-pretty text-[1.0625rem] font-medium leading-snug text-[var(--tr-text-secondary)] sm:mt-5 sm:text-lg lg:mx-0">
           {coaches.lead}
         </p>
       </RevealOnView>
 
-      <div className="mt-14 grid gap-7 lg:grid-cols-2 lg:gap-10 lg:mt-[4.5rem]">
+      <div className="mt-16 space-y-20 sm:mt-20 sm:space-y-24 lg:mt-24 lg:space-y-32">
         <RevealOnView delayMs={40}>
-          <CoachBlock
-            label={coaches.training.label}
-            title={coaches.training.title}
-            bullets={coaches.training.bullets}
-          />
+          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14 xl:gap-20">
+            <div className="lg:col-span-5 xl:col-span-5">
+              <CoachCopyBlock
+                label={coaches.training.label}
+                title={coaches.training.title}
+                bullets={coaches.training.bullets}
+              />
+            </div>
+            <div className="flex justify-center lg:col-span-7 xl:col-span-7">
+              <IphoneScreenshot
+                src={SCREENSHOT_TRAINING}
+                alt={SCREENSHOT_ALT.training}
+                size="section"
+              />
+            </div>
+          </div>
         </RevealOnView>
-        <RevealOnView delayMs={80}>
-          <CoachBlock
-            label={coaches.nutrition.label}
-            title={coaches.nutrition.title}
-            bullets={coaches.nutrition.bullets}
-          />
+
+        <RevealOnView delayMs={60}>
+          <div className="grid items-center gap-12 lg:grid-cols-12 lg:gap-14 xl:gap-20">
+            <div className="flex justify-center lg:order-1 lg:col-span-7 xl:col-span-7">
+              <IphoneScreenshot
+                src={SCREENSHOT_NUTRITION}
+                alt={SCREENSHOT_ALT.nutrition}
+                size="section"
+              />
+            </div>
+            <div className="lg:order-2 lg:col-span-5 xl:col-span-5">
+              <CoachCopyBlock
+                label={coaches.nutrition.label}
+                title={coaches.nutrition.title}
+                bullets={coaches.nutrition.bullets}
+              />
+            </div>
+          </div>
         </RevealOnView>
       </div>
     </Section>
   );
 }
 
-function CoachBlock({
+function CoachCopyBlock({
   label,
   title,
   bullets,
@@ -57,25 +86,25 @@ function CoachBlock({
   bullets: readonly string[];
 }) {
   return (
-    <article className="relative flex h-full flex-col overflow-hidden rounded-[var(--tr-radius-xl)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)] p-8 shadow-[var(--tr-shadow-card)] ring-1 ring-white/[0.04] sm:p-10 lg:p-11">
+    <article className="relative text-center lg:pl-8 lg:text-left">
       <div
-        className="pointer-events-none absolute left-0 top-0 h-full w-1 bg-trainr-accent sm:w-[5px]"
+        className="pointer-events-none absolute left-0 top-0 hidden h-full w-1 bg-trainr-accent sm:w-[5px] lg:block"
         aria-hidden
       />
       <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-trainr-accent sm:text-[11px]">
         {label}
       </p>
-      <h3 className="mt-4 text-[1.375rem] font-bold leading-tight tracking-tight text-[var(--tr-text-primary)] sm:mt-5 sm:text-2xl lg:text-[1.75rem]">
+      <h3 className="mt-4 text-[1.5rem] font-bold leading-tight tracking-tight text-[var(--tr-text-primary)] sm:mt-5 sm:text-[1.75rem] lg:text-[2rem]">
         {title}
       </h3>
-      <ul className="mt-6 space-y-3.5 sm:mt-7 sm:space-y-4">
+      <ul className="mx-auto mt-7 max-w-md space-y-4 text-left lg:mx-0 lg:max-w-none lg:mt-8 lg:space-y-4">
         {bullets.map((line) => (
           <li
             key={line}
-            className="flex gap-3 text-pretty text-[0.9375rem] leading-relaxed text-[var(--tr-text-secondary)] sm:text-[1rem]"
+            className="flex gap-3 text-pretty text-[1rem] font-medium leading-relaxed text-[var(--tr-text-secondary)] sm:text-[1.0625rem]"
           >
             <span
-              className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-trainr-accent"
+              className="mt-2 h-2 w-2 shrink-0 rounded-full bg-trainr-accent"
               aria-hidden
             />
             <span>{line}</span>

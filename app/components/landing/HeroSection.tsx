@@ -1,7 +1,12 @@
+import {
+  SCREENSHOT_ALT,
+  SCREENSHOT_TRAINING,
+} from "../../content/app-screenshots";
 import { trainrProduct } from "../../content/trainr-product";
 import { RevealOnView } from "../RevealOnView";
 import { Container } from "../system/Container";
 import { Eyebrow } from "../system/Eyebrow";
+import { IphoneScreenshot } from "./IphoneScreenshot";
 
 const { hero, supportEmail } = trainrProduct;
 
@@ -26,78 +31,6 @@ function ChevronRight({ className }: { className?: string }) {
   );
 }
 
-/** Device frame: today’s coaching panels only — no social UI. */
-function HeroDevicePreview() {
-  return (
-    <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px]">
-      <p className="mb-3 text-right font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-[var(--tr-text-faint)] sm:text-[10px]">
-        Hoy
-      </p>
-      <div
-        className="pointer-events-none absolute -inset-10 rounded-[var(--tr-radius-2xl)] bg-[var(--trainr-accent-glow)] blur-3xl"
-        aria-hidden
-      />
-      <div
-        className="relative rounded-[2.125rem] p-[10px] shadow-[var(--tr-shadow-device)]"
-        style={{
-          background:
-            "linear-gradient(145deg, #2a2a30 0%, #1a1a1f 40%, #121214 100%)",
-        }}
-      >
-        <div
-          className="relative overflow-hidden rounded-[1.65rem] bg-[#0a0a0a] ring-1 ring-black/50"
-          style={{ aspectRatio: "9 / 19" }}
-        >
-          <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.035] via-transparent to-transparent"
-            aria-hidden
-          />
-          <div className="relative z-10 flex h-11 items-end justify-between px-5 pb-1 pt-2">
-            <span className="font-mono text-[11px] font-semibold tabular-nums text-[var(--tr-text-tertiary)]">
-              9:41
-            </span>
-            <div className="absolute left-1/2 top-2 h-[28px] w-[88px] -translate-x-1/2 rounded-full bg-black ring-1 ring-white/[0.1]" />
-            <div className="h-2.5 w-5 rounded-sm border border-[var(--tr-border-medium)]" />
-          </div>
-          <div className="relative z-10 space-y-2.5 px-3 pb-8 pt-1">
-            <p className="px-1 text-[12px] font-semibold text-[var(--tr-text-primary)] sm:text-[13px]">
-              Hoy
-            </p>
-            <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-2.5 shadow-[var(--tr-shadow-inset)] ring-1 ring-white/[0.04]">
-              <p className="font-mono text-[8px] font-semibold uppercase tracking-[0.12em] text-trainr-accent sm:text-[9px]">
-                Training Coach
-              </p>
-              <p className="mt-1 text-[11px] font-bold leading-snug text-[var(--tr-text-primary)] sm:text-[12px]">
-                Pierna · prioridad sentadilla
-              </p>
-              <p className="mt-1 text-[10px] leading-snug text-[var(--tr-text-tertiary)]">
-                4×6–8 · sube peso si RPE {"<"} 8
-              </p>
-            </div>
-            <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-2.5 shadow-[var(--tr-shadow-inset)] ring-1 ring-white/[0.04]">
-              <p className="font-mono text-[8px] font-semibold uppercase tracking-[0.12em] text-trainr-accent sm:text-[9px]">
-                Nutrition Coach
-              </p>
-              <p className="mt-1 text-[11px] font-bold leading-snug text-[var(--tr-text-primary)] sm:text-[12px]">
-                Comer bien con pierna dura
-              </p>
-              <p className="mt-1 text-[10px] leading-snug text-[var(--tr-text-tertiary)]">
-                Carbos alrededor del entreno · proteína en la cena
-              </p>
-            </div>
-            <div className="rounded-[var(--tr-radius-sm)] border border-dashed border-[var(--tr-border-medium)] bg-black/25 py-2.5 text-center">
-              <p className="px-2 text-[10px] font-medium text-[var(--tr-text-secondary)]">
-                Dos coaches · un plan para hoy
-              </p>
-            </div>
-          </div>
-          <div className="absolute bottom-2 left-1/2 z-10 h-1 w-[28%] -translate-x-1/2 rounded-full bg-zinc-600/90" />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export function HeroSection() {
   return (
     <section
@@ -115,7 +48,7 @@ export function HeroSection() {
       <div className="tr-divider-fade absolute bottom-0 left-0 right-0 opacity-60" />
 
       <Container className="relative flex flex-1 flex-col justify-center py-12 sm:py-16 lg:py-[4.5rem]">
-        <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-14">
+        <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-16">
           <div className="lg:col-span-6 xl:col-span-6">
             <RevealOnView>
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-3 sm:gap-y-2">
@@ -137,10 +70,10 @@ export function HeroSection() {
               </div>
             </RevealOnView>
 
-            <RevealOnView delayMs={35} className="mt-6 sm:mt-8">
+            <RevealOnView delayMs={35} className="mt-6 sm:mt-7">
               <h1
                 id="hero-heading"
-                className="max-w-[19rem] text-balance text-[var(--tr-text-primary)] min-[400px]:max-w-[24rem] sm:max-w-2xl lg:max-w-[32rem]"
+                className="max-w-[19rem] text-balance text-[var(--tr-text-primary)] min-[400px]:max-w-[26rem] sm:max-w-2xl lg:max-w-[34rem]"
               >
                 <span className="tr-text-display block leading-[1.02]">
                   {hero.headline}
@@ -148,29 +81,13 @@ export function HeroSection() {
               </h1>
             </RevealOnView>
 
-            <RevealOnView delayMs={50} className="mt-4 max-w-xl sm:mt-5 lg:max-w-2xl">
-              <p className="text-pretty text-[clamp(1.05rem,3vw,1.45rem)] font-semibold leading-snug tracking-[-0.02em] text-trainr-accent">
+            <RevealOnView delayMs={50} className="mt-3 max-w-xl sm:mt-4 lg:max-w-2xl">
+              <p className="text-pretty text-[clamp(1.08rem,3.2vw,1.5rem)] font-semibold leading-snug tracking-[-0.02em] text-trainr-accent">
                 {hero.subhead}
               </p>
             </RevealOnView>
 
-            <RevealOnView delayMs={65} className="mt-5 sm:mt-6">
-              <ul
-                className="flex max-w-xl flex-wrap gap-x-2 gap-y-2"
-                aria-label="Menos carga mental"
-              >
-                {hero.reliefPhrases.map((phrase) => (
-                  <li
-                    key={phrase}
-                    className="rounded-[var(--tr-radius-pill)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)]/90 px-3 py-1.5 font-mono text-[10px] font-semibold uppercase tracking-[0.1em] text-[var(--tr-text-secondary)] sm:text-[11px] sm:tracking-[0.12em]"
-                  >
-                    {phrase}
-                  </li>
-                ))}
-              </ul>
-            </RevealOnView>
-
-            <RevealOnView delayMs={95} className="mt-7 sm:mt-9">
+            <RevealOnView delayMs={85} className="mt-7 sm:mt-9">
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
                   href={hero.primaryHref}
@@ -197,7 +114,12 @@ export function HeroSection() {
 
           <div className="flex justify-center lg:col-span-6 xl:col-span-6">
             <RevealOnView delayMs={90} className="w-full">
-              <HeroDevicePreview />
+              <IphoneScreenshot
+                src={SCREENSHOT_TRAINING}
+                alt={SCREENSHOT_ALT.training}
+                size="hero"
+                priority
+              />
             </RevealOnView>
           </div>
         </div>

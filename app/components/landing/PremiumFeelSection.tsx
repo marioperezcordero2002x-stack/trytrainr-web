@@ -27,7 +27,7 @@ export function PremiumFeelSection() {
         </p>
       </RevealOnView>
 
-      <div className="mt-11 grid gap-3.5 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:mt-14">
+      <div className="mt-11 grid gap-3.5 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:mt-14 lg:grid-cols-3">
         {premiumFeel.points.map((point, i) => (
           <RevealOnView key={point.title} delayMs={i * 40}>
             <div className="flex h-full gap-4 rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-5 shadow-[var(--tr-shadow-inset)] sm:p-6">

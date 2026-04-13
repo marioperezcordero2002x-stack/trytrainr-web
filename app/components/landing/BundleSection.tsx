@@ -12,17 +12,17 @@ export function BundleSection() {
       tone="subtle"
       spacing="default"
       aria-labelledby="bundle-heading"
-      className="border-b border-[var(--tr-border)]"
+      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.12)]"
     >
       <RevealOnView className="mx-auto max-w-3xl text-center">
         <Eyebrow className="text-center">{bundle.eyebrow}</Eyebrow>
         <h2
           id="bundle-heading"
-          className="mt-5 text-balance text-[var(--tr-text-primary)] text-[clamp(1.625rem,4vw,2.5rem)] font-semibold leading-[1.1] tracking-[-0.03em] sm:mt-6"
+          className="mt-5 text-balance text-[var(--tr-text-primary)] text-[clamp(1.75rem,4.5vw,2.75rem)] font-semibold leading-[1.08] tracking-[-0.035em] sm:mt-6"
         >
           {bundle.title}
         </h2>
-        <ul className="mx-auto mt-8 max-w-xl space-y-3 text-center text-pretty sm:mt-9 sm:space-y-3.5">
+        <ul className="mx-auto mt-8 max-w-xl space-y-3 text-center text-pretty sm:mt-10 sm:space-y-3.5">
           {bundle.tension.map((line) => (
             <li
               key={line}
@@ -32,10 +32,10 @@ export function BundleSection() {
             </li>
           ))}
         </ul>
-        <p className="tr-text-lead mx-auto mt-8 max-w-md text-pretty font-semibold text-trainr-accent sm:mt-9">
+        <p className="tr-text-lead mx-auto mt-8 max-w-md text-pretty font-semibold text-trainr-accent sm:mt-10">
           {bundle.lead}
         </p>
-        <p className="tr-text-body-sm mx-auto mt-4 max-w-lg text-pretty text-[var(--tr-text-secondary)] sm:mt-5 sm:text-[0.9375rem]">
+        <p className="tr-text-body-sm mx-auto mt-3 max-w-lg text-pretty text-[var(--tr-text-secondary)] sm:mt-4 sm:text-[0.9375rem]">
           {bundle.sublead}
         </p>
       </RevealOnView>
