@@ -10,15 +10,15 @@ export const trainrProduct = {
     eyebrow: "Dos coaches. Un sistema.",
     domainLine: "trytrainr.com",
     trustBadge: "Acceso anticipado",
-    headline: "Trainr te dice qué entrenar y cómo comer cada día.",
-    killerLine: "Saber qué hacer hoy lo cambia todo.",
-    subhead: "Sin dudas. Sin ruido. Solo ejecuta.",
+    headline: "Trainr: qué entrenar y cómo comer, cada día.",
+    killerLine: "Menos dudas. Más avance.",
+    subhead: "Sin ruido. Solo ejecuta.",
     tensionPains: [
-      "Demasiadas dudas.",
-      "Demasiadas decisiones.",
-      "Demasiado ruido.",
+      "Muchas dudas.",
+      "Muchas decisiones.",
+      "Mucho ruido.",
     ] as const,
-    tensionResolve: "Trainr lo simplifica.",
+    tensionResolve: "Trainr lo ordena.",
     primaryCta: "Acceso anticipado",
     primaryHref: "#cta" as const,
     secondaryCta: "Cómo funciona",
@@ -28,18 +28,9 @@ export const trainrProduct = {
 
   quickValue: {
     items: [
-      {
-        title: "Qué entrenar",
-        line: "Antes del gym.",
-      },
-      {
-        title: "Cómo comer",
-        line: "Con el entreno.",
-      },
-      {
-        title: "Un sitio",
-        line: "Menos decisiones.",
-      },
+      { title: "Qué entrenar", line: "Antes del gym." },
+      { title: "Cómo comer", line: "Con el entreno." },
+      { title: "Un sitio", line: "Menos decidir." },
     ] as const,
   },
 
@@ -47,78 +38,60 @@ export const trainrProduct = {
     eyebrow: "Cómo funciona",
     title: "Tres pasos. Un día.",
     steps: [
-      {
-        title: "Training Coach: hoy",
-        body: "Qué hacer y cómo enfocarlo.",
-      },
-      {
-        title: "Nutrition Coach: hoy",
-        body: "Práctico, alineado al esfuerzo.",
-      },
-      {
-        title: "Juntos",
-        body: "Una lógica: entreno y comida.",
-      },
+      { title: "Training: hoy", body: "Qué hacer y cómo." },
+      { title: "Nutrition: hoy", body: "Comida alineada al esfuerzo." },
+      { title: "Juntos", body: "Misma lógica en todo." },
     ] as const,
   },
 
   coaches: {
     eyebrow: "El producto",
-    title: "Dos coaches. Esto es Trainr.",
-    lead: "Entreno y comida, cada día resueltos.",
+    title: "Dos coaches. Trainr.",
+    lead: "Las dos piezas, cada día.",
     training: {
       label: "Training Coach",
-      title: "Tu entreno de hoy, decidido.",
-      bullets: ["Qué entrenar hoy.", "Guía real, no solo registro."] as const,
+      title: "Entreno de hoy, listo.",
+      bullets: ["Qué tocar hoy.", "Guía, no solo registro."] as const,
     },
     nutrition: {
       label: "Nutrition Coach",
-      title: "Tu comida de hoy, clara.",
-      bullets: ["Cómo comer hoy, con el gym.", "Sin rigidez ni líos."] as const,
+      title: "Comida de hoy, clara.",
+      bullets: ["Cómo comer con el gym.", "Sin rigidez."] as const,
     },
   },
 
   bundle: {
     eyebrow: "Sistema completo",
-    title: "Entrenar o comer bien por separado no es suficiente.",
+    title: "Entreno o comida solos no bastan.",
     pairLead: "Puedes hacerlo.",
-    pairResolve: "Pero no es lo mismo.",
-    togetherIntro: "Cuando ambos trabajan juntos:",
+    pairResolve: "No es lo mismo.",
+    togetherIntro: "Los dos a la vez:",
     togetherOutro: "todo encaja.",
-    sublead: "Solo uno es un error: te falta la otra mitad del sistema.",
+    sublead: "Solo uno: falta la otra mitad.",
     points: [
-      {
-        title: "Solo uno",
-        body: "Incompleto. La otra pieza te frena.",
-      },
-      {
-        title: "Juntos",
-        body: "Sistema real. Todo encaja.",
-      },
-      {
-        title: "Trainr",
-        body: "Las dos, cada día.",
-      },
+      { title: "Solo uno", body: "Incompleto. Te frena." },
+      { title: "Juntos", body: "Encaja." },
+      { title: "Trainr", body: "Las dos, diario." },
     ] as const,
   },
 
   premiumFeel: {
     eyebrow: "Serio",
     title: "No es otra app de fitness.",
-    lead: "Para actuar, no para mirar.",
+    lead: "Para hacer, no mirar.",
     points: [
-      { title: "Menos ruido", body: "Solo lo de hoy." },
-      { title: "Constancia", body: "Algo que repites." },
-      { title: "Siguiente paso", body: "Entreno y comida." },
+      { title: "Menos ruido", body: "Solo hoy." },
+      { title: "Constancia", body: "Que repites." },
+      { title: "Siguiente paso", body: "Siempre claro." },
     ] as const,
   },
 
   finalCta: {
-    kicker: "Deja de improvisar.",
-    title: "Empieza con Trainr.",
+    kicker: "No sigas improvisando.",
+    title: "Empieza hoy.",
     subtitle: "",
     lead: "",
-    note: "Demasiado sentido para no usarlo.",
+    note: "Cuanto antes, mejor.",
     primaryLabel: "Acceso anticipado",
     secondaryLabel: "Cómo funciona",
     secondaryHref: "#how-trainr-works" as const,

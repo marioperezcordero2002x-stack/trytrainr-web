@@ -2,7 +2,7 @@ import { trainrProduct } from "../../content/trainr-product";
 import { RevealOnView } from "../RevealOnView";
 import { Section } from "../system/Section";
 
-const { finalCta, hero, supportEmail } = trainrProduct;
+const { finalCta, supportEmail } = trainrProduct;
 
 export function FinalCtaSection() {
   return (
@@ -34,12 +34,11 @@ export function FinalCtaSection() {
               {finalCta.lead}
             </p>
           ) : null}
-          <p className="relative mx-auto mt-6 max-w-lg overflow-hidden rounded-[var(--tr-radius-lg)] border border-[color:var(--trainr-accent-line)] bg-gradient-to-br from-[rgba(255,122,0,0.12)] via-[rgba(255,122,0,0.05)] to-transparent px-4 py-3 text-pretty text-center text-[clamp(0.98rem,2.8vw,1.25rem)] font-extrabold leading-[1.2] tracking-[-0.03em] text-trainr-accent shadow-[0_0_32px_-12px_rgba(255,122,0,0.4),inset_0_1px_0_rgba(255,255,255,0.05)] sm:mt-7 sm:px-5 sm:py-3.5">
-            <span className="relative z-[1]">{hero.killerLine}</span>
-          </p>
-          <p className="tr-text-body-sm mx-auto mt-4 max-w-md text-[var(--tr-text-tertiary)] sm:mt-5">
-            {finalCta.note}
-          </p>
+          {finalCta.note ? (
+            <p className="mx-auto mt-5 max-w-sm text-pretty text-[0.9375rem] font-medium leading-snug text-[var(--tr-text-secondary)] sm:mt-6">
+              {finalCta.note}
+            </p>
+          ) : null}
           <div className="mt-9 flex flex-col items-stretch justify-center gap-3 sm:mt-10 sm:flex-row sm:items-center">
             <a
               href={`mailto:${supportEmail}?subject=${encodeURIComponent(finalCta.mailtoSubject)}`}
