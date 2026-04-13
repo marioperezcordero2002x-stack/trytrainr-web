@@ -11,7 +11,7 @@ export const trainrProduct = {
     domainLine: "trytrainr.com",
     trustBadge: "Acceso anticipado",
     headline: "Trainr: qué entrenar y cómo comer, cada día.",
-    killerLine: "Menos dudas. Más avance.",
+    killerLine: "No pienses. Cumple.",
     subhead: "Sin ruido. Solo ejecuta.",
     tensionPains: [
       "Muchas dudas.",
@@ -87,11 +87,12 @@ export const trainrProduct = {
   },
 
   finalCta: {
-    kicker: "No sigas improvisando.",
-    title: "Empieza hoy.",
+    kicker: "",
+    title: "Empieza con Trainr.",
     subtitle: "",
     lead: "",
-    note: "Cuanto antes, mejor.",
+    note: "",
+    closingMemorable: "Saber qué hacer hoy lo cambia todo.",
     primaryLabel: "Acceso anticipado",
     secondaryLabel: "Cómo funciona",
     secondaryHref: "#how-trainr-works" as const,

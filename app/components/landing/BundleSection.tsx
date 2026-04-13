@@ -12,7 +12,7 @@ export function BundleSection() {
       tone="subtle"
       spacing="default"
       aria-labelledby="bundle-heading"
-      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.12)]"
+      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.22)]"
     >
       <RevealOnView className="mx-auto max-w-3xl text-center">
         <Eyebrow className="text-center">{bundle.eyebrow}</Eyebrow>
@@ -28,7 +28,7 @@ export function BundleSection() {
         <p className="mx-auto mt-2 max-w-lg text-[1.125rem] font-semibold leading-snug text-[var(--tr-text-primary)] sm:text-xl">
           {bundle.pairResolve}
         </p>
-        <div className="mx-auto mt-8 max-w-xl text-pretty sm:mt-10">
+        <div className="mx-auto mt-9 max-w-xl text-pretty sm:mt-11">
           <p className="text-[clamp(1.125rem,3vw,1.45rem)] font-semibold leading-snug text-trainr-accent">
             {bundle.togetherIntro}
           </p>
@@ -41,7 +41,7 @@ export function BundleSection() {
         </p>
       </RevealOnView>
 
-      <div className="mt-12 grid gap-4 sm:mt-14 sm:grid-cols-3 sm:gap-5 lg:mt-16">
+      <div className="mt-14 grid gap-5 sm:mt-16 sm:grid-cols-3 sm:gap-6 lg:mt-20">
         {bundle.points.map((point, i) => (
           <RevealOnView key={point.title} delayMs={i * 55}>
             <div className="flex h-full flex-col rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-5 shadow-[var(--tr-shadow-inset)] sm:p-6">

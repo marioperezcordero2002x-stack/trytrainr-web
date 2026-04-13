@@ -10,7 +10,7 @@ export function QuickValueSection() {
       id="value"
       tone="canvas"
       spacing="default"
-      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*0.55)] sm:!py-[calc(var(--tr-section-y)*0.65)]"
+      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*0.68)] sm:!py-[calc(var(--tr-section-y)*0.8)]"
       aria-labelledby="value-heading"
     >
       <h2 id="value-heading" className="sr-only">
@@ -22,7 +22,7 @@ export function QuickValueSection() {
             {quickValue.items.map((item, i) => (
               <div
                 key={item.title}
-                className="px-5 py-6 sm:px-7 sm:py-8 lg:px-8 lg:py-9"
+                className="px-5 py-7 sm:px-7 sm:py-9 lg:px-9 lg:py-10"
               >
                 <p
                   className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--tr-text-faint)]"

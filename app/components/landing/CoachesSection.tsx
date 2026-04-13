@@ -18,22 +18,22 @@ export function CoachesSection() {
       tone="band"
       spacing="default"
       aria-labelledby="coaches-heading"
-      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.55)] sm:!py-[calc(var(--tr-section-y)*1.68)]"
+      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.62)] sm:!py-[calc(var(--tr-section-y)*1.78)]"
     >
       <RevealOnView className="mx-auto max-w-4xl text-center lg:text-left">
         <Eyebrow className="lg:text-left">{coaches.eyebrow}</Eyebrow>
         <h2
           id="coaches-heading"
-          className="mx-auto mt-5 max-w-4xl text-balance text-[var(--tr-text-primary)] text-[clamp(2rem,5.5vw,3.5rem)] font-semibold leading-[1.04] tracking-[-0.04em] sm:mt-6 lg:mx-0"
+          className="mx-auto mt-6 max-w-4xl text-balance text-[var(--tr-text-primary)] text-[clamp(2rem,5.5vw,3.5rem)] font-semibold leading-[1.04] tracking-[-0.04em] sm:mt-7 lg:mx-0"
         >
           {coaches.title}
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-pretty text-[1.125rem] font-semibold leading-snug text-[var(--tr-text-secondary)] sm:mt-5 sm:text-xl lg:mx-0">
+        <p className="mx-auto mt-5 max-w-xl text-pretty text-[1.125rem] font-semibold leading-snug text-[var(--tr-text-secondary)] sm:mt-6 sm:text-xl lg:mx-0">
           {coaches.lead}
         </p>
       </RevealOnView>
 
-      <div className="mt-20 space-y-24 sm:mt-24 sm:space-y-28 lg:mt-28 lg:space-y-36">
+      <div className="mt-24 space-y-28 sm:mt-28 sm:space-y-32 lg:mt-32 lg:space-y-40">
         <RevealOnView delayMs={40}>
           <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-16 xl:gap-20">
             <div className="lg:col-span-5 xl:col-span-5">

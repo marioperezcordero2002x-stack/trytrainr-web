@@ -12,7 +12,7 @@ export function HowItWorksSection() {
       tone="subtle"
       spacing="default"
       aria-labelledby="how-heading"
-      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.02)]"
+      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.14)]"
     >
       <div className="max-w-3xl">
         <RevealOnView>
@@ -26,7 +26,7 @@ export function HowItWorksSection() {
         </RevealOnView>
       </div>
 
-      <div className="mt-12 grid gap-5 sm:mt-14 sm:grid-cols-3 sm:gap-6">
+      <div className="mt-14 grid gap-6 sm:mt-16 sm:grid-cols-3 sm:gap-7">
         {howItWorks.steps.map((step, i) => (
           <RevealOnView key={step.title} delayMs={i * 50}>
             <div className="group relative flex h-full flex-col overflow-hidden rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-5 shadow-[var(--tr-shadow-card)] transition-[border-color,box-shadow] duration-200 sm:p-6 sm:pb-7 hover:border-[var(--tr-border-medium)]">

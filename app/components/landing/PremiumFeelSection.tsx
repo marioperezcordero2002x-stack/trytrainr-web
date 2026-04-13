@@ -12,7 +12,7 @@ export function PremiumFeelSection() {
       tone="band"
       spacing="default"
       aria-labelledby="premium-heading"
-      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.05)] sm:!py-[calc(var(--tr-section-y)*1.12)]"
+      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.12)] sm:!py-[calc(var(--tr-section-y)*1.22)]"
     >
       <RevealOnView className="max-w-3xl">
         <Eyebrow>{premiumFeel.eyebrow}</Eyebrow>
@@ -22,12 +22,12 @@ export function PremiumFeelSection() {
         >
           {premiumFeel.title}
         </h2>
-        <p className="tr-text-lead mt-5 max-w-2xl text-pretty text-[var(--tr-text-secondary)]">
+        <p className="tr-text-lead mt-6 max-w-2xl text-pretty text-[var(--tr-text-secondary)] sm:mt-7">
           {premiumFeel.lead}
         </p>
       </RevealOnView>
 
-      <div className="mt-11 grid gap-3.5 sm:mt-12 sm:grid-cols-2 sm:gap-4 lg:mt-14 lg:grid-cols-3">
+      <div className="mt-12 grid gap-4 sm:mt-14 sm:grid-cols-2 sm:gap-5 lg:mt-16 lg:grid-cols-3">
         {premiumFeel.points.map((point, i) => (
           <RevealOnView key={point.title} delayMs={i * 40}>
             <div className="flex h-full gap-4 rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-5 shadow-[var(--tr-shadow-inset)] sm:p-6">
