@@ -28,9 +28,14 @@ export function BundleSection() {
         <p className="mx-auto mt-2 max-w-lg text-[1.125rem] font-semibold leading-snug text-[var(--tr-text-primary)] sm:text-xl">
           {bundle.pairResolve}
         </p>
-        <p className="tr-text-lead mx-auto mt-8 max-w-2xl text-pretty font-semibold text-trainr-accent sm:mt-10">
-          {bundle.togetherLine}
-        </p>
+        <div className="mx-auto mt-8 max-w-xl text-pretty sm:mt-10">
+          <p className="text-[clamp(1.125rem,3vw,1.45rem)] font-semibold leading-snug text-trainr-accent">
+            {bundle.togetherIntro}
+          </p>
+          <p className="mt-1 text-[clamp(1.35rem,4vw,1.85rem)] font-extrabold leading-tight tracking-[-0.03em] text-trainr-accent">
+            {bundle.togetherOutro}
+          </p>
+        </div>
         <p className="tr-text-body-sm mx-auto mt-4 max-w-md text-pretty font-medium text-[var(--tr-text-secondary)] sm:mt-5 sm:text-[0.9375rem]">
           {bundle.sublead}
         </p>
