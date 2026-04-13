@@ -12,7 +12,7 @@ export function CoachesSection() {
       tone="band"
       spacing="default"
       aria-labelledby="coaches-heading"
-      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.08)]"
+      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.12)]"
     >
       <RevealOnView className="max-w-3xl">
         <Eyebrow>{coaches.eyebrow}</Eyebrow>

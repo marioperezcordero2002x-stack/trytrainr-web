@@ -26,7 +26,7 @@ function ChevronRight({ className }: { className?: string }) {
   );
 }
 
-/** Preview: guidance diario (entreno + nutrición), sin feed social. */
+/** Device frame: today’s coaching panels only — no social UI. */
 function HeroDevicePreview() {
   return (
     <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px]">
@@ -114,7 +114,7 @@ export function HeroSection() {
       />
       <div className="tr-divider-fade absolute bottom-0 left-0 right-0 opacity-60" />
 
-      <Container className="relative flex flex-1 flex-col justify-center py-10 sm:py-14 lg:py-20">
+      <Container className="relative flex flex-1 flex-col justify-center py-12 sm:py-16 lg:py-[4.5rem]">
         <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-12 lg:gap-10 xl:gap-14">
           <div className="lg:col-span-6 xl:col-span-6">
             <RevealOnView>

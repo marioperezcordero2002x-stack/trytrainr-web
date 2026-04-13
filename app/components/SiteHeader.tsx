@@ -7,8 +7,8 @@ import { TrainrLogoMark } from "./TrainrLogoMark";
 const nav = [
   { href: "/#how-trainr-works", label: "How it works" },
   { href: "/#coaches", label: "Coaches" },
-  { href: "/#why-trainr", label: "Why Trainr" },
-  { href: "/#app", label: "Preview" },
+  { href: "/#bundle", label: "Together" },
+  { href: "/#premium-feel", label: "Premium" },
   { href: "/#contact", label: "Contact" },
 ] as const;
 

@@ -25,9 +25,12 @@ export function BundleSection() {
         <p className="tr-text-lead mx-auto mt-5 max-w-xl text-pretty text-[var(--tr-text-secondary)]">
           {bundle.lead}
         </p>
+        <p className="tr-text-body-sm mx-auto mt-4 max-w-lg text-pretty text-[var(--tr-text-tertiary)] sm:mt-5">
+          {bundle.sublead}
+        </p>
       </RevealOnView>
 
-      <div className="mt-12 grid gap-4 sm:mt-14 sm:grid-cols-3 sm:gap-5 lg:mt-16">
+      <div className="mt-11 grid gap-4 sm:mt-12 sm:grid-cols-3 sm:gap-5 lg:mt-14">
         {bundle.points.map((point, i) => (
           <RevealOnView key={point.title} delayMs={i * 55}>
             <div className="flex h-full flex-col rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-5 shadow-[var(--tr-shadow-inset)] sm:p-6">

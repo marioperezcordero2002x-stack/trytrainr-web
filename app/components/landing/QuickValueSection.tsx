@@ -10,36 +10,37 @@ export function QuickValueSection() {
       id="value"
       tone="canvas"
       spacing="default"
-      className="border-b border-[var(--tr-border)] !pt-[calc(var(--tr-section-y)*0.75)] !pb-[calc(var(--tr-section-y)*1.05)] sm:!pt-[calc(var(--tr-section-y)*0.85)] sm:!pb-[calc(var(--tr-section-y)*1.15)]"
+      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*0.55)] sm:!py-[calc(var(--tr-section-y)*0.65)]"
       aria-labelledby="value-heading"
     >
       <h2 id="value-heading" className="sr-only">
-        What you get every day
+        What Trainr gives you every day
       </h2>
-      <div className="grid gap-4 sm:grid-cols-3 sm:gap-5 lg:gap-6">
-        {quickValue.items.map((item, i) => (
-          <RevealOnView key={item.title} delayMs={i * 45}>
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[var(--tr-radius-xl)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] px-5 py-7 shadow-[var(--tr-shadow-card)] sm:px-6 sm:py-9">
+      <RevealOnView>
+        <div className="overflow-hidden rounded-[var(--tr-radius-xl)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)] shadow-[var(--tr-shadow-inset)]">
+          <div className="grid divide-y divide-[var(--tr-border)] md:grid-cols-3 md:divide-x md:divide-y-0">
+            {quickValue.items.map((item, i) => (
               <div
-                className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-trainr-accent/90 via-trainr-accent/40 to-transparent"
-                aria-hidden
-              />
-              <span
-                className="font-mono text-[10px] font-bold text-[var(--tr-text-faint)]"
-                aria-hidden
+                key={item.title}
+                className="px-5 py-6 sm:px-7 sm:py-8 lg:px-8 lg:py-9"
               >
-                {String(i + 1).padStart(2, "0")}
-              </span>
-              <h3 className="tr-text-h3 mt-5 text-balance text-[var(--tr-text-primary)] sm:mt-6 sm:text-[length:var(--tr-text-h2)] sm:leading-tight sm:tracking-tight">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-[0.9375rem] font-medium leading-snug text-[var(--tr-text-secondary)] sm:mt-4 sm:text-base sm:leading-relaxed">
-                {item.line}
-              </p>
-            </div>
-          </RevealOnView>
-        ))}
-      </div>
+                <p
+                  className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--tr-text-faint)]"
+                  aria-hidden
+                >
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+                <h3 className="mt-3 text-lg font-semibold leading-snug tracking-tight text-[var(--tr-text-primary)] sm:text-xl">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-[0.875rem] font-medium leading-relaxed text-[var(--tr-text-secondary)] sm:text-[0.9375rem]">
+                  {item.line}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </RevealOnView>
     </Section>
   );
 }
