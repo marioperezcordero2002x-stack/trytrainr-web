@@ -1,13 +1,12 @@
-import { AboutSection } from "./components/landing/AboutSection";
+import { BundleSection } from "./components/landing/BundleSection";
 import { CoachesSection } from "./components/landing/CoachesSection";
-import { DifferentSection } from "./components/landing/DifferentSection";
-import { ExecutionSocialSection } from "./components/landing/ExecutionSocialSection";
-import { FeaturesSection } from "./components/landing/FeaturesSection";
-import { ConversionBridgeSection } from "./components/landing/ConversionBridgeSection";
 import { FinalCtaSection } from "./components/landing/FinalCtaSection";
 import { HeroSection } from "./components/landing/HeroSection";
 import { HowItWorksSection } from "./components/landing/HowItWorksSection";
+import { QuickValueSection } from "./components/landing/QuickValueSection";
 import { ShowcaseSection } from "./components/landing/ShowcaseSection";
+import { SupportingLayersSection } from "./components/landing/SupportingLayersSection";
+import { WhyTrainrSection } from "./components/landing/WhyTrainrSection";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 
@@ -20,14 +19,13 @@ export default function Home() {
         className="flex flex-1 flex-col bg-[var(--tr-canvas)]"
       >
         <HeroSection />
+        <QuickValueSection />
         <HowItWorksSection />
         <CoachesSection />
-        <AboutSection />
-        <FeaturesSection />
-        <DifferentSection />
+        <BundleSection />
+        <WhyTrainrSection />
         <ShowcaseSection />
-        <ExecutionSocialSection />
-        <ConversionBridgeSection />
+        <SupportingLayersSection />
         <FinalCtaSection />
       </main>
       <SiteFooter />

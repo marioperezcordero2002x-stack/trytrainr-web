@@ -43,8 +43,8 @@ export function SiteFooter() {
               </span>
             </Link>
             <p className="tr-text-body-sm mt-4 max-w-sm text-pretty">
-              Guidance diario con Training Coach y Nutrition Coach: claridad de
-              entreno y comida en un solo sistema, con contexto social opcional.
+              Daily guidance from Training Coach and Nutrition Coach — what to
+              train, how to eat, one quiet system.
             </p>
             <p className="mt-5 font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-[var(--tr-text-faint)]">
               trytrainr.com
@@ -52,7 +52,7 @@ export function SiteFooter() {
           </div>
 
           <div>
-            <p className="tr-text-overline">Contacto</p>
+            <p className="tr-text-overline">Contact</p>
             <a
               href="mailto:support@trytrainr.com"
               className="mt-4 inline-flex items-center gap-2.5 text-[0.9375rem] font-medium text-[var(--tr-text-primary)] transition-colors hover:text-trainr-accent"
@@ -61,7 +61,7 @@ export function SiteFooter() {
               support@trytrainr.com
             </a>
             <p className="tr-text-body-sm mt-3 max-w-xs text-[var(--tr-text-tertiary)]">
-              Prensa, partnerships o acceso anticipado: mismo canal.
+              Press, partnerships, or early access — same inbox.
             </p>
           </div>
 
@@ -92,10 +92,10 @@ export function SiteFooter() {
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[11px] text-[var(--tr-text-faint)]">
-            © {new Date().getFullYear()} Trainr. Todos los derechos reservados.
+            © {new Date().getFullYear()} Trainr. All rights reserved.
           </p>
           <p className="text-[11px] text-[var(--tr-text-faint)]">
-            Claridad sobre ruido.
+            Clarity over noise.
           </p>
         </div>
       </Container>

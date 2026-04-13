@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 import { TrainrLogoMark } from "./TrainrLogoMark";
 
 const nav = [
-  { href: "/#how-it-works", label: "Cómo funciona" },
+  { href: "/#how-trainr-works", label: "How it works" },
   { href: "/#coaches", label: "Coaches" },
-  { href: "/#features", label: "Producto" },
-  { href: "/#app", label: "Interfaz" },
-  { href: "/#contact", label: "Contacto" },
+  { href: "/#why-trainr", label: "Why Trainr" },
+  { href: "/#app", label: "Preview" },
+  { href: "/#contact", label: "Contact" },
 ] as const;
 
 export function SiteHeader() {
@@ -45,7 +45,7 @@ export function SiteHeader() {
 
         <nav
           className="flex min-w-0 flex-1 items-center justify-center gap-0.5 overflow-x-auto py-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-1 [&::-webkit-scrollbar]:hidden"
-          aria-label="Secciones"
+          aria-label="Sections"
         >
           {nav.map((item) => (
             <a
@@ -62,7 +62,7 @@ export function SiteHeader() {
           href="mailto:support@trytrainr.com"
           className="inline-flex shrink-0 items-center justify-center rounded-[var(--tr-radius-pill)] bg-[var(--tr-surface-1)] px-3.5 py-2 text-[0.8125rem] font-semibold text-[var(--tr-text-primary)] ring-1 ring-[var(--tr-border-medium)] transition-[background-color,box-shadow,transform] duration-200 hover:bg-[var(--tr-surface-2)] hover:ring-[color:var(--trainr-accent-line)] active:scale-[0.98] sm:px-5 sm:text-sm"
         >
-          Contactar
+          Email
         </a>
       </div>
     </header>

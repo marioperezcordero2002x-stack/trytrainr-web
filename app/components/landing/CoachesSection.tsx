@@ -12,7 +12,7 @@ export function CoachesSection() {
       tone="band"
       spacing="default"
       aria-labelledby="coaches-heading"
-      className="border-b border-[var(--tr-border)]"
+      className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.08)]"
     >
       <RevealOnView className="max-w-3xl">
         <Eyebrow>{coaches.eyebrow}</Eyebrow>
@@ -27,7 +27,7 @@ export function CoachesSection() {
         </p>
       </RevealOnView>
 
-      <div className="mt-10 grid gap-5 lg:grid-cols-2 lg:gap-6 lg:mt-14">
+      <div className="mt-12 grid gap-6 lg:grid-cols-2 lg:gap-8 lg:mt-16">
         <RevealOnView delayMs={40}>
           <CoachBlock
             label={coaches.training.label}
@@ -43,21 +43,6 @@ export function CoachesSection() {
           />
         </RevealOnView>
       </div>
-
-      <RevealOnView delayMs={120} className="mt-8 lg:mt-10">
-        <div className="relative overflow-hidden rounded-[var(--tr-radius-xl)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)] px-6 py-8 text-center shadow-[var(--tr-shadow-card)] sm:px-10 sm:py-9">
-          <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[var(--trainr-accent-soft)]/35 via-transparent to-[var(--trainr-accent-soft)]/25"
-            aria-hidden
-          />
-          <p className="relative tr-text-h3 font-bold tracking-tight text-[var(--tr-text-primary)]">
-            {coaches.bundle.title}
-          </p>
-          <p className="relative mx-auto mt-3 max-w-lg text-pretty text-[0.9375rem] leading-relaxed text-[var(--tr-text-secondary)] sm:text-base">
-            {coaches.bundle.body}
-          </p>
-        </div>
-      </RevealOnView>
     </Section>
   );
 }
@@ -72,7 +57,7 @@ function CoachBlock({
   bullets: readonly string[];
 }) {
   return (
-    <article className="relative flex h-full flex-col overflow-hidden rounded-[var(--tr-radius-xl)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-6 shadow-[var(--tr-shadow-card)] sm:p-8">
+    <article className="relative flex h-full flex-col overflow-hidden rounded-[var(--tr-radius-xl)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)] p-7 shadow-[var(--tr-shadow-card)] sm:p-9 lg:p-10">
       <div
         className="pointer-events-none absolute left-0 top-0 h-full w-[3px] bg-trainr-accent"
         aria-hidden

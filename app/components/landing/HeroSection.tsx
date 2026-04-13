@@ -31,7 +31,7 @@ function HeroDevicePreview() {
   return (
     <div className="relative mx-auto w-full max-w-[280px] sm:max-w-[300px] lg:max-w-[320px]">
       <p className="mb-3 text-right font-mono text-[9px] font-semibold uppercase tracking-[0.2em] text-[var(--tr-text-faint)] sm:text-[10px]">
-        Tu día
+        Today
       </p>
       <div
         className="pointer-events-none absolute -inset-10 rounded-[var(--tr-radius-2xl)] bg-[var(--trainr-accent-glow)] blur-3xl"
@@ -61,17 +61,17 @@ function HeroDevicePreview() {
           </div>
           <div className="relative z-10 space-y-2.5 px-3 pb-8 pt-1">
             <p className="px-1 text-[12px] font-semibold text-[var(--tr-text-primary)] sm:text-[13px]">
-              Hoy
+              Today
             </p>
             <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-2.5 shadow-[var(--tr-shadow-inset)] ring-1 ring-white/[0.04]">
               <p className="font-mono text-[8px] font-semibold uppercase tracking-[0.12em] text-trainr-accent sm:text-[9px]">
                 Training Coach
               </p>
               <p className="mt-1 text-[11px] font-bold leading-snug text-[var(--tr-text-primary)] sm:text-[12px]">
-                Pierna · sentadilla prioritaria
+                Lower · squat priority
               </p>
               <p className="mt-1 text-[10px] leading-snug text-[var(--tr-text-tertiary)]">
-                4×6–8 · sube si RPE {"<"} 8
+                4×6–8 · add load if RPE {"<"} 8
               </p>
             </div>
             <div className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-2.5 shadow-[var(--tr-shadow-inset)] ring-1 ring-white/[0.04]">
@@ -79,15 +79,15 @@ function HeroDevicePreview() {
                 Nutrition Coach
               </p>
               <p className="mt-1 text-[11px] font-bold leading-snug text-[var(--tr-text-primary)] sm:text-[12px]">
-                Comer hoy con pierna dura
+                Fuel for a heavy leg day
               </p>
               <p className="mt-1 text-[10px] leading-snug text-[var(--tr-text-tertiary)]">
-                Carbohidrato alrededor del entreno · cena con proteína
+                Carbs around training · protein at dinner
               </p>
             </div>
             <div className="rounded-[var(--tr-radius-sm)] border border-dashed border-[var(--tr-border-medium)] bg-black/25 py-2.5 text-center">
               <p className="px-2 text-[10px] font-medium text-[var(--tr-text-secondary)]">
-                Dos coaches · una decisión por día
+                Two coaches · one plan for the day
               </p>
             </div>
           </div>
@@ -174,28 +174,11 @@ export function HeroSection() {
                 </a>
               </div>
               <a
-                href={`mailto:${supportEmail}?subject=Prioridad%20de%20acceso%20Trainr`}
+                href={`mailto:${supportEmail}?subject=${encodeURIComponent("Trainr – early access")}`}
                 className="mt-4 inline-flex text-[0.8125rem] font-medium text-[var(--tr-text-tertiary)] underline decoration-[var(--tr-border-strong)] underline-offset-[5px] transition-colors hover:text-[var(--tr-text-primary)]"
               >
                 {hero.tertiaryCta}
               </a>
-            </RevealOnView>
-
-            <RevealOnView delayMs={145} className="mt-9 sm:mt-11">
-              <div className="tr-divider-fade mb-6 sm:mb-8" />
-              <ul className="grid gap-3 sm:grid-cols-3 sm:gap-4">
-                {hero.specRows.map((row) => (
-                  <li
-                    key={row.label}
-                    className="rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] px-4 py-3 shadow-[var(--tr-shadow-inset)]"
-                  >
-                    <p className="tr-text-overline">{row.label}</p>
-                    <p className="mt-1 text-[0.8125rem] font-medium text-[var(--tr-text-primary)]">
-                      {row.value}
-                    </p>
-                  </li>
-                ))}
-              </ul>
             </RevealOnView>
           </div>
 

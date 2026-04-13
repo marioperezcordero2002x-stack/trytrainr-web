@@ -104,7 +104,7 @@ export function ShowcaseSection() {
       tone="canvas"
       spacing="default"
       aria-labelledby="showcase-heading"
-      className="relative overflow-hidden !py-[calc(var(--tr-section-y)*1.2)] sm:!py-[calc(var(--tr-section-y)*1.4)] lg:!py-[calc(var(--tr-section-y)*1.7)]"
+      className="relative overflow-hidden !py-[calc(var(--tr-section-y)*1.02)] sm:!py-[calc(var(--tr-section-y)*1.12)] lg:!py-[calc(var(--tr-section-y)*1.28)]"
     >
       <div
         className="pointer-events-none absolute inset-0 bg-tr-grid bg-tr-grid-section opacity-[0.2]"
@@ -119,7 +119,7 @@ export function ShowcaseSection() {
         aria-hidden
       />
 
-      <div className="relative flex flex-col gap-14 sm:gap-16 lg:gap-20 xl:gap-24">
+      <div className="relative flex flex-col gap-11 sm:gap-14 lg:gap-16 xl:gap-20">
         <RevealOnView className="mx-auto max-w-xl text-center lg:max-w-2xl">
           <Eyebrow>{showcase.eyebrow}</Eyebrow>
           <h2

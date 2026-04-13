@@ -14,35 +14,35 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Trainr — Guidance diario de entreno y nutrición",
+    default: "Trainr — Two coaches. Daily clarity.",
     template: "%s · Trainr",
   },
   description:
-    "Trainr te dice qué entrenar y cómo comer cada día. Training Coach y Nutrition Coach en un sistema claro y premium. trytrainr.com",
+    "Trainr tells you what to train and how to eat each day. Training Coach and Nutrition Coach in one premium system. trytrainr.com",
   metadataBase: new URL("https://trytrainr.com"),
   openGraph: {
-    title: "Trainr — Dos coaches. Un sistema.",
+    title: "Trainr — Two coaches. One system.",
     description:
-      "Claridad diaria: dirección de entreno y orientación nutricional alineadas, sin ruido. Acceso anticipado en trytrainr.com.",
+      "Daily clarity for training and nutrition — less noise, better execution. Early access at trytrainr.com.",
     url: "/",
     siteName: "Trainr",
-    locale: "es_ES",
+    locale: "en_US",
     type: "website",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Trainr — Training Coach y Nutrition Coach",
+        alt: "Trainr — Training Coach and Nutrition Coach",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trainr — Guidance diario",
+    title: "Trainr — Daily guidance",
     description:
-      "Qué entrenar y cómo comer hoy, con dos coaches que trabajan juntos. Menos fricción, más ejecución.",
+      "What to train and how to eat today, with two coaches that work as one system.",
     images: ["/og-image.png"],
   },
 };
@@ -54,7 +54,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="es"
+      lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[var(--tr-canvas)] text-[var(--tr-text-primary)]">
@@ -62,7 +62,7 @@ export default function RootLayout({
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-trainr-accent focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-[#0a0a0c] focus:shadow-lg"
         >
-          Saltar al contenido
+          Skip to content
         </a>
         {children}
       </body>

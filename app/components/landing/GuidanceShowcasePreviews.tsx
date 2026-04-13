@@ -1,4 +1,4 @@
-/** Mockups estáticos: foco en guidance diario (entreno + nutrición), sin feed social. */
+/** Static mockups: daily training + nutrition guidance — not a social feed. */
 
 export function GuidanceShowcaseTraining({ dense }: { dense?: boolean }) {
   const t = dense
@@ -22,11 +22,11 @@ export function GuidanceShowcaseTraining({ dense }: { dense?: boolean }) {
   return (
     <div className={`space-y-3 ${t.pad}`}>
       <div className="flex items-center justify-between px-0.5">
-        <span className={`font-semibold text-white ${t.title}`}>Entreno</span>
+        <span className={`font-semibold text-white ${t.title}`}>Train</span>
         <span
           className={`rounded-md bg-[var(--trainr-accent-soft)] font-bold uppercase tracking-wide text-trainr-accent ${t.chip}`}
         >
-          Hoy
+          Today
         </span>
       </div>
 
@@ -35,22 +35,23 @@ export function GuidanceShowcaseTraining({ dense }: { dense?: boolean }) {
           Training Coach
         </p>
         <p className={`mt-1.5 font-bold leading-tight text-zinc-100 ${t.h}`}>
-          Tirón · énfasis en espalda
+          Pull · back emphasis
         </p>
         <p className={`mt-2 leading-relaxed text-zinc-400 ${t.body}`}>
-          Dominadas, remo y bíceps. Mantén RPE 7–8; si vas justo, baja una repetición y sube técnica.
+          Pull-ups, rows, arms. Hold RPE 7–8; if you are tight, drop a rep and
+          lock technique.
         </p>
         <div className="mt-3 space-y-1.5 border-t border-[var(--tr-border)] pt-3">
           <div className={`flex items-center justify-between text-zinc-500 ${t.row}`}>
-            <span>Dominadas asistidas</span>
+            <span>Assisted pull-ups</span>
             <span className="font-semibold text-zinc-300">4×8</span>
           </div>
           <div className={`flex items-center justify-between text-zinc-500 ${t.row}`}>
-            <span>Remo con barra</span>
+            <span>Barbell row</span>
             <span className="font-semibold text-zinc-300">3×10</span>
           </div>
           <div className={`flex items-center justify-between text-zinc-500 ${t.row}`}>
-            <span>Curl martillo</span>
+            <span>Hammer curl</span>
             <span className="font-semibold text-zinc-300">3×12</span>
           </div>
         </div>
@@ -58,7 +59,7 @@ export function GuidanceShowcaseTraining({ dense }: { dense?: boolean }) {
 
       <div className="rounded-[var(--tr-radius-sm)] border border-dashed border-[var(--tr-border-medium)] bg-black/30 px-3 py-2 text-center">
         <p className={`font-medium text-zinc-400 ${dense ? "text-[9px]" : "text-[10px]"}`}>
-          Decisión del día · sin improvisar en caliente
+          Today&apos;s call · no guessing under load
         </p>
       </div>
     </div>
@@ -87,11 +88,11 @@ export function GuidanceShowcaseNutrition({ dense }: { dense?: boolean }) {
   return (
     <div className={`space-y-3 ${t.pad}`}>
       <div className="flex items-center justify-between px-0.5">
-        <span className={`font-semibold text-white ${t.title}`}>Nutrición</span>
+        <span className={`font-semibold text-white ${t.title}`}>Fuel</span>
         <span
           className={`rounded-md border border-[var(--tr-border-medium)] font-bold uppercase tracking-wide text-zinc-400 ${t.chip}`}
         >
-          Hoy
+          Today
         </span>
       </div>
 
@@ -100,30 +101,31 @@ export function GuidanceShowcaseNutrition({ dense }: { dense?: boolean }) {
           Nutrition Coach
         </p>
         <p className={`mt-1.5 font-bold leading-tight text-zinc-100 ${t.h}`}>
-          Comer hoy con tirón intenso
+          Eating for a hard pull day
         </p>
         <p className={`mt-2 leading-relaxed text-zinc-400 ${t.body}`}>
-          Prioriza hidratación y carbohidrato alrededor del entreno; cena con proteína completa y pocas decisiones extra.
+          Hydration and carbs around training; dinner with complete protein —
+          fewer extra decisions.
         </p>
         <ul className={`mt-3 space-y-1.5 border-t border-[var(--tr-border)] pt-3 text-zinc-500 ${t.li}`}>
           <li className="flex gap-2">
             <span className="text-trainr-accent">·</span>
-            <span>Desayuno estable, sin saltarte proteína</span>
+            <span>Steady breakfast; do not skip protein</span>
           </li>
           <li className="flex gap-2">
             <span className="text-trainr-accent">·</span>
-            <span>Post-entreno: comida clara, sin complicar</span>
+            <span>Post-workout: simple, clear meal</span>
           </li>
           <li className="flex gap-2">
             <span className="text-trainr-accent">·</span>
-            <span>Cena ligera si el día fue denso</span>
+            <span>Lighter dinner if the day was heavy</span>
           </li>
         </ul>
       </div>
 
       <div className="rounded-[var(--tr-radius-sm)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)]/80 px-3 py-2 text-center ring-1 ring-white/[0.03]">
         <p className={`text-zinc-500 ${dense ? "text-[9px]" : "text-[10px]"}`}>
-          Orientación, no hoja de cálculo
+          Guidance, not a spreadsheet
         </p>
       </div>
     </div>
@@ -139,7 +141,7 @@ export function GuidanceShowcaseSystem({ dense }: { dense?: boolean }) {
       className={`flex flex-col justify-center space-y-3 px-2.5 pb-7 pt-1 sm:px-3 ${dense ? "min-h-[240px] pb-6 sm:min-h-[252px]" : "min-h-[280px] sm:min-h-[300px]"}`}
     >
       <p className="text-center font-mono text-[9px] font-semibold uppercase tracking-[0.16em] text-zinc-500 sm:text-[10px]">
-        Sistema
+        In sync
       </p>
       <div className="space-y-2 rounded-[var(--tr-radius-md)] border border-[var(--tr-border)] bg-[var(--tr-surface-1)] p-3 ring-1 ring-white/[0.04]">
         <div className="flex items-center gap-2">
@@ -152,11 +154,11 @@ export function GuidanceShowcaseSystem({ dense }: { dense?: boolean }) {
         </div>
         <div className="my-1 h-px w-full bg-[var(--tr-border)]" />
         <p className={`leading-snug text-zinc-400 ${label}`}>
-          Mismo contexto del día · menos fricción entre entreno y comida
+          Same daily context · less friction between training and food
         </p>
       </div>
       <p className={`text-center font-medium text-zinc-500 ${label}`}>
-        One system. Better results.
+        One system. Better execution.
       </p>
     </div>
   );
