@@ -18,7 +18,7 @@ export function PremiumFeelSection() {
         <Eyebrow>{premiumFeel.eyebrow}</Eyebrow>
         <h2
           id="premium-heading"
-          className="tr-text-h2 mt-5 text-balance text-[var(--tr-text-primary)]"
+          className="tr-text-h2 mt-6 text-balance text-[var(--tr-text-primary)] sm:mt-7"
         >
           {premiumFeel.title}
         </h2>

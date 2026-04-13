@@ -67,8 +67,8 @@
   --tr-text-display: clamp(2.375rem, 1.2rem + 4.2vw, 4rem);
 
   /* Espaciado secciones (ritmo vertical) */
-  --tr-section-y: clamp(4.5rem, 11vw, 8.25rem);
-  --tr-section-y-tight: clamp(3.25rem, 7.5vw, 5.5rem);
+  --tr-section-y: clamp(4.75rem, 11.5vw, 8.75rem);
+  --tr-section-y-tight: clamp(3.35rem, 7.75vw, 5.75rem);
   --tr-gutter-x: clamp(1rem, 4vw, 2.5rem);
 
   --header-height: 3.75rem;

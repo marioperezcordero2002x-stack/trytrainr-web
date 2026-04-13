@@ -30,7 +30,7 @@ export function QuickValueSection() {
                 >
                   {String(i + 1).padStart(2, "0")}
                 </p>
-                <h3 className="mt-3 text-lg font-semibold leading-snug tracking-tight text-[var(--tr-text-primary)] sm:text-xl">
+                <h3 className="mt-4 text-lg font-semibold leading-snug tracking-tight text-[var(--tr-text-primary)] sm:text-xl">
                   {item.title}
                 </h3>
                 <p className="mt-2 text-[0.875rem] font-medium leading-relaxed text-[var(--tr-text-secondary)] sm:text-[0.9375rem]">

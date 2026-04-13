@@ -88,11 +88,10 @@ export const trainrProduct = {
 
   finalCta: {
     kicker: "",
-    title: "Empieza con Trainr.",
+    title: "Empieza hoy.",
     subtitle: "",
     lead: "",
     note: "",
-    closingMemorable: "Saber qué hacer hoy lo cambia todo.",
     primaryLabel: "Acceso anticipado",
     secondaryLabel: "Cómo funciona",
     secondaryHref: "#how-trainr-works" as const,

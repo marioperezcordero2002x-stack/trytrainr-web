@@ -19,14 +19,14 @@ export function HowItWorksSection() {
           <Eyebrow>{howItWorks.eyebrow}</Eyebrow>
           <h2
             id="how-heading"
-            className="tr-text-h2 mt-5 text-balance text-[var(--tr-text-primary)]"
+            className="tr-text-h2 mt-6 text-balance text-[var(--tr-text-primary)] sm:mt-7"
           >
             {howItWorks.title}
           </h2>
         </RevealOnView>
       </div>
 
-      <div className="mt-14 grid gap-6 sm:mt-16 sm:grid-cols-3 sm:gap-7">
+      <div className="mt-16 grid gap-6 sm:mt-[4.5rem] sm:grid-cols-3 sm:gap-7">
         {howItWorks.steps.map((step, i) => (
           <RevealOnView key={step.title} delayMs={i * 50}>
             <div className="group relative flex h-full flex-col overflow-hidden rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-5 shadow-[var(--tr-shadow-card)] transition-[border-color,box-shadow] duration-200 sm:p-6 sm:pb-7 hover:border-[var(--tr-border-medium)]">

@@ -18,11 +18,11 @@ export function BundleSection() {
         <Eyebrow className="text-center">{bundle.eyebrow}</Eyebrow>
         <h2
           id="bundle-heading"
-          className="mt-5 text-balance text-[var(--tr-text-primary)] text-[clamp(1.75rem,4.5vw,2.85rem)] font-semibold leading-[1.08] tracking-[-0.035em] sm:mt-6"
+          className="mt-6 text-balance text-[var(--tr-text-primary)] text-[clamp(1.75rem,4.5vw,2.85rem)] font-semibold leading-[1.08] tracking-[-0.035em] sm:mt-7"
         >
           {bundle.title}
         </h2>
-        <p className="mx-auto mt-8 max-w-lg text-[1.125rem] font-semibold leading-snug text-[var(--tr-text-secondary)] sm:mt-9 sm:text-xl">
+        <p className="mx-auto mt-9 max-w-lg text-[1.125rem] font-semibold leading-snug text-[var(--tr-text-secondary)] sm:mt-10 sm:text-xl">
           {bundle.pairLead}
         </p>
         <p className="mx-auto mt-2 max-w-lg text-[1.125rem] font-semibold leading-snug text-[var(--tr-text-primary)] sm:text-xl">

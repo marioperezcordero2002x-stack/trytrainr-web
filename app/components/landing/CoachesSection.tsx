@@ -24,7 +24,7 @@ export function CoachesSection() {
         <Eyebrow className="lg:text-left">{coaches.eyebrow}</Eyebrow>
         <h2
           id="coaches-heading"
-          className="mx-auto mt-6 max-w-4xl text-balance text-[var(--tr-text-primary)] text-[clamp(2rem,5.5vw,3.5rem)] font-semibold leading-[1.04] tracking-[-0.04em] sm:mt-7 lg:mx-0"
+          className="mx-auto mt-7 max-w-4xl text-balance text-[var(--tr-text-primary)] text-[clamp(2rem,5.5vw,3.5rem)] font-semibold leading-[1.04] tracking-[-0.04em] sm:mt-8 lg:mx-0"
         >
           {coaches.title}
         </h2>
