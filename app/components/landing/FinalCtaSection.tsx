@@ -17,13 +17,13 @@ export function FinalCtaSection() {
           <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.16em] text-[var(--tr-text-faint)] sm:text-[11px]">
             {finalCta.kicker}
           </p>
-          <h2 className="tr-text-h2 mt-5 text-balance text-[var(--tr-text-primary)] sm:mt-6">
+          <h2 className="tr-text-h2 mt-5 text-balance font-extrabold tracking-[-0.03em] text-[var(--tr-text-primary)] sm:mt-6">
             {finalCta.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-md text-pretty text-[clamp(1.125rem,2.8vw,1.375rem)] font-semibold leading-snug tracking-tight text-trainr-accent sm:mt-5">
+          <p className="mx-auto mt-4 max-w-md text-pretty text-[clamp(1.125rem,2.8vw,1.375rem)] font-bold leading-snug tracking-tight text-trainr-accent sm:mt-5">
             {finalCta.subtitle}
           </p>
-          <p className="tr-text-lead mx-auto mt-5 max-w-lg text-pretty text-[var(--tr-text-secondary)]">
+          <p className="tr-text-lead mx-auto mt-5 max-w-lg text-pretty font-medium text-[var(--tr-text-secondary)]">
             {finalCta.lead}
           </p>
           <p className="tr-text-body-sm mx-auto mt-3 max-w-md text-[var(--tr-text-tertiary)]">

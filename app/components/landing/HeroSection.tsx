@@ -81,7 +81,13 @@ export function HeroSection() {
               </h1>
             </RevealOnView>
 
-            <RevealOnView delayMs={50} className="mt-3 max-w-xl sm:mt-4 lg:max-w-2xl">
+            <RevealOnView delayMs={42} className="mt-5 max-w-xl sm:mt-6">
+              <p className="relative overflow-hidden rounded-[var(--tr-radius-lg)] border border-[color:var(--trainr-accent-line)] bg-gradient-to-br from-[rgba(255,122,0,0.14)] via-[rgba(255,122,0,0.06)] to-transparent px-4 py-3.5 text-pretty text-[clamp(1.2rem,4vw,1.7rem)] font-extrabold leading-[1.12] tracking-[-0.035em] text-trainr-accent shadow-[0_0_40px_-10px_rgba(255,122,0,0.45),inset_0_1px_0_rgba(255,255,255,0.06)] sm:px-5 sm:py-4">
+                <span className="relative z-[1]">{hero.killerLine}</span>
+              </p>
+            </RevealOnView>
+
+            <RevealOnView delayMs={50} className="mt-4 max-w-xl sm:mt-5 lg:max-w-2xl">
               <p className="text-pretty text-[clamp(1.08rem,3.2vw,1.5rem)] font-semibold leading-snug tracking-[-0.02em] text-trainr-accent">
                 {hero.subhead}
               </p>

@@ -11,6 +11,7 @@ export const trainrProduct = {
     domainLine: "trytrainr.com",
     trustBadge: "Acceso anticipado",
     headline: "Trainr te dice qué entrenar y cómo comer cada día.",
+    killerLine: "No pienses. Cumple.",
     subhead: "Sin dudas. Sin ruido. Solo ejecuta.",
     tensionPains: [
       "Demasiadas dudas.",
@@ -64,7 +65,7 @@ export const trainrProduct = {
   coaches: {
     eyebrow: "El producto",
     title: "Dos coaches. Esto es Trainr.",
-    lead: "Qué entrenar y cómo comer — resuelto cada día.",
+    lead: "Entreno y comida resueltos cada día.",
     training: {
       label: "Training Coach",
       title: "Tu entreno de hoy, decidido.",
@@ -88,21 +89,21 @@ export const trainrProduct = {
     title: "Entrenar o comer bien no es suficiente.",
     pairLead: "Por separado ayudan.",
     pairResolve: "Juntos funcionan.",
+    insufficientLine: "Solo uno: incompleto.",
     lead: "Un sistema. Mejor resultado.",
-    sublead:
-      "Solo una pieza te deja a medias. Trainr une entreno y comida — o sigues cargando tú con el resto.",
+    sublead: "Sin las dos, el día no cierra. La carga sigue siendo tuya.",
     points: [
       {
-        title: "A medias",
-        body: "Un lado fuerte y el otro flojo: el día no cierra.",
+        title: "Incompleto",
+        body: "Solo entreno o solo comida: el otro lado te frena.",
       },
       {
         title: "Alineados",
-        body: "Lo que entrenas y lo que comes dejan de contradecirse.",
+        body: "Entreno y comida en la misma lógica.",
       },
       {
-        title: "Así nace Trainr",
-        body: "Menos fricción, más constancia real.",
+        title: "Trainr",
+        body: "Las dos, unidas. Menos fricción, más constancia.",
       },
     ] as const,
   },
@@ -110,7 +111,7 @@ export const trainrProduct = {
   premiumFeel: {
     eyebrow: "Serio",
     title: "No es otra app de fitness.",
-    lead: "Para ejecutar, no para coleccionar pantallas.",
+    lead: "Para hacer, no para mirar pantallas.",
     points: [
       {
         title: "Menos ruido",
@@ -128,11 +129,11 @@ export const trainrProduct = {
   },
 
   finalCta: {
-    kicker: "Saber qué hacer hoy lo cambia todo.",
-    title: "Empieza con claridad.",
-    subtitle: "Exactamente qué hacer cada día.",
-    lead: "Acceso anticipado: vas primero. Respuesta directa.",
-    note: "Cada día sin plan es tiempo que no vuelve.",
+    kicker: "Deja de improvisar.",
+    title: "Empieza hoy con Trainr.",
+    subtitle: "Simple. Directo. Cada día.",
+    lead: "Acceso anticipado: vas primero. Respuesta clara.",
+    note: "Tiene demasiado sentido como para no probarlo.",
     primaryLabel: "Acceso anticipado",
     secondaryLabel: "Ver cómo funciona",
     secondaryHref: "#how-trainr-works" as const,
