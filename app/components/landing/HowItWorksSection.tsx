@@ -3,31 +3,31 @@ import { RevealOnView } from "../RevealOnView";
 import { Eyebrow } from "../system/Eyebrow";
 import { Section } from "../system/Section";
 
-const { howItWorks } = trainrProduct;
+const { process } = trainrProduct;
 
 export function HowItWorksSection() {
   return (
     <Section
-      id="how-trainr-works"
+      id="proceso"
       tone="subtle"
       spacing="default"
-      aria-labelledby="how-heading"
+      aria-labelledby="process-heading"
       className="border-b border-[var(--tr-border)] !py-[calc(var(--tr-section-y)*1.14)]"
     >
       <div className="max-w-3xl">
         <RevealOnView>
-          <Eyebrow>{howItWorks.eyebrow}</Eyebrow>
+          <Eyebrow>{process.eyebrow}</Eyebrow>
           <h2
-            id="how-heading"
+            id="process-heading"
             className="tr-text-h2 mt-6 text-balance text-[var(--tr-text-primary)] sm:mt-7"
           >
-            {howItWorks.title}
+            {process.title}
           </h2>
         </RevealOnView>
       </div>
 
       <div className="mt-16 grid gap-6 sm:mt-[4.5rem] sm:grid-cols-3 sm:gap-7">
-        {howItWorks.steps.map((step, i) => (
+        {process.steps.map((step, i) => (
           <RevealOnView key={step.title} delayMs={i * 50}>
             <div className="group relative flex h-full flex-col overflow-hidden rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-[var(--tr-surface-0)] p-5 shadow-[var(--tr-shadow-card)] transition-[border-color,box-shadow] duration-200 sm:p-6 sm:pb-7 hover:border-[var(--tr-border-medium)]">
               <div

@@ -7,6 +7,7 @@ import { PremiumFeelSection } from "./components/landing/PremiumFeelSection";
 import { QuickValueSection } from "./components/landing/QuickValueSection";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
+import { WhatsAppStickyCta } from "./components/WhatsAppStickyCta";
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <SiteHeader />
       <main
         id="main-content"
-        className="flex flex-1 flex-col bg-[var(--tr-canvas)]"
+        className="flex flex-1 flex-col bg-[var(--tr-canvas)] pb-24 sm:pb-0"
       >
         <HeroSection />
         <QuickValueSection />
@@ -24,6 +25,7 @@ export default function Home() {
         <PremiumFeelSection />
         <FinalCtaSection />
       </main>
+      <WhatsAppStickyCta />
       <SiteFooter />
     </>
   );

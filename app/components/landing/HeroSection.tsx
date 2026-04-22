@@ -1,14 +1,9 @@
-import {
-  SCREENSHOT_ALT,
-  SCREENSHOT_TRAINING,
-} from "../../content/app-screenshots";
 import { trainrProduct } from "../../content/trainr-product";
 import { RevealOnView } from "../RevealOnView";
 import { Container } from "../system/Container";
 import { Eyebrow } from "../system/Eyebrow";
-import { IphoneScreenshot } from "./IphoneScreenshot";
 
-const { hero, supportEmail } = trainrProduct;
+const { hero, whatsApp, brand } = trainrProduct;
 
 function ChevronRight({ className }: { className?: string }) {
   return (
@@ -32,6 +27,10 @@ function ChevronRight({ className }: { className?: string }) {
 }
 
 export function HeroSection() {
+  const whatsAppHref = `https://wa.me/${whatsApp.phoneE164}?text=${encodeURIComponent(
+    whatsApp.prefill,
+  )}`;
+
   return (
     <section
       className="relative flex min-h-0 flex-col overflow-hidden border-b border-[var(--tr-border)] bg-[var(--tr-canvas)] sm:min-h-[min(92svh,52rem)] lg:min-h-[min(100svh,56rem)]"
@@ -48,8 +47,8 @@ export function HeroSection() {
       <div className="tr-divider-fade absolute bottom-0 left-0 right-0 opacity-60" />
 
       <Container className="relative flex flex-1 flex-col justify-center py-14 sm:py-[4.25rem] lg:py-20">
-        <div className="grid items-center gap-12 sm:gap-14 lg:grid-cols-12 lg:gap-12 xl:gap-16">
-          <div className="lg:col-span-6 xl:col-span-6">
+        <div className="grid items-start gap-10 sm:gap-12 lg:grid-cols-12 lg:items-center lg:gap-12 xl:gap-16">
+          <div className="lg:col-span-7 xl:col-span-7">
             <RevealOnView>
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-3 sm:gap-y-2">
                 <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
@@ -61,7 +60,7 @@ export function HeroSection() {
                     ·
                   </span>
                   <span className="font-mono text-[var(--tr-text-caption)] font-medium uppercase tracking-[0.12em] text-[var(--tr-text-tertiary)]">
-                    {hero.domainLine}
+                    {brand.descriptor}
                   </span>
                 </div>
                 <span className="inline-flex w-fit rounded-[var(--tr-radius-pill)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)] px-3 py-1 font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--tr-text-secondary)] sm:ml-0">
@@ -73,7 +72,7 @@ export function HeroSection() {
             <RevealOnView delayMs={35} className="mt-7 sm:mt-8">
               <h1
                 id="hero-heading"
-                className="max-w-[19rem] text-balance text-[var(--tr-text-primary)] min-[400px]:max-w-[26rem] sm:max-w-2xl lg:max-w-[34rem]"
+                className="max-w-[22rem] text-balance text-[var(--tr-text-primary)] min-[400px]:max-w-[28rem] sm:max-w-2xl lg:max-w-[38rem]"
               >
                 <span className="tr-text-display block leading-[1.02]">
                   {hero.headline}
@@ -81,64 +80,76 @@ export function HeroSection() {
               </h1>
             </RevealOnView>
 
-            <RevealOnView delayMs={42} className="mt-6 max-w-xl sm:mt-7 lg:max-w-[26rem]">
-              <p className="relative overflow-hidden rounded-[var(--tr-radius-lg)] border border-[color:var(--trainr-accent-line)] bg-gradient-to-br from-[rgba(255,122,0,0.16)] via-[rgba(255,122,0,0.07)] to-transparent px-4 py-4 text-pretty text-[clamp(1.15rem,3.8vw,1.65rem)] font-extrabold leading-[1.14] tracking-[-0.034em] text-trainr-accent shadow-[0_0_48px_-10px_rgba(255,122,0,0.5),inset_0_1px_0_rgba(255,255,255,0.07)] sm:px-5 sm:py-[1.125rem]">
-                <span className="relative z-[1]">{hero.killerLine}</span>
-              </p>
-            </RevealOnView>
-
-            <RevealOnView delayMs={50} className="mt-5 max-w-xl sm:mt-6 lg:max-w-2xl">
-              <p className="text-pretty text-[clamp(1.08rem,3.2vw,1.5rem)] font-semibold leading-snug tracking-[-0.02em] text-trainr-accent">
+            <RevealOnView delayMs={50} className="mt-6 max-w-2xl sm:mt-7">
+              <p className="text-pretty text-[clamp(1.05rem,3.1vw,1.45rem)] font-semibold leading-snug tracking-[-0.02em] text-[var(--tr-text-secondary)]">
                 {hero.subhead}
               </p>
             </RevealOnView>
 
-            <RevealOnView delayMs={65} className="mt-7 max-w-md sm:mt-8">
-              <div className="border-l-2 border-trainr-accent/50 pl-4">
-                <ul className="space-y-1 text-[0.875rem] font-medium leading-snug text-[var(--tr-text-tertiary)] sm:text-[0.9375rem]">
-                  {hero.tensionPains.map((line) => (
-                    <li key={line}>{line}</li>
-                  ))}
-                </ul>
-                <p className="mt-3 text-[0.9375rem] font-semibold leading-snug text-trainr-accent sm:text-[1rem]">
-                  {hero.tensionResolve}
-                </p>
-              </div>
-            </RevealOnView>
-
-            <RevealOnView delayMs={85} className="mt-8 sm:mt-10">
+            <RevealOnView delayMs={70} className="mt-7 sm:mt-8">
               <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center">
                 <a
-                  href={hero.primaryHref}
-                  className="group inline-flex min-h-[50px] w-full items-center justify-center gap-2 rounded-[var(--tr-radius-lg)] bg-trainr-accent px-6 text-[0.9375rem] font-extrabold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_16px_40px_-12px_rgba(255,122,0,0.42)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-[var(--trainr-accent-hover)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.14),0_20px_48px_-12px_rgba(255,122,0,0.48)] active:scale-[0.98] sm:w-auto sm:min-h-[52px] sm:min-w-[200px] sm:px-7"
+                  href={whatsAppHref}
+                  className="group inline-flex min-h-[54px] w-full items-center justify-center gap-2 rounded-[var(--tr-radius-lg)] bg-trainr-accent px-6 text-[0.9375rem] font-extrabold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_16px_40px_-12px_rgba(255,122,0,0.42)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-[var(--trainr-accent-hover)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.14),0_20px_48px_-12px_rgba(255,122,0,0.48)] active:scale-[0.98] sm:w-auto sm:min-h-[56px] sm:min-w-[240px] sm:px-7"
                 >
                   {hero.primaryCta}
                   <ChevronRight className="opacity-90 transition-transform duration-200 group-hover:translate-x-0.5" />
                 </a>
                 <a
                   href={hero.secondaryHref}
-                  className="inline-flex min-h-[50px] w-full items-center justify-center rounded-[var(--tr-radius-lg)] border border-[var(--tr-border-medium)] bg-transparent px-6 text-[0.875rem] font-semibold text-[var(--tr-text-primary)] shadow-[var(--tr-shadow-inset)] transition-[background-color,border-color] duration-200 hover:border-[var(--tr-border-strong)] hover:bg-[var(--tr-surface-0)] sm:w-auto sm:min-h-[52px] sm:min-w-[168px]"
+                  className="inline-flex min-h-[54px] w-full items-center justify-center rounded-[var(--tr-radius-lg)] border border-[var(--tr-border-medium)] bg-transparent px-6 text-[0.875rem] font-semibold text-[var(--tr-text-primary)] shadow-[var(--tr-shadow-inset)] transition-[background-color,border-color] duration-200 hover:border-[var(--tr-border-strong)] hover:bg-[var(--tr-surface-0)] sm:w-auto sm:min-h-[56px] sm:min-w-[190px]"
                 >
                   {hero.secondaryCta}
                 </a>
               </div>
-              <a
-                href={`mailto:${supportEmail}?subject=${encodeURIComponent("Trainr – acceso anticipado")}`}
-                className="mt-4 inline-flex text-[0.8125rem] font-medium text-[var(--tr-text-tertiary)] underline decoration-[var(--tr-border-strong)] underline-offset-[5px] transition-colors hover:text-[var(--tr-text-primary)]"
-              >
-                {hero.tertiaryCta}
-              </a>
+
+              <div className="mt-4 flex flex-wrap gap-2.5">
+                {hero.trustLineItems.map((item) => (
+                  <span
+                    key={item}
+                    className="inline-flex items-center rounded-[var(--tr-radius-pill)] border border-[var(--tr-border)] bg-white/[0.02] px-3 py-1.5 text-[0.75rem] font-semibold tracking-tight text-[var(--tr-text-secondary)]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
             </RevealOnView>
           </div>
 
-          <div className="flex justify-center lg:col-span-6 xl:col-span-6">
-            <RevealOnView delayMs={90} className="w-full">
-              <IphoneScreenshot
-                src={SCREENSHOT_TRAINING}
-                alt={SCREENSHOT_ALT.training}
-                size="hero"
-                priority
-              />
+          <div className="lg:col-span-5 xl:col-span-5">
+            <RevealOnView delayMs={95} className="w-full">
+              <div className="relative overflow-hidden rounded-[var(--tr-radius-xl)] border border-[var(--tr-border-medium)] bg-[var(--tr-surface-0)] shadow-[var(--tr-shadow-card)]">
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-white/[0.06] via-transparent to-[var(--trainr-accent-soft)] opacity-80" />
+                <div className="relative p-6 sm:p-7">
+                  <p className="font-mono text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--tr-text-faint)]">
+                    {hero.miniProof.title}
+                  </p>
+                  <div className="mt-5 grid gap-3">
+                    {hero.miniProof.rows.map((row) => (
+                      <div
+                        key={row.k}
+                        className="flex items-center justify-between gap-4 rounded-[var(--tr-radius-lg)] border border-[var(--tr-border)] bg-white/[0.02] px-4 py-3 shadow-[var(--tr-shadow-inset)]"
+                      >
+                        <span className="text-[0.8125rem] font-semibold text-[var(--tr-text-tertiary)]">
+                          {row.k}
+                        </span>
+                        <span className="text-right text-[0.875rem] font-semibold text-[var(--tr-text-primary)]">
+                          {row.v}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="mt-6 rounded-[var(--tr-radius-lg)] border border-[color:var(--trainr-accent-line)] bg-gradient-to-br from-[rgba(255,122,0,0.16)] via-[rgba(255,122,0,0.07)] to-transparent px-4 py-4 shadow-[0_0_48px_-18px_rgba(255,122,0,0.55),inset_0_1px_0_rgba(255,255,255,0.07)]">
+                    <p className="text-[0.9375rem] font-extrabold leading-tight tracking-[-0.03em] text-trainr-accent">
+                      Entrega en 72h · Mobile‑first · CTA a WhatsApp
+                    </p>
+                    <p className="mt-1 text-[0.8125rem] font-medium leading-relaxed text-[var(--tr-text-secondary)]">
+                      Sin animaciones pesadas. Sin “plantilla”. Solo lo que convierte.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </RevealOnView>
           </div>
         </div>

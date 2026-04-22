@@ -2,18 +2,22 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { trainrProduct } from "../content/trainr-product";
 import { TrainrLogoMark } from "./TrainrLogoMark";
 
 const nav = [
-  { href: "/#coaches", label: "Coaches" },
-  { href: "/#how-trainr-works", label: "Cómo funciona" },
-  { href: "/#bundle", label: "Juntos" },
-  { href: "/#premium-feel", label: "Por qué Trainr" },
-  { href: "/#contact", label: "Contacto" },
+  { href: "/#proyectos", label: "Proyectos" },
+  { href: "/#beneficios", label: "Beneficios" },
+  { href: "/#sectores", label: "Sectores" },
+  { href: "/#proceso", label: "Proceso" },
+  { href: "/#precio", label: "Precio" },
 ] as const;
 
 export function SiteHeader() {
   const [elevated, setElevated] = useState(false);
+  const whatsAppHref = `https://wa.me/${trainrProduct.whatsApp.phoneE164}?text=${encodeURIComponent(
+    trainrProduct.whatsApp.prefill,
+  )}`;
 
   useEffect(() => {
     const onScroll = () => setElevated(window.scrollY > 8);
@@ -39,12 +43,12 @@ export function SiteHeader() {
         >
           <TrainrLogoMark variant="header" className="translate-y-[0.5px]" />
           <span className="text-[1rem] font-semibold tracking-[-0.04em] sm:text-[1.0625rem]">
-            Trainr
+            {trainrProduct.brand.name}
           </span>
         </Link>
 
         <nav
-          className="flex min-w-0 flex-1 items-center justify-center gap-0.5 overflow-x-auto py-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:gap-1 [&::-webkit-scrollbar]:hidden"
+          className="hidden min-w-0 flex-1 items-center justify-center gap-0.5 overflow-x-auto py-1 [-ms-overflow-style:none] [scrollbar-width:none] sm:flex sm:gap-1 [&::-webkit-scrollbar]:hidden"
           aria-label="Secciones"
         >
           {nav.map((item) => (
@@ -59,10 +63,10 @@ export function SiteHeader() {
         </nav>
 
         <a
-          href="mailto:support@trytrainr.com"
+          href={whatsAppHref}
           className="inline-flex shrink-0 items-center justify-center rounded-[var(--tr-radius-pill)] bg-[var(--tr-surface-1)] px-3.5 py-2 text-[0.8125rem] font-semibold text-[var(--tr-text-primary)] ring-1 ring-[var(--tr-border-medium)] transition-[background-color,box-shadow,transform] duration-200 hover:bg-[var(--tr-surface-2)] hover:ring-[color:var(--trainr-accent-line)] active:scale-[0.98] sm:px-5 sm:text-sm"
         >
-          Escribir
+          WhatsApp
         </a>
       </div>
     </header>

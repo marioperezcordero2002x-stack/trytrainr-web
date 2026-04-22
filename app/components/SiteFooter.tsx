@@ -1,8 +1,9 @@
 import Link from "next/link";
+import { trainrProduct } from "../content/trainr-product";
 import { TrainrLogoMark } from "./TrainrLogoMark";
 import { Container } from "./system/Container";
 
-function MailIcon({ className }: { className?: string }) {
+function WhatsAppIcon({ className }: { className?: string }) {
   return (
     <svg
       className={className}
@@ -14,7 +15,14 @@ function MailIcon({ className }: { className?: string }) {
       aria-hidden
     >
       <path
-        d="M4 6h16v12H4V6zm0 0l8 6 8-6"
+        d="M12 21a9 9 0 1 0-7.87-4.6L3 21l4.77-1.08A8.96 8.96 0 0 0 12 21Z"
+        stroke="currentColor"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M9.2 8.9c.2-.5.5-.5.8-.5.3 0 .6 0 .8.5l.7 1.6c.1.3.1.6-.1.8l-.5.6c.5 1 1.4 1.8 2.4 2.4l.6-.5c.2-.2.5-.2.8-.1l1.6.7c.5.2.5.5.5.8 0 .3 0 .6-.5.8-.6.3-1.4.5-2.1.3-3-.8-5.4-3.2-6.2-6.2-.2-.7 0-1.5.3-2.1Z"
         stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
@@ -25,6 +33,10 @@ function MailIcon({ className }: { className?: string }) {
 }
 
 export function SiteFooter() {
+  const whatsAppHref = `https://wa.me/${trainrProduct.whatsApp.phoneE164}?text=${encodeURIComponent(
+    trainrProduct.whatsApp.prefill,
+  )}`;
+
   return (
     <footer
       id="contact"
@@ -39,29 +51,29 @@ export function SiteFooter() {
             >
               <TrainrLogoMark variant="footer" className="translate-y-px" />
               <span className="text-base font-semibold tracking-[-0.04em] sm:text-lg">
-                Trainr
+                {trainrProduct.brand.name}
               </span>
             </Link>
             <p className="tr-text-body-sm mt-4 max-w-sm text-pretty">
-              Te dice qué entrenar y cómo comer cada día. Training Coach y
-              Nutrition Coach en un solo sistema, sin ruido.
+              Landing pages dark premium para negocios locales. Claridad,
+              velocidad y CTA a WhatsApp para generar clientes.
             </p>
             <p className="mt-5 font-mono text-[11px] font-medium uppercase tracking-[0.12em] text-[var(--tr-text-faint)]">
-              trytrainr.com
+              {trainrProduct.brand.domain}
             </p>
           </div>
 
           <div>
             <p className="tr-text-overline">Contacto</p>
             <a
-              href="mailto:support@trytrainr.com"
+              href={whatsAppHref}
               className="mt-4 inline-flex items-center gap-2.5 text-[0.9375rem] font-medium text-[var(--tr-text-primary)] transition-colors hover:text-trainr-accent"
             >
-              <MailIcon className="text-[var(--tr-text-faint)]" />
-              support@trytrainr.com
+              <WhatsAppIcon className="text-[var(--tr-text-faint)]" />
+              WhatsApp
             </a>
             <p className="tr-text-body-sm mt-3 max-w-xs text-[var(--tr-text-tertiary)]">
-              Prensa, acuerdos o acceso anticipado: mismo correo.
+              Respuesta rápida. Precio claro. Entrega en 72h.
             </p>
           </div>
 
@@ -92,10 +104,11 @@ export function SiteFooter() {
 
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <p className="text-[11px] text-[var(--tr-text-faint)]">
-            © {new Date().getFullYear()} Trainr. Todos los derechos reservados.
+            © {new Date().getFullYear()} {trainrProduct.brand.name}. Todos los
+            derechos reservados.
           </p>
           <p className="text-[11px] text-[var(--tr-text-faint)]">
-            Claridad frente al ruido.
+            Menos ruido. Más clientes.
           </p>
         </div>
       </Container>

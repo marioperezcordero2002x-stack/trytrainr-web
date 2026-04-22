@@ -14,36 +14,26 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Trainr — Dos coaches. Claridad diaria.",
-    template: "%s · Trainr",
+    default: "Noxen Web — Landings que generan clientes",
+    template: "%s · Noxen Web",
   },
   description:
-    "Trainr te dice qué entrenar y cómo comer cada día. Training Coach y Nutrition Coach en un sistema premium. trytrainr.com",
-  metadataBase: new URL("https://trytrainr.com"),
+    "Landing pages dark premium para negocios locales. Listas en 72h, mobile-first, carga rápida y CTA a WhatsApp.",
+  metadataBase: new URL("https://noxenweb.com"),
   openGraph: {
-    title: "Trainr — Dos coaches. Un sistema.",
+    title: "Noxen Web — Páginas web que generan clientes",
     description:
-      "Menos dudas, más claridad: entreno y nutrición alineados. Acceso anticipado en trytrainr.com.",
+      "Landing pages para negocios locales listas en 72h. Diseño premium oscuro, velocidad real y CTA a WhatsApp.",
     url: "/",
-    siteName: "Trainr",
+    siteName: "Noxen Web",
     locale: "es_ES",
     type: "website",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Trainr — Training Coach y Nutrition Coach",
-        type: "image/png",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Trainr — Guía diaria",
+    title: "Noxen Web — Landings en 72h",
     description:
-      "Qué entrenar y cómo comer hoy, con dos coaches que trabajan como un solo sistema.",
-    images: ["/og-image.png"],
+      "Landing pages para negocios locales: mobile-first, rápidas y pensadas para WhatsApp.",
   },
 };
 

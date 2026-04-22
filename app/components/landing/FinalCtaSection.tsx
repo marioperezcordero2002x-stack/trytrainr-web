@@ -2,9 +2,13 @@ import { trainrProduct } from "../../content/trainr-product";
 import { RevealOnView } from "../RevealOnView";
 import { Section } from "../system/Section";
 
-const { finalCta, supportEmail } = trainrProduct;
+const { finalCta, whatsApp } = trainrProduct;
 
 export function FinalCtaSection() {
+  const whatsAppHref = `https://wa.me/${whatsApp.phoneE164}?text=${encodeURIComponent(
+    whatsApp.prefill,
+  )}`;
+
   return (
     <Section
       id="cta"
@@ -20,7 +24,7 @@ export function FinalCtaSection() {
             </p>
           ) : null}
           <h2
-            className={`tr-text-h2 inline-block max-w-none whitespace-nowrap text-center font-extrabold tracking-[-0.035em] text-[var(--tr-text-primary)] ${finalCta.kicker ? "mt-5 sm:mt-6" : ""}`}
+            className={`tr-text-h2 text-balance text-center font-extrabold tracking-[-0.035em] text-[var(--tr-text-primary)] ${finalCta.kicker ? "mt-5 sm:mt-6" : ""}`}
           >
             {finalCta.title}
           </h2>
@@ -32,11 +36,6 @@ export function FinalCtaSection() {
               {finalCta.subtitle}
             </p>
           ) : null}
-          {finalCta.lead ? (
-            <p className="tr-text-lead mx-auto mt-5 max-w-lg text-pretty font-medium text-[var(--tr-text-secondary)]">
-              {finalCta.lead}
-            </p>
-          ) : null}
           {finalCta.note ? (
             <p className="mx-auto mt-5 max-w-sm text-pretty text-[0.9375rem] font-medium leading-snug text-[var(--tr-text-secondary)] sm:mt-6">
               {finalCta.note}
@@ -44,10 +43,10 @@ export function FinalCtaSection() {
           ) : null}
           <div className="mt-11 flex flex-col items-stretch justify-center gap-3 sm:mt-12 sm:flex-row sm:items-center">
             <a
-              href={`mailto:${supportEmail}?subject=${encodeURIComponent(finalCta.mailtoSubject)}`}
+              href={whatsAppHref}
               className="inline-flex min-h-[52px] items-center justify-center rounded-[var(--tr-radius-lg)] bg-trainr-accent px-8 text-[0.9375rem] font-extrabold text-white shadow-[0_0_0_1px_rgba(255,255,255,0.12),0_12px_32px_-8px_rgba(255,122,0,0.4)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-[var(--trainr-accent-hover)] hover:shadow-[0_0_0_1px_rgba(255,255,255,0.14),0_16px_40px_-8px_rgba(255,122,0,0.48)] active:scale-[0.98]"
             >
-              {finalCta.primaryLabel}
+              Pedir presupuesto por WhatsApp
             </a>
             <a
               href={finalCta.secondaryHref}
